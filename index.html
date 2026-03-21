@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AstroScan AI | Экспертная система натального синтеза</title>
+    <title>AstroScan AI | Expert Natal Synthesis System</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -14,8 +14,12 @@
         .font-mono-tech { font-family: 'Space Grotesk', sans-serif; }
         .glass { background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(56, 189, 248, 0.1); }
         .neon-text { text-shadow: 0 0 10px rgba(56, 189, 248, 0.5); }
-        .gradient-bg { background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.1), transparent); }
         .card-hover:hover { border-color: var(--accent); transform: translateY(-2px); transition: all 0.3s ease; }
+        
+        /* Скрытие элементов в зависимости от языка */
+        [lang="en"] { display: none; }
+        body.lang-en [lang="ru"] { display: none; }
+        body.lang-en [lang="en"] { display: block; }
     </style>
 
     <script type="application/ld+json">
@@ -29,121 +33,119 @@
         "@type": "Organization",
         "name": "AstroScan Lab",
         "url": "https://astroscan-lab.github.io/astroscan_bot/"
-      },
-      "featureList": [
-        "Swiss Ephemeris 0.001° Precision",
-        "NASA JPL Data Verification",
-        "Multi-agent AI Architecture (GPT-4o)",
-        "Systemic Psychological Profiling"
-      ],
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "Telegram Stars"
       }
     }
     </script>
 </head>
-<body class="gradient-bg">
+<body class="lang-ru">
 
     <nav class="fixed w-full z-50 glass border-b border-slate-800">
         <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
             <div class="font-mono-tech font-bold text-xl tracking-tighter neon-text">ASTROSCAN<span class="text-sky-400">.LAB</span></div>
-            <div class="hidden md:flex gap-8 text-sm uppercase tracking-widest text-slate-400">
-                <a href="#tech" class="hover:text-sky-400 transition">Технологии</a>
-                <a href="#reports" class="hover:text-sky-400 transition">Отчеты</a>
-                <a href="#method" class="hover:text-sky-400 transition">Методология</a>
+            
+            <div class="flex items-center gap-6">
+                <button onclick="toggleLang()" class="text-xs font-bold border border-slate-700 px-3 py-1 rounded hover:border-sky-400 transition uppercase tracking-widest">
+                    <span lang="ru">English</span>
+                    <span lang="en">Русский</span>
+                </button>
+                
+                <div class="hidden md:flex gap-8 text-xs uppercase tracking-widest text-slate-400">
+                    <a href="#tech"><span lang="ru">Технологии</span><span lang="en">Tech</span></a>
+                    <a href="#reports"><span lang="ru">Отчеты</span><span lang="en">Reports</span></a>
+                </div>
+                
+                <a href="https://t.me/astroscan_bot" class="bg-sky-500 hover:bg-sky-400 text-slate-900 px-4 py-2 rounded font-bold text-xs transition uppercase">Bot</a>
             </div>
-            <a href="https://t.me/astroscan_bot" class="bg-sky-500 hover:bg-sky-400 text-slate-900 px-5 py-2 rounded-lg font-bold text-sm transition uppercase">Bot</a>
         </div>
     </nav>
 
     <section class="pt-32 pb-20 px-6 text-center">
         <div class="max-w-4xl mx-auto">
-            <div class="inline-block px-3 py-1 border border-sky-500/30 rounded-full text-xs font-mono text-sky-400 mb-6 uppercase tracking-widest">
-                Verification: NASA JPL & Swiss Ephemeris 0.001°
+            <div class="inline-block px-3 py-1 border border-sky-500/30 rounded-full text-[10px] font-mono text-sky-400 mb-6 uppercase tracking-widest">
+                NASA JPL & Swiss Ephemeris 0.001°
             </div>
-            <h1 class="text-5xl md:text-8xl font-bold mb-8 tracking-tighter">Будущее <br><span class="text-sky-400">астро-аналитики</span></h1>
-            <p class="text-lg md:text-xl text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed">
-                Высокоточный синтез данных NASA, швейцарских алгоритмов и системного психоанализа. Мы исключаем галлюцинации ИИ, опираясь на математику.
+            
+            <h1 class="text-5xl md:text-7xl font-bold mb-8 tracking-tighter">
+                <span lang="ru">Будущее <br><span class="text-sky-400">астро-аналитики</span></span>
+                <span lang="en">The Future of <br><span class="text-sky-400">Astro-Analytics</span></span>
+            </h1>
+            
+            <p class="text-lg text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed">
+                <span lang="ru">Высокоточный синтез данных NASA, швейцарских алгоритмов и системного психоанализа. Мы исключаем галлюцинации ИИ.</span>
+                <span lang="en">High-precision synthesis of NASA data, Swiss algorithms, and systemic psychoanalysis. Zero AI hallucinations.</span>
             </p>
-            <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <a href="https://t.me/astroscan_bot" class="bg-white text-slate-900 px-8 py-4 rounded-xl font-bold text-lg hover:bg-sky-400 transition shadow-lg shadow-sky-500/20">Получить анализ личности</a>
-                <a href="#tech" class="glass px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-800 transition">Как это работает?</a>
-            </div>
+            
+            <a href="https://t.me/astroscan_bot" class="bg-white text-slate-900 px-8 py-4 rounded-xl font-bold text-lg hover:bg-sky-400 transition shadow-lg shadow-sky-500/20">
+                <span lang="ru">Получить анализ личности</span>
+                <span lang="en">Get Personality Analysis</span>
+            </a>
         </div>
     </section>
 
-    <section id="tech" class="max-w-7xl mx-auto px-6 py-24 border-t border-slate-900">
-        <h2 class="text-center font-mono-tech text-3xl mb-16 tracking-tighter">ТЕХНИЧЕСКИЙ СТЕК / TECH STACK</h2>
+    <section id="tech" class="max-w-7xl mx-auto px-6 py-20">
         <div class="grid md:grid-cols-3 gap-8">
-            <div class="glass p-10 rounded-3xl card-hover">
-                <div class="text-sky-500 mb-6 font-mono text-xs uppercase tracking-[0.2em]">01. Precision</div>
-                <h3 class="text-2xl font-bold mb-4 italic">Швейцарские эфемериды</h3>
-                <p class="text-slate-400 leading-relaxed text-sm">Интеграция библиотеки <b>Swiss Ephemeris</b>. Расчет координат небесных тел с точностью до 0.001° для исключения погрешностей.</p>
+            <div class="glass p-8 rounded-3xl card-hover">
+                <h3 class="text-xl font-bold mb-4 italic text-sky-400">Precision</h3>
+                <p lang="ru" class="text-slate-400 text-sm">Интеграция <b>Swiss Ephemeris</b>. Расчет координат с точностью до 0.001°.</p>
+                <p lang="en" class="text-slate-400 text-sm"><b>Swiss Ephemeris</b> integration. 0.001° coordinate precision.</p>
             </div>
-            <div class="glass p-10 rounded-3xl card-hover">
-                <div class="text-sky-500 mb-6 font-mono text-xs uppercase tracking-[0.2em]">02. Intelligence</div>
-                <h3 class="text-2xl font-bold mb-4 italic">GPT-4o Multi-Agent</h3>
-                <p class="text-slate-400 leading-relaxed text-sm">Мультиагентная архитектура. Каждый сектор карты анализируется отдельным дообученным агентом перед финальным синтезом.</p>
+            <div class="glass p-8 rounded-3xl card-hover">
+                <h3 class="text-xl font-bold mb-4 italic text-sky-400">Intelligence</h3>
+                <p lang="ru" class="text-slate-400 text-sm">Мультиагентная архитектура на базе дообученной модели <b>GPT-4o</b>.</p>
+                <p lang="en" class="text-slate-400 text-sm">Multi-agent architecture based on fine-tuned <b>GPT-4o</b> model.</p>
             </div>
-            <div class="glass p-10 rounded-3xl card-hover">
-                <div class="text-sky-500 mb-6 font-mono text-xs uppercase tracking-[0.2em]">03. Validation</div>
-                <h3 class="text-2xl font-bold mb-4 italic">NASA JPL Data</h3>
-                <p class="text-slate-400 leading-relaxed text-sm">Верификация положений планет по протоколам <b>Jet Propulsion Laboratory (NASA)</b>. Только доказательная астрономия.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="reports" class="bg-slate-900/30 py-24">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex justify-between items-end mb-16">
-                <div>
-                    <h2 class="text-4xl font-bold mb-4">Аналитические отчеты</h2>
-                    <p class="text-slate-500">Системный аудит всех сфер жизни в формате PDF.</p>
-                </div>
-            </div>
-            <div class="grid md:grid-cols-4 gap-6">
-                <div class="glass p-8 rounded-2xl border-l-4 border-sky-500">
-                    <h4 class="font-bold text-xl mb-3">Natal Full</h4>
-                    <p class="text-xs text-slate-400 leading-relaxed">Архитектура личности, теневой контур и векторы эволюции.</p>
-                </div>
-                <div class="glass p-8 rounded-2xl border-l-4 border-purple-500">
-                    <h4 class="font-bold text-xl mb-3">Career</h4>
-                    <p class="text-xs text-slate-400 leading-relaxed">Аудит профессиональной роли и финансовых ограничений.</p>
-                </div>
-                <div class="glass p-8 rounded-2xl border-l-4 border-rose-500">
-                    <h4 class="font-bold text-xl mb-3">Compatibility</h4>
-                    <p class="text-xs text-slate-400 leading-relaxed">Резонанс в паре: от бытового комфорта до глубинных дефицитов.</p>
-                </div>
-                <div class="glass p-8 rounded-2xl border-l-4 border-emerald-500">
-                    <h4 class="font-bold text-xl mb-3">Child Chart</h4>
-                    <p class="text-xs text-slate-400 leading-relaxed">Врожденные паттерны и экологичные стратегии развития ребенка.</p>
-                </div>
+            <div class="glass p-8 rounded-3xl card-hover">
+                <h3 class="text-xl font-bold mb-4 italic text-sky-400">Validation</h3>
+                <p lang="ru" class="text-slate-400 text-sm">Верификация данных по протоколам <b>NASA JPL</b>. Только доказательная астрономия.</p>
+                <p lang="en" class="text-slate-400 text-sm">Data verification via <b>NASA JPL</b> protocols. Evidence-based astronomy.</p>
             </div>
         </div>
     </section>
 
-    <section id="method" class="max-w-3xl mx-auto px-6 py-32 text-center">
-        <h2 class="text-3xl font-bold mb-8 italic">«Это не гадание. Это психопрофайлинг».</h2>
-        <p class="text-slate-400 text-lg leading-relaxed mb-10">
-            AstroScan AI синтезирует математическую модель неба с паттернами клинической психологии и КПТ. Мы не даем расплывчатых прогнозов — мы строим <b>когнитивную карту</b> вашего сознания.
-        </p>
-        <div class="h-px w-20 bg-sky-500 mx-auto"></div>
+    <section id="reports" class="max-w-7xl mx-auto px-6 py-20">
+        <h2 class="text-3xl font-bold mb-12 text-center">
+            <span lang="ru">Аналитические отчеты</span>
+            <span lang="en">Analytical Reports</span>
+        </h2>
+        <div class="grid md:grid-cols-4 gap-6 text-sm">
+            <div class="glass p-6 rounded-2xl border-l-2 border-sky-500">
+                <b class="block mb-2 text-sky-400">Natal Full</b>
+                <span lang="ru text-slate-400">Архитектура личности, теневой контур и векторы эволюции.</span>
+                <span lang="en text-slate-400">Personality architecture, shadow self, and evolution vectors.</span>
+            </div>
+            <div class="glass p-6 rounded-2xl border-l-2 border-purple-500">
+                <b class="block mb-2 text-purple-400">Career</b>
+                <span lang="ru text-slate-400">Аудит профессиональной роли и финансовых векторов.</span>
+                <span lang="en text-slate-400">Professional role audit and financial vectors.</span>
+            </div>
+            <div class="glass p-6 rounded-2xl border-l-2 border-rose-500">
+                <b class="block mb-2 text-rose-400">Compatibility</b>
+                <span lang="ru text-slate-400">Анализ резонанса в паре и глубинных дефицитов.</span>
+                <span lang="en text-slate-400">Partnership resonance and deep deficit analysis.</span>
+            </div>
+            <div class="glass p-6 rounded-2xl border-l-2 border-emerald-500">
+                <b class="block mb-2 text-emerald-400">Child Chart</b>
+                <span lang="ru text-slate-400">Врожденные таланты и стратегии развития ребенка.</span>
+                <span lang="en text-slate-400">Innate talents and child development strategies.</span>
+            </div>
+        </div>
     </section>
 
-    <footer class="max-w-7xl mx-auto px-6 py-12 border-t border-slate-900">
-        <div class="flex flex-col md:flex-row justify-between items-center gap-8">
-            <div class="font-mono-tech font-bold text-lg text-slate-500">ASTROSCAN LAB / 2026</div>
-            <div class="flex gap-10 text-xs uppercase tracking-widest text-slate-500">
-                <a href="privacy.html" class="hover:text-white transition">Privacy Policy</a>
-                <a href="terms.html" class="hover:text-white transition">Terms</a>
-                <a href="https://t.me/astroscan_bot" class="hover:text-white transition">Telegram</a>
-            </div>
-            <div class="text-[10px] text-slate-700 uppercase tracking-widest">
-                Powered by Swiss Ephemeris & GPT-4o
-            </div>
+    <footer class="max-w-7xl mx-auto px-6 py-12 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="font-mono-tech font-bold text-slate-600">ASTROSCAN LAB / 2026</div>
+        <div class="flex gap-8 text-[10px] uppercase tracking-[0.2em] text-slate-500">
+            <a href="privacy.html" class="hover:text-white transition">Privacy</a>
+            <a href="terms.html" class="hover:text-white transition">Terms</a>
+            <a href="https://t.me/astroscan_bot" class="hover:text-white transition">Telegram</a>
         </div>
     </footer>
+
+    <script>
+        function toggleLang() {
+            document.body.classList.toggle('lang-en');
+            document.body.classList.toggle('lang-ru');
+        }
+    </script>
 
 </body>
 </html>
