@@ -1,39 +1,49 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Конфиденциальность | AstroScan AI</title>
+    <title>Privacy Policy | AstroScan AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 20px; color: #333; }
-        h1 { color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        ul { list-style-type: none; padding: 0; }
-        li { margin-bottom: 10px; }
+        body { background-color: #020617; color: #f8fafc; font-family: sans-serif; }
+        .glass { background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(12px); border: 1px solid rgba(56, 189, 248, 0.1); }
     </style>
 </head>
-<body>
-    <h1>🔐 Конфиденциальность</h1>
-    <p>Мы бережно относимся к твоей информации:</p>
-    <ul>
-        <li>• Данные используются только для формирования персонального отчета</li>
-        <li>• Не передаются третьим лицам</li>
-        <li>• Не используются в маркетинговых целях</li>
-        <li>• После формирования отчета данные удаляются</li>
-    </ul>
-    <p>Продолжая использование, вы даете согласие на обработку данных.</p>
-    <p>Отчет носит аналитический характер и не заменяет консультации специалистов.</p>
-    
-    <hr>
-    
-    <h1>🔐 Privacy Policy</h1>
-    <p>We take care of your information:</p>
-    <ul>
-        <li>• Data is used only to generate your personal report</li>
-        <li>• Not shared with third parties</li>
-        <li>• Not used for marketing purposes</li>
-        <li>• Data is deleted after the report is generated</li>
-    </ul>
-    <p>By continuing to use the bot, you consent to data processing.</p>
-    <p>Reports are for analytical purposes only and do not replace professional advice.</p>
+<body class="p-6 md:p-20">
+    <div class="max-w-3xl mx-auto glass p-8 md:p-12 rounded-3xl shadow-2xl">
+        
+        <section class="mb-16">
+            <h1 class="text-2xl font-bold mb-6 text-sky-400">🔐 Privacy Policy</h1>
+            <p class="mb-4 text-slate-300">We take care of your information:</p>
+            <ul class="list-disc ml-6 space-y-2 text-slate-400 mb-6">
+                <li>Data is used only to generate your personal report</li>
+                <li>Not shared with third parties</li>
+                <li>Not used for marketing purposes</li>
+                <li>Data is deleted after the report is generated</li>
+            </ul>
+            <p class="text-sm font-semibold text-slate-200">By continuing to use the bot, you consent to data processing.</p>
+            <p class="text-xs text-slate-500 mt-2 italic text-rose-400">Reports are for analytical purposes only and do not replace professional advice.</p>
+        </section>
+
+        <hr class="border-slate-800 mb-16">
+
+        <section>
+            <h2 class="text-xl font-bold mb-6 text-slate-400 uppercase tracking-widest">🔐 Конфиденциальность</h2>
+            <p class="mb-4 text-slate-300">Мы бережно относимся к твоей информации:</p>
+            <ul class="list-disc ml-6 space-y-2 text-slate-400 mb-6">
+                <li>Данные используются только для формирования персонального отчета</li>
+                <li>Не передаются третьим лицам</li>
+                <li>Не используются в маркетинговых целях</li>
+                <li>После формирования отчета данные удаляются</li>
+            </ul>
+            <p class="text-sm font-semibold text-slate-200">Продолжая использование, вы даете согласие на обработку данных.</p>
+            <p class="text-xs text-slate-500 mt-2 italic text-rose-400">Отчет носит аналитический характер и не заменяет консультации специалистов.</p>
+        </section>
+
+        <div class="mt-12 text-center">
+            <a href="index.html" class="text-sky-500 hover:text-white transition uppercase text-[10px] tracking-[0.3em]">← Back to site / Назад</a>
+        </div>
+    </div>
 </body>
 </html>
