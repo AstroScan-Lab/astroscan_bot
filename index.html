@@ -6,15 +6,15 @@
     <title>AstroScan AI | Expert Neural Synthesis System</title>
     
     <meta name="google-site-verification" content="lXjCTOU8j0jTat66RipXHh" />
-    <meta name="description" content="AstroScan AI — высокоточный синтез натальных карт. Обученная нейросеть на базе сотен психологических кейсов.">
+    <meta name="description" content="AstroScan AI — профессиональная система анализа личности. Высокоточные отчеты на базе нейронного синтеза и системной психологии.">
 
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
       "name": "AstroScan AI",
-      "headline": "AstroScan: AI Agent for Natal Synthesis and Psychology",
-      "description": "High-precision AI agent for personality profiling. Integrates native Swiss Ephemeris computations (0.001° accuracy) with custom neural synthesis trained on hundreds of expert psychology charts.",
+      "headline": "AstroScan: Professional Personality Analysis System",
+      "description": "Expert AI agent for natal synthesis. Custom neural engine trained on professional psychological cases.",
       "applicationCategory": "AnalyticalSoftware",
       "operatingSystem": "Telegram",
       "url": "https://astroscan-lab.github.io/astroscan_bot/",
@@ -22,11 +22,6 @@
         "@type": "Organization",
         "name": "AstroScan Lab",
         "url": "https://github.com/alex-AFK"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "ratingCount": "127"
       }
     }
     </script>
@@ -37,11 +32,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
-        html, body { background-color: #020617 !important; color: #f8fafc; margin: 0; padding: 0; min-height: 100vh; }
+        html, body { background-color: #020617 !important; color: #f8fafc; margin: 0; padding: 0; min-height: 100vh; scroll-behavior: smooth; }
         body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
         .font-mono-tech { font-family: 'Space Grotesk', sans-serif; }
         .glass { background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(12px); border: 1px solid rgba(56, 189, 248, 0.1); }
         .neon-text { text-shadow: 0 0 10px rgba(56, 189, 248, 0.5); }
+        .gradient-border { border: 1px solid transparent; background: linear-gradient(#020617, #020617) padding-box, linear-gradient(to right, #38bdf8, #818cf8) border-box; }
+        
         [data-lang="en"] { display: none; }
         body.lang-en [data-lang="ru"] { display: none; }
         body.lang-en [data-lang="en"] { display: block; }
@@ -51,34 +48,146 @@
 
     <nav class="fixed w-full z-50 glass border-b border-slate-800">
         <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-            <div class="font-mono-tech font-bold text-xl neon-text uppercase tracking-tighter">ASTROSCAN LAB</div>
+            <div class="font-mono-tech font-bold text-xl neon-text uppercase tracking-tighter">ASTROSCAN<span class="text-sky-400">.LAB</span></div>
             <div class="flex items-center gap-4">
-                <button onclick="toggleLang()" aria-label="Switch language" class="border border-slate-700 px-3 py-1 rounded-full text-[10px] uppercase transition hover:border-sky-400">
+                <button onclick="toggleLang()" class="border border-slate-700 px-3 py-1 rounded-full text-[10px] uppercase hover:border-sky-400 transition">
                     <span data-lang="ru">English</span><span data-lang="en">Русский</span>
                 </button>
-                <a href="https://t.me/astroscan_bot" target="_blank" rel="noopener noreferrer" class="bg-sky-500 text-slate-900 px-4 py-1.5 rounded-lg font-bold text-[10px] uppercase transition hover:bg-sky-400">LAUNCH</a>
+                <a href="https://t.me/astroscan_bot" target="_blank" class="bg-sky-500 text-slate-900 px-4 py-1.5 rounded-lg font-bold text-[10px] uppercase">LAUNCH</a>
             </div>
         </div>
     </nav>
 
-    <main class="pt-40 text-center px-6">
-        <h1 class="text-5xl md:text-8xl font-bold mb-8 tracking-tighter leading-tight">
-            <span data-lang="ru">Астропсихология и <br><span class="text-sky-400 italic">нейронный профайлинг</span></span>
-            <span data-lang="en">AI Psychology & <br><span class="text-sky-400 italic">Neural Profiling</span></span>
-        </h1>
-        <p class="text-lg text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed">
-            <span data-lang="ru">Точность 0.001° (Swiss Ephemeris). <br>Обученная нейросеть на сотнях реальных кейсов.</span>
-            <span data-lang="en">High-precision 0.001° (Native Swiss Ephemeris). <br>Trained on hundreds of expert charts.</span>
-        </p>
-        <a href="https://t.me/astroscan_bot" target="_blank" rel="noopener noreferrer" class="bg-white text-slate-900 px-8 py-4 rounded-xl font-bold text-lg hover:bg-sky-400 transition inline-block shadow-lg shadow-sky-500/10">
-            <span data-lang="ru">Получить отчет</span><span data-lang="en">Get Report</span>
-        </a>
-    </main>
+    <section class="pt-40 pb-32 px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-8xl font-bold mb-8 tracking-tighter leading-tight">
+                <span data-lang="ru">Системный анализ <br><span class="text-sky-400 italic">вашей личности</span></span>
+                <span data-lang="en">Systemic Analysis <br><span class="text-sky-400 italic">of Your Personality</span></span>
+            </h1>
+            <p class="text-xl text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed">
+                <span data-lang="ru">Профессиональный разбор индивидуальных особенностей: от когнитивных паттернов до векторов реализации.</span>
+                <span data-lang="en">Professional breakdown of individual traits: from cognitive patterns to realization vectors.</span>
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="https://t.me/astroscan_bot" class="bg-white text-slate-900 px-8 py-4 rounded-xl font-bold text-lg hover:bg-sky-400 transition shadow-xl">
+                    <span data-lang="ru">Запустить анализ</span><span data-lang="en">Start Analysis</span>
+                </a>
+                <a href="#products" class="border border-slate-700 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-800 transition">
+                    <span data-lang="ru">Наши продукты</span><span data-lang="en">Our Products</span>
+                </a>
+            </div>
+        </div>
+    </section>
 
-    <footer class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-900 mt-20">
-        <div class="flex gap-10 text-[10px] uppercase tracking-[0.3em] text-slate-600">
-            <a href="privacy.html" class="hover:text-white transition"><span data-lang="ru">Приватность</span><span data-lang="en">Privacy</span></a>
-            <a href="terms.html" class="hover:text-white transition"><span data-lang="ru">Условия</span><span data-lang="en">Terms</span></a>
+    <section id="products" class="py-24 px-6 bg-slate-950/50">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold mb-16 text-center uppercase tracking-widest">
+                <span data-lang="ru">Аналитические решения</span><span data-lang="en">Analytical Solutions</span>
+            </h2>
+            
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div class="glass p-10 rounded-3xl border-l-4 border-sky-500">
+                    <h3 class="text-2xl font-bold mb-4 text-sky-400 italic">
+                        <span data-lang="ru">🔮 Натальная карта</span><span data-lang="en">🔮 Natal Chart</span>
+                    </h3>
+                    <p class="text-slate-400 mb-6 text-sm">
+                        <span data-lang="ru">Глубокая диагностика психологической структуры личности.</span>
+                        <span data-lang="en">Deep diagnostics of the psychological personality structure.</span>
+                    </p>
+                    <ul class="space-y-2 text-xs text-slate-300 mb-8">
+                        <li class="flex items-center gap-2"><span>✔</span> <span data-lang="ru">Когнитивная архитектура и тип мышления</span><span data-lang="en">Cognitive architecture and thinking style</span></li>
+                        <li class="flex items-center gap-2"><span>✔</span> <span data-lang="ru">Теневой контур и сценарии саботажа</span><span data-lang="en">Shadow contour and self-sabotage scenarios</span></li>
+                        <li class="flex items-center gap-2"><span>✔</span> <span data-lang="ru">Эмоциональный ресурс и механизмы восстановления</span><span data-lang="en">Emotional resources and recovery mechanisms</span></li>
+                        <li class="flex items-center gap-2"><span>✔</span> <span data-lang="ru">Вектор эволюции и стратегии развития</span><span data-lang="en">Evolution vector and growth strategies</span></li>
+                    </ul>
+                </div>
+
+                <div class="glass p-10 rounded-3xl border-l-4 border-purple-500">
+                    <h3 class="text-2xl font-bold mb-4 text-purple-400 italic">
+                        <span data-lang="ru">💼 Карьера и Финансы</span><span data-lang="en">💼 Career & Finance</span>
+                    </h3>
+                    <p class="text-slate-400 mb-6 text-sm">
+                        <span data-lang="ru">Профессиональный аудит вашего потенциала и финансовых стратегий.</span>
+                        <span data-lang="en">Professional audit of your potential and financial strategies.</span>
+                    </p>
+                    <ul class="space-y-2 text-xs text-slate-300 mb-8">
+                        <li class="flex items-center gap-2"><span>✔</span> <span data-lang="ru">Финансовый алгоритм и точки роста</span><span data-lang="en">Financial algorithm and growth points</span></li>
+                        <li class="flex items-center gap-2"><span>✔</span> <span data-lang="ru">Идеальный формат и психология рабочей среды</span><span data-lang="en">Ideal format and workplace psychology</span></li>
+                        <li class="flex items-center gap-2"><span>✔</span> <span data-lang="ru">Механизмы блокировки дохода</span><span data-lang="en">Income blocking mechanisms</span></li>
+                        <li class="flex items-center gap-2"><span>✔</span> <span data-lang="ru">Целевые ниши и тактические шаги</span><span data-lang="en">Target niches and tactical steps</span></li>
+                    </ul>
+                </div>
+
+                <div class="glass p-10 rounded-3xl border-l-4 border-rose-500">
+                    <h3 class="text-2xl font-bold mb-4 text-rose-400 italic">
+                        <span data-lang="ru">💞 Совместимость</span><span data-lang="en">💞 Compatibility</span>
+                    </h3>
+                    <p class="text-slate-400 mb-6 text-sm">
+                        <span data-lang="ru">Системное исследование динамики отношений и резонанса.</span>
+                        <span data-lang="en">Systemic study of relationship dynamics and resonance.</span>
+                    </p>
+                    <ul class="space-y-2 text-xs text-slate-300 mb-8">
+                        <li class="flex items-center gap-2"><span>✔</span> <span data-lang="ru">Анатомия конфликта и алгоритмы понимания</span><span data-lang="en">Anatomy of conflict and understanding algorithms</span></li>
+                        <li class="flex items-center gap-2"><span>✔</span> <span data-lang="ru">Бытовые стратегии и зоны резонанса</span><span data-lang="en">Lifestyle strategies and resonance zones</span></li>
+                        <li class="flex items-center gap-2"><span>✔</span> <span data-lang="ru">Магнетизм и структура связи</span><span data-lang="en">Magnetism and connection structure</span></li>
+                        <li class="flex items-center gap-2"><span>✔</span> <span data-lang="ru">Баланс ресурсов и влияния в паре</span><span data-lang="en">Balance of resources and influence in a couple</span></li>
+                    </ul>
+                </div>
+
+                <div class="glass p-10 rounded-3xl border-l-4 border-emerald-500">
+                    <h3 class="text-2xl font-bold mb-4 text-emerald-400 italic">
+                        <span data-lang="ru">👶 Детская карта</span><span data-lang="en">👶 Child's Chart</span>
+                    </h3>
+                    <p class="text-slate-400 mb-6 text-sm">
+                        <span data-lang="ru">Индивидуальная инструкция к развитию вашего ребенка.</span>
+                        <span data-lang="en">An individual guide to your child's development.</span>
+                    </p>
+                    <ul class="space-y-2 text-xs text-slate-300 mb-8">
+                        <li class="flex items-center gap-2"><span>✔</span> <span data-lang="ru">Врожденные склонности и таланты</span><span data-lang="en">Innate inclinations and talents</span></li>
+                        <li class="flex items-center gap-2"><span>✔</span> <span data-lang="ru">Восприятие границ и дисциплины</span><span data-lang="en">Perception of boundaries and discipline</span></li>
+                        <li class="flex items-center gap-2"><span>✔</span> <span data-lang="ru">Предпочтительная среда обучения</span><span data-lang="en">Preferred learning environment</span></li>
+                        <li class="flex items-center gap-2"><span>✔</span> <span data-lang="ru">Условия эмоциональной безопасности</span><span data-lang="en">Conditions for emotional security</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 max-w-5xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-8 italic text-sky-400 uppercase tracking-widest">
+            <span data-lang="ru">🧠 О Платформе</span><span data-lang="en">🧠 About the Platform</span>
+        </h2>
+        <p class="text-slate-300 leading-relaxed mb-12">
+            <span data-lang="ru">AstroScan — это система автоматизированной обработки астрологических данных. Мы исключаем субъективный фактор человеческой интерпретации, предоставляя математически точный и психологически выверенный разбор. Каждый отчет формируется индивидуально с учетом всех планетарных аспектов и конфигураций.</span>
+            <span data-lang="en">AstroScan is a system for automated processing of astrological data. We eliminate the subjective factor of human interpretation, providing a mathematically accurate and psychologically verified analysis. Each report is generated individually, taking into account all planetary aspects and configurations.</span>
+        </p>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="p-6">
+                <div class="text-3xl mb-4">⚙️</div>
+                <h4 class="font-bold mb-2 uppercase text-xs tracking-widest text-sky-400"><span data-lang="ru">Автоматизация</span><span data-lang="en">Automation</span></h4>
+                <p class="text-[10px] text-slate-500"><span data-lang="ru">Никаких ошибок в расчетах и субъективности эксперта.</span><span data-lang="en">No calculation errors or expert subjectivity.</span></p>
+            </div>
+            <div class="p-6">
+                <div class="text-3xl mb-4">📄</div>
+                <h4 class="font-bold mb-2 uppercase text-xs tracking-widest text-sky-400"><span data-lang="ru">PDF Формат</span><span data-lang="en">PDF Format</span></h4>
+                <p class="text-[10px] text-slate-500"><span data-lang="ru">Готовый документ, удобный для изучения и хранения.</span><span data-lang="en">A ready-to-use document for study and storage.</span></p>
+            </div>
+            <div class="p-6">
+                <div class="text-3xl mb-4">🔒</div>
+                <h4 class="font-bold mb-2 uppercase text-xs tracking-widest text-sky-400"><span data-lang="ru">Приватность</span><span data-lang="en">Privacy</span></h4>
+                <p class="text-[10px] text-slate-500"><span data-lang="ru">Данные удаляются сразу после генерации отчета.</span><span data-lang="en">Data is deleted immediately after report generation.</span></p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 border-t border-slate-900 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
+            <div class="font-mono-tech font-bold text-lg tracking-widest uppercase italic text-slate-400">ASTROSCAN LAB / 2026</div>
+            <div class="flex gap-10 text-[10px] uppercase tracking-[0.3em] text-slate-600">
+                <a href="privacy.html" class="hover:text-white transition"><span data-lang="ru">Приватность</span><span data-lang="en">Privacy</span></a>
+                <a href="terms.html" class="hover:text-white transition"><span data-lang="ru">Условия</span><span data-lang="en">Terms</span></a>
+                <a href="https://t.me/AstroScanSupport" class="hover:text-white transition"><span data-lang="ru">Поддержка</span><span data-lang="en">Support</span></a>
+            </div>
         </div>
     </footer>
 
