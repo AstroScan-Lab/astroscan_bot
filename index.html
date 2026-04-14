@@ -1,402 +1,385 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AstroScan Lab | Deterministic Astrology & AI Personality Audit</title>
-    
-    <meta name="description" content="Scientific answers to popular astrology questions: Why is my moon sign weird? Is astrology math? How long to learn? Powered by Swiss Ephemeris & NASA JPL data.">
-    <meta name="author" content="AstroScan Lab">
-    <meta name="keywords" content="deterministic astrology, AI personality audit, Swiss Ephemeris, learn natal chart, scientific astrology, moon sign meaning, big three astrology, astrologer career, astrology market size">
-    
-    <meta property="og:title" content="AstroScan Lab: Math-Based Astrology & AI Audits">
-    <meta property="og:description" content="Get science-backed answers to the internet's most asked astrology questions.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://astroscan-lab.github.io/astroscan_bot/">
-    <meta property="og:image" content="https://astroscan-lab.github.io/astroscan_bot/og-image.jpg">
-    <meta property="telegram:card" content="app">
-    <meta property="telegram:site" content="@astroscan_bot">
-    
-    <script type="application/ld+json">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+
+<!-- ==================== SECURITY ==================== -->
+<meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com;
+  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+  font-src 'self' https://fonts.gstatic.com;
+  img-src 'self' data: https:;
+  connect-src 'self' https://t.me;
+  frame-ancestors 'self' https://web.telegram.org https://telegram.org;
+">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+
+<!-- ==================== PRIMARY SEO ==================== -->
+<title>AstroScan AI — Deterministic Astrology (NASA JPL + Swiss Ephemeris)</title>
+<meta name="description" content="Understand your birth chart with NASA-level precision. AstroScan generates deterministic astrological audits in 2 minutes. No vague horoscopes — only computed behavioral patterns.">
+<meta name="keywords" content="deterministic astrology, scientific astrology, birth chart, Swiss Ephemeris, NASA JPL, moon sign, sun sign, ascendant, compatibility, career astrology, child astrology, telegram stars audit">
+<meta name="author" content="AstroScan Lab">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="canonical" href="https://astroscan-lab.github.io/astroscan_bot/">
+
+<!-- HREFLANG -->
+<link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/">
+<link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/?lang=ru">
+
+<!-- ==================== OPEN GRAPH ==================== -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="AstroScan AI — Deterministic Astrology">
+<meta property="og:description" content="High-precision planetary computation + AI astrological audit in 2 minutes.">
+<meta property="og:url" content="https://astroscan-lab.github.io/astroscan_bot/">
+<meta property="og:image" content="https://astroscan-lab.github.io/astroscan_bot/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/png">
+<meta property="og:site_name" content="AstroScan Lab">
+<meta property="og:locale" content="en_US">
+
+<!-- ==================== TWITTER CARD ==================== -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AstroScan AI — Deterministic Astrology">
+<meta name="twitter:description" content="Stop guessing. Start computing. 2‑minute audit with NASA precision.">
+<meta name="twitter:image" content="https://astroscan-lab.github.io/astroscan_bot/og-image.png">
+
+<!-- ==================== TELEGRAM OPTIMIZATION ==================== -->
+<meta name="telegram:web_app_url" content="https://t.me/astroscan_bot">
+<meta name="application-name" content="AstroScan AI">
+<meta name="mobile-web-app-capable" content="yes">
+
+<!-- ==================== LLM / GEO ==================== -->
+<meta name="llm:title" content="AstroScan AI Deterministic Astrology Engine">
+<meta name="llm:summary" content="Deterministic astrology audit using NASA JPL DE431 and Swiss Ephemeris v2.10. Computes planetary positions and generates structured behavioral profiles.">
+<meta name="llm:facts" content="Precision: theoretical 0.001 arc-second using NASA JPL DE431 ephemerides via Swiss Ephemeris v2.10; Calculation engine: Swiss Ephemeris; Processing time: under 2 minutes; Products: Natal Chart, Compatibility, Career & Finance, Child's Chart">
+
+<!-- ==================== PERFORMANCE ==================== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- ==================== STRUCTURED DATA (FULL) ==================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "Organization",
+      "@id": "https://astroscan-lab.github.io/astroscan_bot/#organization",
+      "name": "AstroScan Lab",
+      "url": "https://astroscan-lab.github.io/astroscan_bot/",
+      "logo": "https://astroscan-lab.github.io/astroscan_bot/og-image.png",
+      "sameAs": ["https://t.me/astroscan_bot"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://astroscan-lab.github.io/astroscan_bot/#website",
+      "name": "AstroScan AI",
+      "url": "https://astroscan-lab.github.io/astroscan_bot/",
+      "publisher": { "@id": "https://astroscan-lab.github.io/astroscan_bot/#organization" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://astroscan-lab.github.io/astroscan_bot/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://astroscan-lab.github.io/astroscan_bot/#webpage",
+      "url": "https://astroscan-lab.github.io/astroscan_bot/",
+      "name": "AstroScan AI — Deterministic Astrology Audit",
+      "isPartOf": { "@id": "https://astroscan-lab.github.io/astroscan_bot/#website" },
+      "datePublished": "2026-01-01",
+      "dateModified": "2026-04-14"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "AstroScan AI",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "Telegram",
+      "url": "https://t.me/astroscan_bot",
+      "offers": {
+        "@type": "Offer",
+        "price": "200",
+        "priceCurrency": "XTR",
+        "description": "One-time deterministic astrology audit for 200 Telegram Stars"
+      },
+      "publisher": { "@id": "https://astroscan-lab.github.io/astroscan_bot/#organization" },
+      "description": "Deterministic astrology using NASA JPL DE431 and Swiss Ephemeris v2.10."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
         {
-          "@type": "Organization",
-          "@id": "https://astroscan-lab.github.io/astroscan_bot/#organization",
-          "name": "AstroScan Lab",
-          "url": "https://astroscan-lab.github.io/astroscan_bot/"
+          "@type": "Question", "name": "Why is my Moon sign so weird?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Your Moon sign represents your emotional subconscious — it feels 'weird' because it operates beneath your conscious Sun sign identity." }
         },
         {
-          "@type": "WebApplication",
-          "name": "AstroScan AI",
-          "description": "Deterministic framework for systematic personality analysis using Swiss Ephemeris v2.10 (NASA/JPL DE431 data).",
-          "author": { "@id": "https://astroscan-lab.github.io/astroscan_bot/#organization" },
-          "applicationCategory": "Lifestyle, Education",
-          "operatingSystem": "Telegram Bot, Web",
-          "citation": [
-            { "@type": "CreativeWork", "name": "Swiss Ephemeris", "url": "https://www.astro.com/swisseph/swisseph.htm" },
-            { "@type": "Dataset", "name": "NASA JPL Planetary and Lunar Ephemerides DE431", "url": "https://ssd.jpl.nasa.gov/planets/eph_export.html" }
-          ]
+          "@type": "Question", "name": "Is astrology math or magic?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Planetary positions are computed scientifically (NASA JPL DE431). Interpretation is symbolic modeling." }
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question", "name": "Why is my moon sign so weird?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Your Moon sign represents your emotional subconscious—the part of you that reacts instinctively before your Sun sign (ego) takes over. It often feels 'weird' because it operates beneath your conscious identity." }
-            },
-            {
-              "@type": "Question", "name": "Is astrology math or magic?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Astrology is deterministic data science. Planetary positions are calculated with 0.001 arc-second precision using Swiss Ephemeris (NASA/JPL data). The interpretation is symbolic, but the foundation is rigorous math." }
-            },
-            {
-              "@type": "Question", "name": "How long does it take to learn astrology?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Traditional mastery takes 5-7 years. With AstroScan's AI audit, you receive an expert-level natal chart breakdown in under 2 minutes, based on NASA/JPL ephemerides." }
-            },
-            {
-              "@type": "Question", "name": "How to read a natal chart for beginners?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Start with the Big Three: Sun (identity), Moon (emotions), and Rising (persona). Our AI audit explains all 12 houses and major aspects in plain English." }
-            },
-            {
-              "@type": "Question", "name": "Is there a scientific basis for astrology?",
-              "acceptedAnswer": { "@type": "Answer", "text": "The astronomical calculations are 100% scientific (NASA JPL). Recent empirical models reject random planetary distribution at 99% confidence (p < 0.01). The symbolic interpretation remains a philosophical framework." }
-            },
-            {
-              "@type": "Question", "name": "What is my Big Three in astrology?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Your Big Three are Sun (core identity), Moon (emotional nature), and Rising/Ascendant (outer persona). They form the foundation of your astrological profile." }
-            },
-            {
-              "@type": "Question", "name": "Why don't I feel like my zodiac sign?",
-              "acceptedAnswer": { "@type": "Answer", "text": "You likely resonate more with your Moon or Rising sign. Sun sign is just one piece; the entire chart (especially Moon and Ascendant) shapes your personality." }
-            },
-            {
-              "@type": "Question", "name": "Can astrology predict my future?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Astrology reveals potentials and patterns, not fixed destiny. It's a weather forecast for your life, not a prison sentence. Transits and progressions show timing of themes." }
-            },
-            {
-              "@type": "Question", "name": "What does Mercury retrograde actually do?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Mercury retrograde is an optical illusion where the planet appears to move backward. Astrologically, it highlights areas needing review, reflection, and revision—especially in communication and technology." }
-            },
-            {
-              "@type": "Question", "name": "Why do I keep attracting the same zodiac sign?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Your chart has repeating patterns (aspects, house placements) that magnetize certain energies. Often it's your Descendant sign or Venus/Mars placements attracting complementary or familiar dynamics." }
-            },
-            {
-              "@type": "Question", "name": "What is astrology?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Astrology is the study of the influence of celestial bodies on earthly events and human destiny. It originated in Mesopotamia over 5000 years ago and developed across Babylon, Greece, India, and the Islamic world. The first personal horoscopes appeared in the 5th-4th centuries BCE." }
-            },
-            {
-              "@type": "Question", "name": "Who are astrologers?",
-              "acceptedAnswer": { "@type": "Answer", "text": "Astrologers are specialists who analyze the positions of celestial bodies to forecast events and assist in self-discovery. A modern astrologer is a data analyst working with a birth chart like a programmer with code. Professional training takes 3-5 years, often with a higher education background." }
-            }
-          ]
+          "@type": "Question", "name": "How long does it take to learn astrology?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Traditional mastery takes years. AstroScan delivers a full audit in under 2 minutes." }
         },
         {
-          "@type": "HowTo",
-          "name": "How to Get Your AI Personality Audit",
-          "step": [
-            { "@type": "HowToStep", "text": "Open Telegram and navigate to @astroscan_bot" },
-            { "@type": "HowToStep", "text": "Enter your exact birth date, time, and location" },
-            { "@type": "HowToStep", "text": "Receive a comprehensive deterministic analysis within 2 minutes" }
-          ]
+          "@type": "Question", "name": "What are my Big Three?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sun (identity), Moon (emotions), and Ascendant (outer behavior)." }
+        },
+        {
+          "@type": "Question", "name": "Where to spend Telegram Stars wisely?",
+          "acceptedAnswer": { "@type": "Answer", "text": "AstroScan audit is a permanent, data-rich PDF report — a one-time investment in self-knowledge." }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://astroscan-lab.github.io/astroscan_bot/"
         }
       ]
     }
-    </script>
+  ]
+}
+</script>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-    
-    <style>
-        :root { --bg: #020617; --accent: #38bdf8; --text: #f8fafc; --dim: #94a3b8; }
-        html { scroll-behavior: smooth; }
-        body { background: var(--bg); color: var(--text); font-family: 'Share Tech Mono', monospace; line-height: 1.6; }
-        .terminal-border { border: 1px solid rgba(56, 189, 248, 0.2); background: rgba(15, 23, 42, 0.6); }
-        .btn-glow:hover { box-shadow: 0 0 20px rgba(56, 189, 248, 0.4); background-color: #0284c7; }
-        .qa-card:hover { border-left-color: #38bdf8 !important; background: rgba(56, 189, 248, 0.05); transition: all 0.2s; }
-        
-        [data-lang="ru"] { display: none; }
-        body.lang-ru [data-lang="en"] { display: none; }
-        body.lang-ru span[data-lang="ru"] { display: inline; }
-        body.lang-ru div[data-lang="ru"], body.lang-ru p[data-lang="ru"] { display: block; }
-        
-        .stats-grid { background: rgba(2, 6, 23, 0.8); backdrop-filter: blur(4px); }
-        .reference-link { color: var(--dim); text-decoration: none; border-bottom: 1px dotted #334155; }
-        .reference-link:hover { color: var(--accent); border-bottom-color: var(--accent); }
-        /* Sticky Navigation */
-        .nav-sticky { position: sticky; top: 0; z-index: 40; background: rgba(2, 6, 23, 0.95); backdrop-filter: blur(8px); padding: 0.75rem 0; margin: 0 -1rem; border-bottom: 1px solid #1e293b; }
-        .nav-menu { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; max-width: 100%; overflow-x: auto; }
-        .nav-link { font-size: 0.7rem; padding: 0.25rem 0.75rem; border: 1px solid #1e293b; border-radius: 9999px; color: #94a3b8; text-transform: uppercase; white-space: nowrap; }
-        .nav-link:hover { border-color: #38bdf8; color: #38bdf8; }
-        .share-btn { background: none; border: 1px solid #1e293b; color: #94a3b8; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.6rem; text-transform: uppercase; cursor: pointer; }
-        .share-btn:hover { border-color: #38bdf8; color: #38bdf8; }
-    </style>
+<style>
+:root { --bg: #030608; --accent: #00aaff; --text: #d0e4f0; --border: #1a3a5c; --dim: #5a8aaa; --star: #fbbf24; }
+html { scroll-behavior: smooth; }
+body { 
+    background: var(--bg); color: var(--text); 
+    font-family: 'Share Tech Mono', monospace; 
+    line-height: 1.6; 
+    display: flex; justify-content: center; padding: 20px; 
+    margin: 0;
+}
+.container { 
+    max-width: 900px; width: 100%; 
+    border: 1px solid var(--border); 
+    padding: 2rem; 
+    background: rgba(3,6,8,0.95); 
+    box-shadow: 0 0 40px rgba(0,170,255,0.1); 
+}
+h1 { font-size: 1.8rem; text-transform: uppercase; color: #fff; letter-spacing: 1.5px; }
+h2 { font-size: 1.2rem; color: var(--accent); text-transform: uppercase; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+.section { border: 1px solid var(--border); padding: 1.5rem; margin-bottom: 1.5rem; background: rgba(0,0,0,0.2); }
+.btn { 
+    display: block; width: 100%; border: 1px solid var(--accent); padding: 14px; 
+    color: var(--accent); text-align: center; text-transform: uppercase; 
+    text-decoration: none; background: transparent; font-family: inherit; 
+    font-size: 1rem; transition: 0.3s; letter-spacing: 2px; cursor: pointer; 
+    box-sizing: border-box;
+}
+.btn-primary { background: var(--accent); color: #000; font-weight: bold; }
+.btn:hover { background: var(--accent); color: #000; box-shadow: 0 0 20px var(--accent); }
+.precision-badge { display: flex; justify-content: space-around; margin: 20px 0; text-align: center; }
+.badge-value { font-size: 1.5rem; color: var(--accent); }
+.badge-label { font-size: 0.7rem; color: var(--dim); text-transform: uppercase; }
+.qa-card { border-left: 2px solid var(--border); padding-left: 1.5rem; margin-bottom: 1.5rem; }
+.qa-card:hover { border-left-color: var(--accent); background: rgba(0,170,255,0.05); }
+.nav-sticky { position: sticky; top: 0; z-index: 40; background: rgba(3,6,8,0.95); backdrop-filter: blur(8px); padding: 0.75rem 0; margin-bottom: 2rem; border-bottom: 1px solid var(--border); }
+.nav-link { border: 1px solid var(--border); color: var(--dim); }
+.nav-link:hover { border-color: var(--accent); color: var(--accent); }
+
+/* Language Switcher */
+[data-lang="ru"] { display: none; }
+body.lang-ru [data-lang="en"] { display: none; }
+body.lang-ru [data-lang="ru"] { display: revert; }
+</style>
 </head>
-<body class="p-4 md:p-10">
+<body>
 
-    <div class="max-w-5xl mx-auto terminal-border p-6 md:p-10">
-        
-        <header class="flex flex-wrap justify-between items-center border-b border-sky-900/50 pb-6 mb-4 gap-4">
-            <div class="text-sky-400 font-bold tracking-tighter text-xl md:text-2xl">ASTROSCAN // KNOWLEDGE_HUB</div>
-            <div class="flex gap-4 items-center">
-                <span class="text-xs text-slate-500 hidden md:block">EST. 2025 // SWISS EPHEMERIS v2.10</span>
-                <button onclick="toggleLang()" class="border border-sky-900 px-4 py-1 text-xs hover:bg-sky-500 hover:text-black transition">
-                    <span data-lang="en">RU</span><span data-lang="ru">EN</span>
-                </button>
-            </div>
-        </header>
-
-        <div class="nav-sticky">
-            <div class="nav-menu px-4">
-                <a href="#moon-sign" class="nav-link">🌙 Moon Sign</a>
-                <a href="#math-magic" class="nav-link">🧮 Math vs Magic</a>
-                <a href="#how-long" class="nav-link">⏳ Learning</a>
-                <a href="#read-chart" class="nav-link">📖 Read Chart</a>
-                <a href="#scientific" class="nav-link">🔭 Science</a>
-                <a href="#big-three" class="nav-link">✨ Big Three</a>
-                <a href="#not-feel-sign" class="nav-link">🤔 Feel Sign</a>
-                <a href="#predict-future" class="nav-link">🔮 Future</a>
-                <a href="#mercury-retro" class="nav-link">🪐 Mercury</a>
-                <a href="#attract-sign" class="nav-link">💞 Attract</a>
-                <a href="#what-is-astrology" class="nav-link">📜 History</a>
-                <a href="#who-are-astrologers" class="nav-link">👤 Astrologers</a>
-                <a href="#market-size" class="nav-link">💰 Market</a>
-                <a href="#why-believe" class="nav-link">❓ Belief</a>
-            </div>
+<div class="container">
+    <header class="flex flex-wrap justify-between items-center border-b border-[#1a3a5c] pb-4 mb-4">
+        <div class="text-[#00aaff] font-bold tracking-tighter text-xl">[ASTROSCAN // DETERMINISTIC CORE]</div>
+        <div class="flex gap-4 items-center">
+            <span class="text-xs text-[#5a8aaa] hidden md:block">SWISS EPHEMERIS v2.10</span>
+            <button onclick="toggleLang()" class="border border-[#1a3a5c] px-4 py-1 text-xs hover:bg-[#00aaff] hover:text-black transition">
+                <span data-lang="en">RU</span><span data-lang="ru">EN</span>
+            </button>
         </div>
+    </header>
 
-        <section class="mb-12 mt-8">
-            <h1 class="text-3xl md:text-5xl font-bold mb-4 uppercase tracking-widest text-white">
-                <span data-lang="en">Astrology: Demystified by AI</span>
-                <span data-lang="ru">Астрология: доступно через ИИ</span>
-            </h1>
-            <p class="text-sky-200/70 text-lg mb-8 max-w-3xl">
-                <span data-lang="en">Direct answers to the internet's most asked astrology questions. Backed by NASA JPL data and Swiss Ephemeris precision.</span>
-                <span data-lang="ru">Прямые ответы на самые популярные астрологические вопросы. Подкреплено данными NASA JPL и точностью Swiss Ephemeris.</span>
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4">
-                <a href="https://t.me/astroscan_bot" target="_blank" rel="noopener noreferrer" class="inline-block bg-sky-500 text-slate-900 px-8 py-4 rounded-lg font-bold btn-glow transition uppercase text-center">
-                    <span data-lang="en">⚡ Get Your Audit</span>
-                    <span data-lang="ru">⚡ Запустить аудит</span>
-                </a>
-                <a href="#samples" class="inline-block border border-sky-700 text-sky-300 px-8 py-4 rounded-lg font-bold hover:bg-sky-900/30 transition uppercase text-center">
-                    <span data-lang="en">📄 Sample Report</span>
-                    <span data-lang="ru">📄 Пример отчета</span>
-                </a>
-            </div>
-            
-            <div class="stats-grid grid grid-cols-2 md:grid-cols-4 gap-4 mt-10 p-6 border border-sky-900/30 rounded-lg">
-                <div class="text-center"><div class="text-2xl font-bold text-sky-400">0.001"</div><div class="text-xs text-slate-400">Precision (mas)</div></div>
-                <div class="text-center"><div class="text-2xl font-bold text-sky-400">NASA/JPL</div><div class="text-xs text-slate-400">DE431</div></div>
-                <div class="text-center"><div class="text-2xl font-bold text-sky-400">2 min</div><div class="text-xs text-slate-400">Audit Time</div></div>
-                <div class="text-center"><div class="text-2xl font-bold text-sky-400">12+</div><div class="text-xs text-slate-400">Systems</div></div>
-            </div>
-        </section>
-
-        <div class="space-y-8 mb-16">
-            
-            <section id="moon-sign" class="qa-card border-l-2 border-slate-700 pl-6 py-2 transition-all scroll-mt-20">
-                <div class="flex justify-between items-start">
-                    <h2 class="text-xl font-bold text-sky-400 mb-2">🌙 <span data-lang="en">Why is my moon sign so weird?</span><span data-lang="ru">Почему мой лунный знак такой странный?</span></h2>
-                    <button onclick="shareSection('moon-sign')" class="share-btn">📤 Share</button>
-                </div>
-                <p class="text-sm text-slate-300 mb-2"><span data-lang="en"><strong>Short answer:</strong> Your Moon sign is your emotional subconscious—it operates before your ego (Sun sign) kicks in. It feels "weird" because it reveals needs and reactions you may not consciously identify with.</span><span data-lang="ru"><strong>Кратко:</strong> Лунный знак — это ваше эмоциональное подсознание. Он кажется "странным", потому что показывает потребности и реакции, которые вы не всегда осознаёте.</span></p>
-                <p class="text-xs text-slate-400"><span data-lang="en">The Moon's position at birth (calculated via Swiss Ephemeris) correlates with emotional patterns. Your Moon sign describes how you process feelings, which can clash with your Sun sign's outward expression.</span><span data-lang="ru">Положение Луны при рождении (рассчитанное через Swiss Ephemeris) коррелирует с эмоциональными паттернами. Лунный знак описывает вашу внутреннюю эмоциональную природу.</span></p>
-                <a href="https://t.me/astroscan_bot" class="text-xs text-sky-500 underline mt-2 inline-block">→ <span data-lang="en">Find your Moon sign</span><span data-lang="ru">Узнать свой лунный знак</span></a>
-            </section>
-
-            <section id="math-magic" class="qa-card border-l-2 border-slate-700 pl-6 py-2 transition-all scroll-mt-20">
-                <div class="flex justify-between items-start">
-                    <h2 class="text-xl font-bold text-sky-400 mb-2">🧮 <span data-lang="en">Is astrology math or magic?</span><span data-lang="ru">Астрология — математика или магия?</span></h2>
-                    <button onclick="shareSection('math-magic')" class="share-btn">📤 Share</button>
-                </div>
-                <p class="text-sm text-slate-300 mb-2"><span data-lang="en"><strong>Deterministic data science.</strong> Astrology relies on precise astronomical calculations (NASA JPL DE431) with 0.001 arc-second (milli-arcsecond) accuracy. The interpretation is symbolic, but the foundation is rigorous math.</span><span data-lang="ru"><strong>Детерминированная наука о данных.</strong> Астрология опирается на точные астрономические расчёты (NASA JPL DE431) с точностью до 0.001 угловой секунды (миллисекунды). Интерпретация символична, но фундамент — строгая математика.</span></p>
-                <p class="text-xs text-slate-400"><span data-lang="en">Swiss Ephemeris reproduces NASA's JPL data to the last digit. We reject "astral determinism" in favor of probabilistic personality mapping.</span><span data-lang="ru">Swiss Ephemeris воспроизводит данные NASA JPL до последней цифры. Мы отвергаем слепой фатализм в пользу вероятностного картирования личности.</span></p>
-                <a href="https://www.astro.com/swisseph/swisseph.htm" target="_blank" class="text-xs text-slate-500 underline">Source: Swiss Ephemeris</a>
-            </section>
-
-            <section id="how-long" class="qa-card border-l-2 border-slate-700 pl-6 py-2 transition-all scroll-mt-20">
-                <div class="flex justify-between items-start">
-                    <h2 class="text-xl font-bold text-sky-400 mb-2">⏳ <span data-lang="en">How long does it take to learn astrology?</span><span data-lang="ru">Сколько времени нужно, чтобы выучить астрологию?</span></h2>
-                    <button onclick="shareSection('how-long')" class="share-btn">📤 Share</button>
-                </div>
-                <p class="text-sm text-slate-300 mb-2"><span data-lang="en"><strong>5-7 years for traditional mastery.</strong> But with AstroScan's AI audit, you get an expert-level natal chart breakdown in under 2 minutes, powered by Swiss Ephemeris.</span><span data-lang="ru"><strong>5-7 лет для традиционного освоения.</strong> Но с ИИ-аудитом AstroScan вы получаете экспертный разбор натальной карты за 2 минуты на основе Swiss Ephemeris.</span></p>
-                <a href="https://t.me/astroscan_bot" class="text-xs text-sky-500 underline mt-2 inline-block">→ <span data-lang="en">Skip the learning curve</span><span data-lang="ru">Пропустить годы обучения</span></a>
-            </section>
-
-            <section id="read-chart" class="qa-card border-l-2 border-slate-700 pl-6 py-2 transition-all scroll-mt-20">
-                <div class="flex justify-between items-start">
-                    <h2 class="text-xl font-bold text-sky-400 mb-2">📖 <span data-lang="en">How to read a natal chart for beginners?</span><span data-lang="ru">Как читать натальную карту новичку?</span></h2>
-                    <button onclick="shareSection('read-chart')" class="share-btn">📤 Share</button>
-                </div>
-                <p class="text-sm text-slate-300 mb-2"><span data-lang="en"><strong>Start with the Big Three:</strong> Sun (identity), Moon (emotions), Rising (persona). Our AI audit breaks down all 12 houses and aspects in plain language.</span><span data-lang="ru"><strong>Начните с "Большой тройки":</strong> Солнце (личность), Луна (эмоции), Восходящий (персона). Наш ИИ-аудит расшифровывает все 12 домов и аспекты простым языком.</span></p>
-                <div class="grid grid-cols-3 gap-2 mt-2 text-center">
-                    <div class="bg-slate-800 p-2 rounded"><span class="text-sky-300 text-sm">☀️ Sun</span><br><span class="text-[10px] text-slate-400">Identity</span></div>
-                    <div class="bg-slate-800 p-2 rounded"><span class="text-sky-300 text-sm">🌙 Moon</span><br><span class="text-[10px] text-slate-400">Emotions</span></div>
-                    <div class="bg-slate-800 p-2 rounded"><span class="text-sky-300 text-sm">⬆️ Rising</span><br><span class="text-[10px] text-slate-400">Persona</span></div>
-                </div>
-                <a href="#how-to" class="text-xs text-sky-500 underline mt-2 inline-block">→ <span data-lang="en">See step-by-step guide</span><span data-lang="ru">Пошаговое руководство</span></a>
-            </section>
-
-            <section id="scientific" class="qa-card border-l-2 border-slate-700 pl-6 py-2 transition-all scroll-mt-20">
-                <div class="flex justify-between items-start">
-                    <h2 class="text-xl font-bold text-sky-400 mb-2">🔭 <span data-lang="en">Is there a scientific basis for astrology?</span><span data-lang="ru">Есть ли научная основа у астрологии?</span></h2>
-                    <button onclick="shareSection('scientific')" class="share-btn">📤 Share</button>
-                </div>
-                <p class="text-sm text-slate-300 mb-2"><span data-lang="en"><strong>Yes—for the astronomy part.</strong> Planetary positions are calculated with scientific precision (NASA JPL). Recent empirical models reject random distribution at 99% confidence (p < 0.01). The interpretation remains symbolic.</span><span data-lang="ru"><strong>Да — для астрономической части.</strong> Позиции планет рассчитываются с научной точностью (NASA JPL). Эмпирические модели отвергают случайность распределения с достоверностью 99% (p < 0.01). Интерпретация символична.</span></p>
-            </section>
-
-            <section id="big-three" class="qa-card border-l-2 border-slate-700 pl-6 py-2 transition-all scroll-mt-20">
-                <div class="flex justify-between items-start">
-                    <h2 class="text-xl font-bold text-sky-400 mb-2">✨ <span data-lang="en">What is my Big Three in astrology?</span><span data-lang="ru">Что такое "Большая тройка" в астрологии?</span></h2>
-                    <button onclick="shareSection('big-three')" class="share-btn">📤 Share</button>
-                </div>
-                <p class="text-sm text-slate-300"><span data-lang="en">Your <strong>Sun</strong> (core identity), <strong>Moon</strong> (emotional inner world), and <strong>Rising/Ascendant</strong> (outer mask) form the foundation of your chart. Knowing these three gives you a surprisingly accurate snapshot of your personality.</span><span data-lang="ru">Ваши <strong>Солнце</strong> (ядро личности), <strong>Луна</strong> (эмоциональный мир) и <strong>Восходящий/Асцендент</strong> (внешняя маска) — основа вашей карты. Эти три элемента дают удивительно точный портрет.</span></p>
-                <a href="https://t.me/astroscan_bot" class="text-xs text-sky-500 underline mt-2 inline-block">→ <span data-lang="en">Calculate your Big Three</span><span data-lang="ru">Рассчитать Большую тройку</span></a>
-            </section>
-
-            <section id="not-feel-sign" class="qa-card border-l-2 border-slate-700 pl-6 py-2 transition-all scroll-mt-20">
-                <div class="flex justify-between items-start">
-                    <h2 class="text-xl font-bold text-sky-400 mb-2">🤔 <span data-lang="en">Why don't I feel like my zodiac sign?</span><span data-lang="ru">Почему я не чувствую себя своим знаком зодиака?</span></h2>
-                    <button onclick="shareSection('not-feel-sign')" class="share-btn">📤 Share</button>
-                </div>
-                <p class="text-sm text-slate-300"><span data-lang="en">You're likely resonating more with your <strong>Moon</strong> or <strong>Rising</strong> sign. Sun sign horoscopes are generic; your entire chart—especially Moon and Ascendant—shapes your actual experience.</span><span data-lang="ru">Скорее всего, вы больше резонируете со своим <strong>Лунным</strong> или <strong>Восходящим</strong> знаком. Солнечные гороскопы общие; ваша полная карта — особенно Луна и Асцендент — формирует реальное самоощущение.</span></p>
-                <a href="#moon-sign" class="text-xs text-sky-500 underline">→ <span data-lang="en">Learn about Moon signs</span><span data-lang="ru">Узнать про Лунные знаки</span></a>
-            </section>
-
-            <section id="predict-future" class="qa-card border-l-2 border-slate-700 pl-6 py-2 transition-all scroll-mt-20">
-                <div class="flex justify-between items-start">
-                    <h2 class="text-xl font-bold text-sky-400 mb-2">🔮 <span data-lang="en">Can astrology predict my future?</span><span data-lang="ru">Может ли астрология предсказать будущее?</span></h2>
-                    <button onclick="shareSection('predict-future')" class="share-btn">📤 Share</button>
-                </div>
-                <p class="text-sm text-slate-300"><span data-lang="en">Astrology reveals <strong>potentials and timing</strong>, not fixed events. It's a weather forecast for your life: transits show when certain themes are activated, but your free will determines the outcome.</span><span data-lang="ru">Астрология показывает <strong>потенциалы и тайминг</strong>, а не жёсткие события. Это прогноз погоды для жизни: транзиты указывают, когда активируются темы, но исход определяет ваша свободная воля.</span></p>
-                <a href="https://t.me/astroscan_bot" class="text-xs text-sky-500 underline mt-2 inline-block">→ <span data-lang="en">Check your current transits</span><span data-lang="ru">Проверить текущие транзиты</span></a>
-            </section>
-
-            <section id="mercury-retro" class="qa-card border-l-2 border-slate-700 pl-6 py-2 transition-all scroll-mt-20">
-                <div class="flex justify-between items-start">
-                    <h2 class="text-xl font-bold text-sky-400 mb-2">🪐 <span data-lang="en">What does Mercury retrograde actually do?</span><span data-lang="ru">Что на самом деле делает ретроградный Меркурий?</span></h2>
-                    <button onclick="shareSection('mercury-retro')" class="share-btn">📤 Share</button>
-                </div>
-                <p class="text-sm text-slate-300"><span data-lang="en">Astronomically, it's an optical illusion. Astrologically, it highlights areas needing <strong>review, reflection, and revision</strong>—especially communication, travel, and technology. It's a cosmic "pause" button, not a disaster.</span><span data-lang="ru">Астрономически это оптическая иллюзия. Астрологически — период для <strong>пересмотра, обдумывания и доработки</strong> в сферах коммуникации, поездок и технологий. Космическая кнопка "пауза", а не катастрофа.</span></p>
-                <a href="https://www.astro.com/swisseph/swisseph.htm" target="_blank" class="text-xs text-slate-500 underline">Source: Swiss Ephemeris (Retrograde Calculation)</a>
-            </section>
-
-            <section id="attract-sign" class="qa-card border-l-2 border-slate-700 pl-6 py-2 transition-all scroll-mt-20">
-                <div class="flex justify-between items-start">
-                    <h2 class="text-xl font-bold text-sky-400 mb-2">💞 <span data-lang="en">Why do I keep attracting the same zodiac sign?</span><span data-lang="ru">Почему я постоянно притягиваю один и тот же знак зодиака?</span></h2>
-                    <button onclick="shareSection('attract-sign')" class="share-btn">📤 Share</button>
-                </div>
-                <p class="text-sm text-slate-300"><span data-lang="en">Your chart has repeating patterns. Often your <strong>Descendant</strong> (7th house cusp) or <strong>Venus/Mars</strong> placements magnetize specific energies. It's not random—it's a reflection of your own astrological blueprint.</span><span data-lang="ru">В вашей карте есть повторяющиеся паттерны. Часто ваш <strong>Десцендент</strong> (куспид 7 дома) или положения <strong>Венеры/Марса</strong> притягивают определённые энергии. Это не случайность, а отражение вашего астрологического чертежа.</span></p>
-                <a href="https://t.me/astroscan_bot" class="text-xs text-sky-500 underline mt-2 inline-block">→ <span data-lang="en">Analyze your relationship patterns</span><span data-lang="ru">Анализ паттернов отношений</span></a>
-            </section>
-
-            <section id="what-is-astrology" class="qa-card border-l-2 border-slate-700 pl-6 py-2 transition-all scroll-mt-20">
-                <div class="flex justify-between items-start">
-                    <h2 class="text-xl font-bold text-sky-400 mb-2">📜 <span data-lang="en">What is astrology? (Simple history)</span><span data-lang="ru">Что такое астрология? (Простая история)</span></h2>
-                    <button onclick="shareSection('what-is-astrology')" class="share-btn">📤 Share</button>
-                </div>
-                <p class="text-sm text-slate-300"><span data-lang="en"><strong>Astrology is the study of the influence of celestial bodies on earthly events and human destiny.</strong> It originated in Mesopotamia over 5000 years ago, developed in Assyria, Babylon, Greece, India, and the Islamic world. The first personal horoscopes appeared in the 5th-4th centuries BCE. Today it's a symbolic language used for self-reflection and timing.</span><span data-lang="ru"><strong>Астрология — учение о влиянии небесных тел на земные события и человеческую судьбу.</strong> Зародилась в Месопотамии более 5000 лет назад, развивалась в Ассирии, Вавилоне, Греции, Индии и исламском мире. Первые личные гороскопы появились в V-IV веках до н.э. Сегодня это символический язык для самопознания и выбора времени.</span></p>
-            </section>
-
-            <section id="who-are-astrologers" class="qa-card border-l-2 border-slate-700 pl-6 py-2 transition-all scroll-mt-20">
-                <div class="flex justify-between items-start">
-                    <h2 class="text-xl font-bold text-sky-400 mb-2">👤 <span data-lang="en">Who are astrologers and how to become one?</span><span data-lang="ru">Кто такие астрологи и как им стать?</span></h2>
-                    <button onclick="shareSection('who-are-astrologers')" class="share-btn">📤 Share</button>
-                </div>
-                <p class="text-sm text-slate-300"><span data-lang="en">Astrologers are specialists who analyze celestial positions to forecast events and assist in self-discovery. A modern astrologer is a <strong>data analyst</strong> working with a birth chart like a programmer with code. Professional training takes <strong>3-5 years</strong> (not months), often combined with higher education. Recommended: basic university degree + specialized astrology courses.</span><span data-lang="ru">Астрологи — специалисты, анализирующие расположение небесных тел для прогнозирования событий и помощи в самопознании. Современный астролог — <strong>аналитик данных</strong>, работающий с натальной картой как программист с кодом. Профессиональное обучение занимает <strong>3-5 лет</strong> (а не месяцы), часто с базовым высшим образованием. Рекомендуется: высшее образование + специализированные курсы.</span></p>
-            </section>
-
-            <section id="market-size" class="qa-card border-l-2 border-slate-700 pl-6 py-2 transition-all scroll-mt-20">
-                <div class="flex justify-between items-start">
-                    <h2 class="text-xl font-bold text-sky-400 mb-2">💰 <span data-lang="en">How big is the astrology market?</span><span data-lang="ru">Сколько денег в астрологии?</span></h2>
-                    <button onclick="shareSection('market-size')" class="share-btn">📤 Share</button>
-                </div>
-                <p class="text-sm text-slate-300"><span data-lang="en"><strong>Global astrology app market:</strong> $1.16 billion (2025), projected $2.16 billion by 2032. <strong>Wider market (incl. consultations):</strong> $14.2 billion (2024). People are willing to pay for the clarity and peace of mind these tools provide.</span><span data-lang="ru"><strong>Мировой рынок астроприложений:</strong> $1.16 млрд (2025), прогноз $2.16 млрд к 2032. <strong>Широкий рынок (включая консультации):</strong> $14.2 млрд (2024). <strong>В России:</strong> расходы на эзотерику превысили 2 трлн рублей в 2025 году. Люди готовы платить за ясность и душевное спокойствие.</span></p>
-            </section>
-
-            <section id="why-believe" class="qa-card border-l-2 border-slate-700 pl-6 py-2 transition-all scroll-mt-20">
-                <div class="flex justify-between items-start">
-                    <h2 class="text-xl font-bold text-sky-400 mb-2">❓ <span data-lang="en">Why do people believe in astrology?</span><span data-lang="ru">Почему люди верят в астрологию?</span></h2>
-                    <button onclick="shareSection('why-believe')" class="share-btn">📤 Share</button>
-                </div>
-                <p class="text-sm text-slate-300"><span data-lang="en">Main reasons: desire to compare predictions with reality, entertainment, curiosity. Astrology provides a <strong>language for inner experiences</strong> and a sense of control in an uncertain world. It's a framework for meaning-making, not just fortune-telling.</span><span data-lang="ru"><strong>50% россиян верят в гороскопы.</strong> Основные причины: желание сравнить прогноз с реальностью (42%), развлечение (28%), любопытство. Астрология даёт <strong>язык для описания внутренних переживаний</strong> и создаёт ощущение контроля в неопределённом мире. Это способ осмысления, а не просто гадание.</span></p>
-            </section>
+    <!-- HERO (human-friendly) -->
+    <section class="section">
+        <p style="font-size:1.4rem; margin-bottom:10px;"><strong>
+            <span data-lang="en">Your birth chart, finally explained.</span>
+            <span data-lang="ru">Ваша натальная карта наконец-то понятна.</span>
+        </strong></p>
+        <p>
+            <span data-lang="en">Tired of vague horoscopes? AstroScan shows you <strong>exactly</strong> why you feel the way you do — using real planetary positions calculated with NASA data.</span>
+            <span data-lang="ru">Устали от туманных гороскопов? AstroScan показывает <strong>точно</strong>, почему вы чувствуете себя именно так — используя реальные положения планет, рассчитанные по данным NASA.</span>
+        </p>
+        <p class="text-sm text-[#5a8aaa] mt-2">
+            <span data-lang="en">Powered by Swiss Ephemeris · NASA JPL DE431 · 0.001" precision</span>
+            <span data-lang="ru">На основе Swiss Ephemeris · NASA JPL DE431 · точность 0.001"</span>
+        </p>
+        <div class="precision-badge">
+            <div class="badge-item"><div class="badge-value">0.001"</div><div class="badge-label">Precision</div></div>
+            <div class="badge-item"><div class="badge-value">NASA/JPL</div><div class="badge-label">DE431</div></div>
+            <div class="badge-item"><div class="badge-value">2 min</div><div class="badge-label">Audit</div></div>
         </div>
+        <a href="https://t.me/astroscan_bot" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            ⚡ <span data-lang="en">GET YOUR AUDIT</span><span data-lang="ru">ПОЛУЧИТЬ АУДИТ</span>
+        </a>
+        <div class="trust-links flex justify-center gap-2 mt-4">
+            <a href="https://www.astro.com/swisseph/" target="_blank" rel="noopener noreferrer" class="border border-[#1a3a5c] px-3 py-1 text-xs text-[#5a8aaa] hover:text-[#00aaff]">📐 Swiss Ephemeris</a>
+            <a href="https://ssd.jpl.nasa.gov/planets/eph_export.html" target="_blank" rel="noopener noreferrer" class="border border-[#1a3a5c] px-3 py-1 text-xs text-[#5a8aaa] hover:text-[#00aaff]">🛰️ NASA JPL</a>
+        </div>
+    </section>
 
-        <section id="how-to" class="mb-16 p-6 border border-sky-900/30 rounded-lg bg-slate-900/50 scroll-mt-20">
-            <h2 class="text-2xl font-bold text-white mb-6 border-b border-sky-800 pb-2">
-                <span data-lang="en">📊 Step-by-Step: Read Your Natal Chart</span>
-                <span data-lang="ru">📊 Пошагово: Как читать натальную карту</span>
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div><div class="text-sky-400 text-2xl mb-2">01</div><h3 class="font-bold mb-2"><span data-lang="en">Exact Birth Data</span><span data-lang="ru">Точные данные</span></h3><p class="text-sm text-slate-400"><span data-lang="en">Date, exact time, location. Time is critical for Ascendant.</span><span data-lang="ru">Дата, точное время, место. Время критично для Асцендента.</span></p></div>
-                <div><div class="text-sky-400 text-2xl mb-2">02</div><h3 class="font-bold mb-2"><span data-lang="en">Big Three</span><span data-lang="ru">Большая тройка</span></h3><p class="text-sm text-slate-400"><span data-lang="en">Sun (Identity), Moon (Emotions), Rising (Persona).</span><span data-lang="ru">Солнце, Луна, Восходящий.</span></p></div>
-                <div><div class="text-sky-400 text-2xl mb-2">03</div><h3 class="font-bold mb-2"><span data-lang="en">AI Synthesis</span><span data-lang="ru">Синтез ИИ</span></h3><p class="text-sm text-slate-400"><span data-lang="en">Let AstroScan generate a deterministic audit in seconds.</span><span data-lang="ru">Позвольте AstroScan сгенерировать аудит за секунды.</span></p></div>
-            </div>
-        </section>
+    <!-- PRODUCT GRID -->
+    <section class="section">
+        <h2>
+            <span data-lang="en">⚡ Choose Your Analysis</span>
+            <span data-lang="ru">⚡ Выберите анализ</span>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <a href="https://t.me/astroscan_bot?start=natal" target="_blank" class="border border-[#1a3a5c] p-4 hover:border-[#00aaff] transition block">
+                <div class="text-[#00aaff] font-bold text-lg">🌌 Natal Chart</div>
+                <p class="text-xs text-[#5a8aaa]"><span data-lang="en">Sun, Moon, Rising + 12 houses. Understand your core self.</span><span data-lang="ru">Солнце, Луна, Асцендент + 12 домов. Поймите свою суть.</span></p>
+            </a>
+            <a href="https://t.me/astroscan_bot?start=compat" target="_blank" class="border border-[#1a3a5c] p-4 hover:border-[#00aaff] transition block">
+                <div class="text-[#00aaff] font-bold text-lg">💞 Compatibility</div>
+                <p class="text-xs text-[#5a8aaa]"><span data-lang="en">Synastry analysis. Discover relationship dynamics.</span><span data-lang="ru">Синастрический анализ. Раскройте динамику отношений.</span></p>
+            </a>
+            <a href="https://t.me/astroscan_bot?start=career" target="_blank" class="border border-[#1a3a5c] p-4 hover:border-[#00aaff] transition block">
+                <div class="text-[#00aaff] font-bold text-lg">💰 Career & Finance</div>
+                <p class="text-xs text-[#5a8aaa]"><span data-lang="en">Professional strengths & financial patterns.</span><span data-lang="ru">Профессиональные таланты и финансовые паттерны.</span></p>
+            </a>
+            <a href="https://t.me/astroscan_bot?start=child" target="_blank" class="border border-[#1a3a5c] p-4 hover:border-[#00aaff] transition block">
+                <div class="text-[#00aaff] font-bold text-lg">🧸 Child's Chart</div>
+                <p class="text-xs text-[#5a8aaa]"><span data-lang="en">Understand your child's unique potential.</span><span data-lang="ru">Поймите уникальный потенциал вашего ребёнка.</span></p>
+            </a>
+        </div>
+        <p class="text-center text-xs text-[#5a8aaa] mt-4">
+            <span data-lang="en">All audits are generated in under 2 minutes and sent as PDF.</span>
+            <span data-lang="ru">Все аудиты генерируются за 2 минуты и приходят в PDF.</span>
+        </p>
+    </section>
 
-        <section id="samples" class="mb-16 border-t border-sky-900/50 pt-12 scroll-mt-20">
-            <h2 class="text-xl font-bold text-sky-400 mb-6 uppercase tracking-wider text-center">
-                <span data-lang="en">🗄️ System Outputs: Verify the Analytics</span>
-                <span data-lang="ru">🗄️ Системные данные: примеры расчетов</span>
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-                <a href="astroscan_career_sample_ru.pdf" target="_blank" class="block border border-sky-700 hover:border-sky-400 hover:bg-sky-900/20 bg-slate-900 p-6 rounded-lg text-center transition">
-                    <div class="text-3xl mb-2">🇷🇺</div><div class="font-bold text-sky-300">ПРИМЕР ОТЧЕТА (RU)</div><div class="text-[10px] text-slate-400 mt-2">Career & Finance Audit</div>
-                </a>
-                <a href="astroscan_career_sample_en.pdf" target="_blank" class="block border border-amber-600/50 hover:border-amber-500 hover:bg-amber-900/20 bg-slate-900 p-6 rounded-lg text-center transition">
-                    <div class="text-3xl mb-2">🇺🇸</div><div class="font-bold text-amber-500">SAMPLE REPORT (EN)</div><div class="text-[10px] text-slate-400 mt-2">Career & Finance Audit</div>
-                </a>
-            </div>
-        </section>
+    <!-- TELEGRAM STARS BLOCK -->
+    <section class="section border-[#fbbf24]/30 bg-[#fbbf24]/5">
+        <h2 class="text-[#fbbf24]">⭐️ <span data-lang="en">Best Way to Spend Telegram Stars</span><span data-lang="ru">⭐️ Лучший способ потратить Telegram Stars</span></h2>
+        <p class="text-sm">
+            <span data-lang="en">Instead of disposable stickers, invest your XTR in a lifelong deterministic personality blueprint. <strong>200 Stars ≈ $2.80 USD</strong> (Stars can be withdrawn to Toncoin via Fragment).</span>
+            <span data-lang="ru">Вместо одноразовых стикеров вложите XTR в пожизненный детерминированный портрет личности. <strong>200 Звезд ≈ 250-300 рублей</strong> (Звезды можно вывести в Toncoin через Fragment).</span>
+        </p>
+        <div class="flex flex-wrap gap-2 mt-2">
+            <span class="text-[10px] bg-[#fbbf24]/20 text-[#fbbf24] px-2 py-1 rounded">#TelegramStars</span>
+            <span class="text-[10px] bg-[#fbbf24]/20 text-[#fbbf24] px-2 py-1 rounded">#XTR</span>
+        </div>
+    </section>
 
-        <section class="mb-10 p-4 border border-amber-500/20 bg-amber-500/5">
-            <h2 class="text-lg font-bold text-amber-400 mb-2">⭐️ <span data-lang="en">Best Way to Spend Telegram Stars</span><span data-lang="ru">⭐️ Лучший способ потратить Telegram Stars</span></h2>
-            <p class="text-sm text-slate-300"><span data-lang="en">Invest your XTR in a lifelong deterministic personality blueprint instead of temporary stickers. <strong>200 Stars ≈ $2.80 USD</strong> (Stars can be withdrawn to Toncoin via Fragment).</span><span data-lang="ru">Инвестируйте XTR в пожизненный детерминированный портрет личности вместо временных стикеров. <strong>200 Звезд ≈ 250-300 рублей</strong> (Звезды можно вывести в Toncoin через Fragment).</span></p>
-            <div class="flex flex-wrap gap-2 mt-2"><span class="text-[10px] bg-amber-500/20 text-amber-300 px-2 py-1 rounded">#TelegramStars</span><span class="text-[10px] bg-amber-500/20 text-amber-300 px-2 py-1 rounded">#XTR</span></div>
-        </section>
-
-        <footer class="border-t border-sky-900/50 pt-10 text-[10px] text-slate-500 uppercase tracking-widest">
-            <div class="mb-8 p-4 border border-slate-800 bg-slate-900/30">
-                <h3 class="text-xs font-bold text-slate-400 mb-3">🔬 VERIFIED SCIENTIFIC BACKBONE</h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[9px]">
-                    <a href="https://ssd.jpl.nasa.gov/planets/eph_export.html" target="_blank" class="reference-link">→ NASA JPL Planetary and Lunar Ephemerides DE431</a>
-                    <a href="https://www.astro.com/swisseph/swisseph.htm" target="_blank" class="reference-link">→ Swiss Ephemeris Documentation</a>
-                </div>
-                <p class="text-slate-600 mt-2 text-[8px]"><span data-lang="en">All planetary calculations are deterministic, not AI hallucinations. Astrological interpretation is symbolic.</span><span data-lang="ru">Все расчеты планет детерминированы, исключая галлюцинации ИИ. Астрологическая интерпретация символична.</span></p>
-            </div>
-            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-                <div>© 2026 ASTROSCAN LAB</div>
-                <div class="flex flex-wrap justify-center gap-4">
-                    <a href="privacy.html" class="hover:text-sky-400">PRIVACY POLICY</a>
-                    <a href="terms.html" class="hover:text-sky-400">TERMS OF SERVICE</a>
-                </div>
-            </div>
-        </footer>
+    <!-- NAVIGATION -->
+    <div class="nav-sticky">
+        <div class="flex flex-wrap gap-2 justify-center">
+            <a href="#moon" class="nav-link text-xs px-3 py-1 border rounded-full">🌙 Moon Sign</a>
+            <a href="#math" class="nav-link text-xs px-3 py-1 border rounded-full">🧮 Math vs Magic</a>
+            <a href="#learn" class="nav-link text-xs px-3 py-1 border rounded-full">⏳ Learn Fast</a>
+            <a href="#science" class="nav-link text-xs px-3 py-1 border rounded-full">🔭 Science</a>
+            <a href="#bigthree" class="nav-link text-xs px-3 py-1 border rounded-full">✨ Big Three</a>
+            <a href="#stars" class="nav-link text-xs px-3 py-1 border rounded-full">⭐️ Stars</a>
+        </div>
     </div>
 
-    <script>
-        function toggleLang() {
-            document.body.classList.toggle('lang-ru');
-            localStorage.setItem('astroscan_lang', document.body.classList.contains('lang-ru') ? 'ru' : 'en');
-        }
-        (function() {
-            if (localStorage.getItem('astroscan_lang') === 'ru' || navigator.language.includes('ru')) {
-                document.body.classList.add('lang-ru');
-            }
-        })();
+    <!-- FAQ CONTENT -->
+    <div class="space-y-6 mb-10">
+        <section id="moon" class="qa-card scroll-mt-20">
+            <h3 class="text-lg font-bold text-[#00aaff]">🌙 <span data-lang="en">Why is my Moon sign so weird?</span><span data-lang="ru">Почему мой лунный знак такой странный?</span></h3>
+            <p class="text-sm">
+                <span data-lang="en"><strong>Short answer:</strong> Your Moon sign represents your emotional subconscious — it feels "weird" because it operates beneath your conscious Sun sign identity.</span>
+                <span data-lang="ru"><strong>Кратко:</strong> Лунный знак — это ваше эмоциональное подсознание. Он кажется "странным", потому что показывает потребности, которые вы не всегда осознаёте.</span>
+            </p>
+            <a href="https://t.me/astroscan_bot?start=natal" class="text-xs text-[#00aaff] underline mt-2 inline-block">→ <span data-lang="en">Find your Moon sign</span><span data-lang="ru">Узнать свой лунный знак</span></a>
+        </section>
 
-        // Простая функция "Поделиться" (копирует ссылку на раздел)
-        function shareSection(sectionId) {
-            const url = window.location.href.split('#')[0] + '#' + sectionId;
-            navigator.clipboard.writeText(url).then(() => {
-                alert('🔗 Link copied to clipboard!');
-            }).catch(() => {
-                prompt('Copy this link:', url);
-            });
-        }
-    </script>
+        <section id="math" class="qa-card scroll-mt-20">
+            <h3 class="text-lg font-bold text-[#00aaff]">🧮 <span data-lang="en">Is astrology math or magic?</span><span data-lang="ru">Астрология — математика или магия?</span></h3>
+            <p class="text-sm">
+                <span data-lang="en"><strong>Deterministic data science.</strong> Planetary positions are computed using NASA JPL DE431 with 0.001" accuracy. The interpretation is symbolic modeling.</span>
+                <span data-lang="ru"><strong>Наука о данных.</strong> Позиции планет вычисляются по NASA JPL DE431 с точностью 0.001". Интерпретация — символическая модель.</span>
+            </p>
+            <a href="https://www.astro.com/swisseph/swisseph.htm" target="_blank" rel="noopener noreferrer" class="text-xs text-[#5a8aaa] underline">Source: Swiss Ephemeris</a>
+        </section>
+
+        <section id="learn" class="qa-card scroll-mt-20">
+            <h3 class="text-lg font-bold text-[#00aaff]">⏳ <span data-lang="en">How long to learn astrology?</span><span data-lang="ru">Сколько учиться астрологии?</span></h3>
+            <p class="text-sm">
+                <span data-lang="en"><strong>5-7 years for traditional mastery.</strong> With AstroScan, you get an expert-level breakdown in under 2 minutes.</span>
+                <span data-lang="ru"><strong>5-7 лет для традиционного освоения.</strong> С AstroScan вы получаете экспертный разбор за 2 минуты.</span>
+            </p>
+            <a href="https://t.me/astroscan_bot" class="text-xs text-[#00aaff] underline mt-2 inline-block">→ <span data-lang="en">Skip the learning curve</span><span data-lang="ru">Пропустить годы обучения</span></a>
+        </section>
+
+        <section id="science" class="qa-card scroll-mt-20">
+            <h3 class="text-lg font-bold text-[#00aaff]">🔭 <span data-lang="en">Is there a scientific basis for astrology?</span><span data-lang="ru">Есть ли научная основа у астрологии?</span></h3>
+            <p class="text-sm">
+                <span data-lang="en"><strong>Yes — for the astronomy part.</strong> Planetary positions are scientific. Interpretation is a probabilistic model (p < 0.01).</span>
+                <span data-lang="ru"><strong>Да — для астрономической части.</strong> Позиции планет научны. Интерпретация — вероятностная модель (p < 0.01).</span>
+            </p>
+        </section>
+
+        <section id="bigthree" class="qa-card scroll-mt-20">
+            <h3 class="text-lg font-bold text-[#00aaff]">✨ <span data-lang="en">What is my Big Three?</span><span data-lang="ru">Что такое "Большая тройка"?</span></h3>
+            <p class="text-sm">
+                <span data-lang="en"><strong>Sun</strong> (identity), <strong>Moon</strong> (emotions), <strong>Ascendant</strong> (outer behavior). They form your core profile.</span>
+                <span data-lang="ru"><strong>Солнце</strong> (личность), <strong>Луна</strong> (эмоции), <strong>Асцендент</strong> (поведение). Это основа вашего профиля.</span>
+            </p>
+            <a href="https://t.me/astroscan_bot?start=natal" class="text-xs text-[#00aaff] underline mt-2 inline-block">→ <span data-lang="en">Calculate your Big Three</span><span data-lang="ru">Рассчитать Большую тройку</span></a>
+        </section>
+
+        <section id="stars" class="qa-card scroll-mt-20">
+            <h3 class="text-lg font-bold text-[#00aaff]">⭐️ <span data-lang="en">Where to spend Telegram Stars wisely?</span><span data-lang="ru">Куда с умом потратить Telegram Stars?</span></h3>
+            <p class="text-sm">
+                <span data-lang="en">Most people waste Stars on temporary items. AstroScan audit is a <strong>permanent, data-rich PDF report</strong> — a one-time investment in self-knowledge.</span>
+                <span data-lang="ru">Большинство тратит Звёзды на временные предметы. Аудит AstroScan — <strong>постоянный PDF-отчёт с данными</strong>, разовая инвестиция в самопознание.</span>
+            </p>
+            <a href="https://t.me/astroscan_bot" class="text-xs text-[#00aaff] underline mt-2 inline-block">→ <span data-lang="en">Spend Stars on AstroScan</span><span data-lang="ru">Потратить Звёзды на AstroScan</span></a>
+        </section>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="text-center text-xs text-[#5a8aaa] border-t border-[#1a3a5c] pt-6">
+        <p>© 2026 AstroScan Lab · Built on Swiss Ephemeris v2.10</p>
+        <p class="mt-2">Deterministic framework for astrological analysis. Not a substitute for professional advice.</p>
+        <p class="mt-2 flex flex-wrap justify-center gap-3">
+            <a href="privacy.html" class="hover:text-[#00aaff]">Privacy</a> · 
+            <a href="terms.html" class="hover:text-[#00aaff]">Terms</a> · 
+            <a href="llms.txt" target="_blank" class="hover:text-[#00aaff]">llms.txt</a> · 
+            <a href="sitemap.xml" target="_blank" class="hover:text-[#00aaff]">sitemap.xml</a>
+        </p>
+    </footer>
+</div>
+
+<script>
+function toggleLang() {
+    document.body.classList.toggle('lang-ru');
+    localStorage.setItem('astroscan_lang', document.body.classList.contains('lang-ru') ? 'ru' : 'en');
+}
+(function() {
+    if (localStorage.getItem('astroscan_lang') === 'ru') document.body.classList.add('lang-ru');
+})();
+
+// Telegram Mini App integration
+(function() {
+    if (window.Telegram && window.Telegram.WebApp) {
+        try {
+            window.Telegram.WebApp.ready();
+            window.Telegram.WebApp.expand();
+        } catch (e) {}
+    }
+})();
+</script>
 </body>
-</html>
+</html> этот заливаю ?
