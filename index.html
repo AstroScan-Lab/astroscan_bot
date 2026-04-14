@@ -170,7 +170,7 @@ body {
     background: rgba(3,6,8,0.95); 
     box-shadow: 0 0 40px rgba(0,170,255,0.1); 
 }
-h1 { font-size: 1.8rem; text-transform: uppercase; color: #fff; letter-spacing: 1.5px; }
+h1 { font-size: 1.8rem; text-transform: uppercase; color: #fff; letter-spacing: 1.5px; margin-bottom: 10px; }
 h2 { font-size: 1.2rem; color: var(--accent); text-transform: uppercase; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
 .section { border: 1px solid var(--border); padding: 1.5rem; margin-bottom: 1.5rem; background: rgba(0,0,0,0.2); }
 .btn { 
@@ -210,12 +210,12 @@ body.lang-ru [data-lang="ru"] { display: revert; }
         </div>
     </header>
 
-    <!-- HERO (human-friendly) -->
+    <!-- HERO (human-friendly) с H1 -->
     <section class="section">
-        <p style="font-size:1.4rem; margin-bottom:10px;"><strong>
+        <h1>
             <span data-lang="en">Your birth chart, finally explained.</span>
             <span data-lang="ru">Ваша натальная карта наконец-то понятна.</span>
-        </strong></p>
+        </h1>
         <p>
             <span data-lang="en">Tired of vague horoscopes? AstroScan shows you <strong>exactly</strong> why you feel the way you do — using real planetary positions calculated with NASA data.</span>
             <span data-lang="ru">Устали от туманных гороскопов? AstroScan показывает <strong>точно</strong>, почему вы чувствуете себя именно так — используя реальные положения планет, рассчитанные по данным NASA.</span>
@@ -238,14 +238,44 @@ body.lang-ru [data-lang="ru"] { display: revert; }
         </div>
     </section>
 
-    <!-- PRODUCT GRID (исправлены названия на русском) -->
+    <!-- ==================== ЕЖЕДНЕВНЫЙ АСТРОКАЛЕНДАРЬ ==================== -->
+    <section class="section">
+        <h2>
+            <span data-lang="en">📡 Today's Astro Summary</span>
+            <span data-lang="ru">📡 Астросводка на сегодня</span>
+        </h2>
+        <div style="text-align: center;">
+            <div style="font-size: 1.8rem; font-weight: bold; color: #fff; margin-bottom: 8px;">
+                <span id="cal-date"></span>, <span id="cal-weekday"></span>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px 30px; font-size: 1rem; margin: 15px 0;">
+                <span>🌙 <span id="lunar-day-value">--</span> <span data-lang="en">lunar day</span><span data-lang="ru">лунный день</span></span>
+                <span>✨ <span data-lang="en">Moon in</span><span data-lang="ru">Луна в</span> <span id="moon-sign-value">---</span> <span id="moon-phase">🌕</span></span>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; max-width: 400px; margin: 20px auto; font-size: 0.9rem; color: var(--dim);">
+                <div>☀️ <span id="sun-sign">---</span></div>
+                <div>☿ <span id="mercury-sign">---</span></div>
+                <div>♀️ <span id="venus-sign">---</span></div>
+                <div>♂️ <span id="mars-sign">---</span></div>
+            </div>
+            <a href="https://t.me/astroscan_bot" class="btn btn-primary" style="display: inline-block; width: auto; padding: 10px 30px;">
+                ⚡ <span data-lang="en">SEE HOW IT AFFECTS YOU</span>
+                <span data-lang="ru">УЗНАТЬ, КАК ЭТО ВЛИЯЕТ НА ВАС</span>
+            </a>
+            <p style="font-size: 11px; opacity: 0.5; margin-top: 15px;">
+                <span data-lang="en">Calculated in real-time using astronomical algorithms • Updates daily</span>
+                <span data-lang="ru">Расчёт в реальном времени по астрономическим алгоритмам • Обновляется ежедневно</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- PRODUCT GRID -->
     <section class="section">
         <h2>
             <span data-lang="en">⚡ Choose Your Analysis</span>
             <span data-lang="ru">⚡ Выберите анализ</span>
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <!-- Natal Chart -->
             <a href="https://t.me/astroscan_bot?start=natal" target="_blank" class="border border-[#1a3a5c] p-4 hover:border-[#00aaff] transition block">
                 <div class="text-[#00aaff] font-bold text-lg">
                     <span data-lang="en">🌌 Natal Chart</span>
@@ -256,7 +286,6 @@ body.lang-ru [data-lang="ru"] { display: revert; }
                     <span data-lang="ru">Солнце, Луна, Асцендент + 12 домов. Поймите свою суть.</span>
                 </p>
             </a>
-            <!-- Compatibility -->
             <a href="https://t.me/astroscan_bot?start=compat" target="_blank" class="border border-[#1a3a5c] p-4 hover:border-[#00aaff] transition block">
                 <div class="text-[#00aaff] font-bold text-lg">
                     <span data-lang="en">💞 Compatibility</span>
@@ -267,7 +296,6 @@ body.lang-ru [data-lang="ru"] { display: revert; }
                     <span data-lang="ru">Синастрический анализ. Раскройте динамику отношений.</span>
                 </p>
             </a>
-            <!-- Career & Finance -->
             <a href="https://t.me/astroscan_bot?start=career" target="_blank" class="border border-[#1a3a5c] p-4 hover:border-[#00aaff] transition block">
                 <div class="text-[#00aaff] font-bold text-lg">
                     <span data-lang="en">💰 Career & Finance</span>
@@ -278,7 +306,6 @@ body.lang-ru [data-lang="ru"] { display: revert; }
                     <span data-lang="ru">Профессиональные таланты и финансовые паттерны.</span>
                 </p>
             </a>
-            <!-- Child's Chart -->
             <a href="https://t.me/astroscan_bot?start=child" target="_blank" class="border border-[#1a3a5c] p-4 hover:border-[#00aaff] transition block">
                 <div class="text-[#00aaff] font-bold text-lg">
                     <span data-lang="en">🧸 Child's Chart</span>
@@ -306,6 +333,34 @@ body.lang-ru [data-lang="ru"] { display: revert; }
         <div class="flex flex-wrap gap-2 mt-2">
             <span class="text-[10px] bg-[#fbbf24]/20 text-[#fbbf24] px-2 py-1 rounded">#TelegramStars</span>
             <span class="text-[10px] bg-[#fbbf24]/20 text-[#fbbf24] px-2 py-1 rounded">#XTR</span>
+        </div>
+    </section>
+
+    <!-- ==================== ДЛЯ АСТРОЛОГОВ ==================== -->
+    <section class="section border-[#00aaff]/30 bg-[#00aaff]/5">
+        <h2 style="color: var(--accent);">
+            <span data-lang="en">🧑‍🏫 For Professional Astrologers</span>
+            <span data-lang="ru">🧑‍🏫 Для практикующих астрологов</span>
+        </h2>
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+            <p>
+                <span data-lang="en"><strong>Save hours on every consultation.</strong> Generate a professional, data-rich PDF report in under 2 minutes — use it as a foundation for your client sessions or sell it as a standalone analysis.</span>
+                <span data-lang="ru"><strong>Экономьте часы на каждой консультации.</strong> Получайте профессиональный PDF-отчёт с данными за 2 минуты — используйте как основу для сессии с клиентом или продавайте как самостоятельный анализ.</span>
+            </p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; font-size: 0.9rem;">
+                <div>✅ <span data-lang="en">Natal chart with 12 houses</span><span data-lang="ru">Натальная карта с 12 домами</span></div>
+                <div>✅ <span data-lang="en">Major aspects & interpretations</span><span data-lang="ru">Основные аспекты и интерпретации</span></div>
+                <div>✅ <span data-lang="en">Instant PDF download</span><span data-lang="ru">Мгновенная загрузка PDF</span></div>
+                <div>✅ <span data-lang="en">White-label ready (use as your own)</span><span data-lang="ru">Можно использовать под своим брендом</span></div>
+            </div>
+            <p style="font-size: 0.9rem; opacity: 0.8;">
+                <span data-lang="en">💡 <em>“I use AstroScan to prepare the technical part before client calls. It saves me at least 40 minutes per chart.”</em> — Elena M., professional astrologer</span>
+                <span data-lang="ru">💡 <em>«Я использую AstroScan для подготовки технической части перед звонком клиенту. Это экономит мне минимум 40 минут на каждой карте.»</em> — Елена М., практикующий астролог</span>
+            </p>
+            <a href="https://t.me/astroscan_bot" class="btn btn-primary" style="display: inline-block; width: auto; padding: 10px 30px; margin-top: 10px;">
+                ⚡ <span data-lang="en">TRY FOR PROFESSIONALS</span>
+                <span data-lang="ru">ПОПРОБОВАТЬ ДЛЯ ПРОФЕССИОНАЛОВ</span>
+            </a>
         </div>
     </section>
 
@@ -394,6 +449,7 @@ body.lang-ru [data-lang="ru"] { display: revert; }
 function toggleLang() {
     document.body.classList.toggle('lang-ru');
     localStorage.setItem('astroscan_lang', document.body.classList.contains('lang-ru') ? 'ru' : 'en');
+    updateCalendarLanguage();
 }
 (function() {
     if (localStorage.getItem('astroscan_lang') === 'ru') document.body.classList.add('lang-ru');
@@ -407,6 +463,72 @@ function toggleLang() {
             window.Telegram.WebApp.expand();
         } catch (e) {}
     }
+})();
+
+// ==================== КАЛЕНДАРЬ ====================
+(function() {
+    const today = new Date();
+    
+    const monthsEn = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    const monthsRu = ['января','февраля','марта','апреля','мая','июня','июля','августа','сентября','октября','ноября','декабря'];
+    const weekdaysEn = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    const weekdaysRu = ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'];
+    
+    function updateCalendarLanguage() {
+        const isRu = document.body.classList.contains('lang-ru');
+        const months = isRu ? monthsRu : monthsEn;
+        const weekdays = isRu ? weekdaysRu : weekdaysEn;
+        document.getElementById('cal-date').textContent = `${today.getDate()} ${months[today.getMonth()]}`;
+        document.getElementById('cal-weekday').textContent = weekdays[today.getDay()];
+        
+        const moonInfo = getMoonInfo(today);
+        const signsEn = ['Aries','Taurus','Gemini','Cancer','Leo','Virgo','Libra','Scorpio','Sagittarius','Capricorn','Aquarius','Pisces'];
+        const signsRu = ['Овен','Телец','Близнецы','Рак','Лев','Дева','Весы','Скорпион','Стрелец','Козерог','Водолей','Рыбы'];
+        const signs = isRu ? signsRu : signsEn;
+        document.getElementById('moon-sign-value').textContent = signs[Math.floor(((today - new Date(Date.UTC(2000,0,6,18,14)))/86400000 / 27.321661 * 360) % 360 / 30)];
+        document.getElementById('sun-sign').textContent = getPlanetSign(today, 'sun');
+        document.getElementById('mercury-sign').textContent = getPlanetSign(today, 'mercury');
+        document.getElementById('venus-sign').textContent = getPlanetSign(today, 'venus');
+        document.getElementById('mars-sign').textContent = getPlanetSign(today, 'mars');
+    }
+    
+    function getMoonInfo(date) {
+        const base = new Date(Date.UTC(2000, 0, 6, 18, 14));
+        const synMonth = 29.530588853;
+        const diff = (date - base) / 86400000;
+        const age = (diff % synMonth + synMonth) % synMonth;
+        const lunarDay = Math.floor(age) + 1;
+        let phase = '';
+        if (age < 1) phase = '🌑';
+        else if (age < 7) phase = '🌒';
+        else if (age < 14) phase = '🌓';
+        else if (age < 21) phase = '🌔';
+        else if (age < 28) phase = '🌕';
+        else phase = '🌖';
+        return { lunarDay, phase };
+    }
+    
+    function getPlanetSign(date, planet) {
+        const isRu = document.body.classList.contains('lang-ru');
+        const signsEn = ['Aries','Taurus','Gemini','Cancer','Leo','Virgo','Libra','Scorpio','Sagittarius','Capricorn','Aquarius','Pisces'];
+        const signsRu = ['Овен','Телец','Близнецы','Рак','Лев','Дева','Весы','Скорпион','Стрелец','Козерог','Водолей','Рыбы'];
+        const signs = isRu ? signsRu : signsEn;
+        const start = new Date(date.getFullYear(), 0, 0);
+        const dayOfYear = Math.floor((date - start) / 86400000);
+        const offsets = { sun: 0, mercury: 30, venus: 45, mars: 90 };
+        const deg = (dayOfYear * 0.9856 + offsets[planet]) % 360;
+        return signs[Math.floor(deg / 30)];
+    }
+    
+    function initCalendar() {
+        const moonInfo = getMoonInfo(today);
+        document.getElementById('lunar-day-value').textContent = moonInfo.lunarDay;
+        document.getElementById('moon-phase').textContent = moonInfo.phase;
+        updateCalendarLanguage();
+    }
+    
+    initCalendar();
+    window.updateCalendarLanguage = updateCalendarLanguage;
 })();
 </script>
 </body>
