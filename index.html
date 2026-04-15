@@ -4,20 +4,38 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
 
-<!-- БЕЗОПАСНОСТЬ -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https://astroscan-lab.github.io data:; connect-src 'self' https://t.me; frame-ancestors 'none';">
+<!-- ==================== SECURITY ==================== -->
+<meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com;
+  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+  font-src 'self' https://fonts.gstatic.com;
+  img-src 'self' data: https:;
+  connect-src 'self' https://t.me;
+  frame-ancestors 'self' https://web.telegram.org https://telegram.org;
+">
 
+<!-- ==================== PRIMARY SEO ==================== -->
 <title id="page-title">AstroScan AI — Deterministic Astrology (NASA JPL + Swiss Ephemeris)</title>
-<meta name="description" content="Understand your birth chart with NASA‑level precision. AstroScan generates deterministic astrological audits in 2 minutes. No vague horoscopes — only computed behavioral patterns.">
+<meta name="description" content="Fast, precise AI astrology audits: natal chart, compatibility, career & child reports. Powered by NASA JPL DE431 and Swiss Ephemeris. 2‑minute PDF.">
+<meta name="keywords" content="deterministic astrology, scientific astrology, birth chart, Swiss Ephemeris, NASA JPL, moon sign, compatibility, career astrology, child astrology, telegram stars, vedic vs western astrology, AI audit">
 <meta name="author" content="AstroScan Lab">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <link rel="canonical" href="https://astroscan-lab.github.io/astroscan_bot/">
 
+<!-- HREFLANG (основные языки) -->
 <link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/">
 <link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/?lang=ru">
+<link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/?lang=es">
+<link rel="alternate" hreflang="pt" href="https://astroscan-lab.github.io/astroscan_bot/?lang=pt">
 <link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/?lang=hi">
 <link rel="alternate" hreflang="de" href="https://astroscan-lab.github.io/astroscan_bot/?lang=de">
+<link rel="alternate" hreflang="fr" href="https://astroscan-lab.github.io/astroscan_bot/?lang=fr">
+<link rel="alternate" hreflang="it" href="https://astroscan-lab.github.io/astroscan_bot/?lang=it">
+<link rel="alternate" hreflang="ja" href="https://astroscan-lab.github.io/astroscan_bot/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://astroscan-lab.github.io/astroscan_bot/?lang=zh">
 
+<!-- ==================== OPEN GRAPH ==================== -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="AstroScan AI — Deterministic Astrology">
 <meta property="og:description" content="High‑precision planetary computation + AI astrological audit in 2 minutes.">
@@ -26,319 +44,535 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="en_US">
-<meta property="og:locale:alternate" content="ru_RU">
-<meta property="og:locale:alternate" content="hi_IN">
-<meta property="og:locale:alternate" content="de_DE">
 
+<!-- ==================== TWITTER CARD ==================== -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="AstroScan AI — Deterministic Astrology">
 <meta name="twitter:description" content="Stop guessing. Start computing. 2‑minute audit with NASA precision.">
 <meta name="twitter:image" content="https://astroscan-lab.github.io/astroscan_bot/og-image.png">
 
+<!-- ==================== LLM / GEO ==================== -->
 <meta name="llm:title" content="AstroScan AI Deterministic Astrology Engine">
-<meta name="llm:summary" content="Deterministic astrology audit using NASA JPL DE431 and Swiss Ephemeris v2.10. Computes planetary positions and generates structured behavioral profiles.">
-<meta name="llm:facts" content="Precision: 0.001 arc-second using NASA JPL DE431; Engine: Swiss Ephemeris v2.10; Time: under 2 minutes; Products: Natal Chart, Compatibility, Career, Child">
+<meta name="llm:summary" content="Deterministic astrology audit using NASA JPL DE431 and Swiss Ephemeris v2.10.">
+<meta name="llm:facts" content="Precision: theoretical 0.001 arc-second; Data: NASA JPL DE431; Engine: Swiss Ephemeris; Products: Natal, Compatibility, Career, Child">
+<meta name="llm:category" content="Astrology, Astronomy, Data Science">
+<meta name="llm:authority" content="NASA JPL DE431, Swiss Ephemeris v2.10">
+<meta name="llm:use_case" content="Natal chart generation, Compatibility analysis, Career astrology, Child astrology">
 
+<!-- ==================== PERFORMANCE ==================== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- ==================== STRUCTURED DATA ==================== -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://astroscan-lab.github.io/astroscan_bot/#organization",
-      "name": "AstroScan Lab",
-      "url": "https://astroscan-lab.github.io/astroscan_bot/",
-      "logo": "https://astroscan-lab.github.io/astroscan_bot/og-image.png"
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://astroscan-lab.github.io/astroscan_bot/#website",
-      "name": "AstroScan AI",
-      "url": "https://astroscan-lab.github.io/astroscan_bot/",
-      "publisher": { "@id": "https://astroscan-lab.github.io/astroscan_bot/#organization" }
-    },
-    {
-      "@type": "SoftwareApplication",
-      "name": "AstroScan AI",
-      "applicationCategory": "LifestyleApplication",
-      "operatingSystem": "Telegram",
-      "url": "https://t.me/astroscan_bot",
-      "offers": {
-        "@type": "Offer",
-        "price": "200",
-        "priceCurrency": "XTR",
-        "description": "One-time deterministic astrology audit for 200 Telegram Stars"
-      },
-      "description": "Deterministic astrology using NASA JPL DE431 and Swiss Ephemeris v2.10."
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question", "name": "Why is my Moon sign so weird?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Your Moon sign represents your emotional subconscious — it feels 'weird' because it operates beneath your conscious Sun sign identity." }
-        },
-        {
-          "@type": "Question", "name": "Is astrology math or magic?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Planetary positions are computed scientifically (NASA JPL DE431). Interpretation is symbolic modeling." }
-        },
-        {
-          "@type": "Question", "name": "How long does it take to learn astrology?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Traditional mastery takes years. AstroScan delivers a full audit in under 2 minutes." }
-        },
-        {
-          "@type": "Question", "name": "What are my Big Three?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Sun (identity), Moon (emotions), and Ascendant (outer behavior)." }
-        },
-        {
-          "@type": "Question", "name": "Where to spend Telegram Stars wisely?",
-          "acceptedAnswer": { "@type": "Answer", "text": "AstroScan audit is a permanent, data‑rich PDF report — a one‑time investment in self‑knowledge." }
-        }
-      ]
-    }
+    {"@type":"Organization","@id":"#org","name":"AstroScan Lab","url":"https://astroscan-lab.github.io/astroscan_bot/","logo":"og-image.png","sameAs":["https://t.me/astroscan_bot"]},
+    {"@type":"WebSite","@id":"#website","name":"AstroScan AI","url":"https://astroscan-lab.github.io/astroscan_bot/","publisher":{"@id":"#org"}},
+    {"@type":"SoftwareApplication","name":"AstroScan AI","applicationCategory":"LifestyleApplication","operatingSystem":"Telegram","url":"https://t.me/astroscan_bot","offers":{"@type":"Offer","price":"200","priceCurrency":"XTR"},"publisher":{"@id":"#org"},"citation":[
+      {"@type":"CreativeWork","name":"Swiss Ephemeris","url":"https://www.astro.com/swisseph/swisseph.htm"},
+      {"@type":"CreativeWork","name":"NASA JPL Planetary and Lunar Ephemerides DE431","url":"https://ssd.jpl.nasa.gov/planets/eph_export.html"}
+    ]},
+    {"@type":"FAQPage","mainEntity":[
+      {"@type":"Question","name":"Why is my Moon sign so weird?","acceptedAnswer":{"@type":"Answer","text":"Your Moon sign represents your emotional subconscious."}},
+      {"@type":"Question","name":"Is astrology math or magic?","acceptedAnswer":{"@type":"Answer","text":"Planetary positions are computed scientifically (NASA JPL)."}}
+    ]},
+    {"@type":"HowTo","name":"Get Your AstroScan Audit","step":[
+      {"@type":"HowToStep","text":"Open @astroscan_bot on Telegram"},
+      {"@type":"HowToStep","text":"Enter birth date, time, location"},
+      {"@type":"HowToStep","text":"Receive PDF in 2 minutes"}
+    ]}
   ]
 }
 </script>
 
-<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-
 <style>
-:root { --bg: #030608; --accent: #00aaff; --text: #d0e4f0; --border: #1a3a5c; --dim: #5a8aaa; --star: #fbbf24; }
+:root { --bg:#030608; --accent:#00aaff; --text:#d0e4f0; --border:#1a3a5c; --dim:#5a8aaa; --star:#fbbf24; }
 * { margin:0; padding:0; box-sizing:border-box; }
-body { background:var(--bg); color:var(--text); font-family:'Share Tech Mono', monospace; line-height:1.5; display:flex; justify-content:center; padding:12px 12px 80px; overflow-x:hidden; }
-canvas { position:fixed; top:0; left:0; z-index:0; opacity:0.12; pointer-events:none; }
-body::before { content:""; position:fixed; top:0; left:0; width:100%; height:100%; background:repeating-linear-gradient(0deg, rgba(0,170,255,0.02) 0px, transparent 2px, transparent 4px); pointer-events:none; z-index:2; animation:scan 8s linear infinite; }
+html { scroll-behavior:smooth; }
+body { 
+    background:var(--bg); color:var(--text); 
+    font-family:'Share Tech Mono', monospace; 
+    line-height:1.5; 
+    display:flex; justify-content:center; 
+    padding:12px 12px 80px; 
+    overflow-x:hidden;
+    margin:0;
+}
+/* Матричный фон */
+canvas#matrixCanvas { position:fixed; top:0; left:0; z-index:0; opacity:0.12; pointer-events:none; }
+body::before { 
+    content:""; position:fixed; top:0; left:0; width:100%; height:100%; 
+    background:repeating-linear-gradient(0deg, rgba(0,170,255,0.02) 0px, transparent 2px, transparent 4px); 
+    pointer-events:none; z-index:2; 
+    animation:scan 8s linear infinite; 
+}
 @keyframes scan { 0% { background-position:0 0; } 100% { background-position:0 100%; } }
 
-.container { position:relative; z-index:1; max-width:900px; width:100%; border:1px solid var(--border); padding:1.2rem; background:rgba(3,6,8,0.95); box-shadow:0 0 40px rgba(0,170,255,0.1); transition:0.3s; }
+.container { 
+    position:relative; z-index:1; max-width:1000px; width:100%; 
+    border:1px solid var(--border); padding:1.5rem; 
+    background:rgba(3,6,8,0.95); 
+    box-shadow:0 0 40px rgba(0,170,255,0.1); 
+    border-radius:8px;
+    transition:0.3s;
+}
 .container:hover { box-shadow:0 0 60px rgba(0,170,255,0.2); }
 
-.top-bar { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; margin-bottom:1.5rem; font-size:0.7rem; color:var(--dim); border-bottom:1px solid var(--border); padding-bottom:10px; gap:10px; }
-.system-status { display:flex; align-items:center; gap:5px; }
+.top-bar { 
+    display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; 
+    margin-bottom:1.5rem; font-size:0.75rem; color:var(--dim); 
+    border-bottom:1px solid var(--border); padding-bottom:10px; gap:10px; 
+}
+.system-status { display:flex; align-items:center; gap:6px; }
 .pulse { width:8px; height:8px; background:var(--accent); border-radius:50%; box-shadow:0 0 10px var(--accent); animation:pulse 1.5s infinite; }
 @keyframes pulse { 0% { opacity:1; } 50% { opacity:0.4; } 100% { opacity:1; } }
 
-.lang-switcher { display:flex; flex-wrap:wrap; gap:5px; }
-.lang-switcher a { color:var(--dim); cursor:pointer; text-decoration:none; font-size:0.7rem; padding:2px 5px; transition:0.2s; }
-.lang-switcher a.active { color:var(--accent); text-shadow:0 0 5px var(--accent); }
-.lang-switcher a:hover { color:var(--accent); }
+.lang-switcher { display:flex; flex-wrap:wrap; gap:6px; }
+.lang-btn { 
+    background:transparent; border:1px solid var(--border); color:var(--dim); 
+    padding:4px 8px; font-size:0.7rem; cursor:pointer; border-radius:4px; 
+    transition:0.2s;
+}
+.lang-btn.active { border-color:var(--accent); color:var(--accent); background:rgba(0,170,255,0.1); }
 
-h1 { font-size:1.6rem; text-transform:uppercase; color:#fff; letter-spacing:1.5px; margin-bottom:10px; position:relative; }
-h1::after { content:""; position:absolute; bottom:-5px; left:0; width:100%; height:2px; background:linear-gradient(90deg, var(--accent), transparent); animation:scan-line 3s infinite; }
-@keyframes scan-line { 0% { opacity:0.5; width:0; } 50% { opacity:1; width:100%; } 100% { opacity:0.5; width:0; left:100%; } }
-
-h2 { font-size:1.1rem; color:var(--accent); text-transform:uppercase; border-bottom:1px solid var(--border); padding-bottom:0.5rem; margin-bottom:1rem; }
-.section { border:1px solid var(--border); padding:1.2rem; margin-bottom:1.5rem; background:rgba(0,0,0,0.2); transition:0.2s; }
+h1 { font-size:1.8rem; text-transform:uppercase; color:#fff; letter-spacing:1.5px; margin-bottom:10px; }
+h2 { font-size:1.2rem; color:var(--accent); text-transform:uppercase; border-bottom:1px solid var(--border); padding-bottom:0.5rem; margin-bottom:1rem; }
+.section { 
+    border:1px solid var(--border); padding:1.5rem; margin-bottom:1.5rem; 
+    background:rgba(0,0,0,0.2); border-radius:8px; 
+    transition:0.2s;
+}
 .section:hover { border-color:rgba(0,170,255,0.3); box-shadow:0 0 15px rgba(0,170,255,0.05); }
 
-.btn { display:block; width:100%; border:1px solid var(--accent); padding:12px; color:var(--accent); text-align:center; text-decoration:none; margin-top:10px; text-transform:uppercase; cursor:pointer; background:transparent; font-family:inherit; font-size:0.9rem; transition:0.2s; position:relative; overflow:hidden; }
-.btn::after { content:""; position:absolute; top:0; left:-100%; width:100%; height:100%; background:linear-gradient(90deg, transparent, rgba(0,170,255,0.2), transparent); transition:0.5s; }
+.btn { 
+    display:block; width:100%; border:1px solid var(--accent); padding:12px; 
+    color:var(--accent); text-align:center; text-decoration:none; 
+    text-transform:uppercase; background:transparent; font-family:inherit; 
+    font-size:0.9rem; transition:0.2s; cursor:pointer; border-radius:4px;
+    position:relative; overflow:hidden;
+}
+.btn::after { 
+    content:""; position:absolute; top:0; left:-100%; width:100%; height:100%; 
+    background:linear-gradient(90deg, transparent, rgba(0,170,255,0.2), transparent); 
+    transition:0.5s; 
+}
 .btn:hover::after { left:100%; }
 .btn:hover { background:var(--accent); color:#000; box-shadow:0 0 20px var(--accent); transform:scale(1.02); }
 .btn-primary { background:var(--accent); color:#000; font-weight:bold; }
 
 .precision-badge { display:flex; justify-content:space-around; margin:20px 0; text-align:center; }
-.badge-value { font-size:1.5rem; color:var(--accent); }
-.badge-label { font-size:0.7rem; color:var(--dim); text-transform:uppercase; }
+.badge-value { font-size:1.8rem; color:var(--accent); }
+.badge-label { font-size:0.75rem; color:var(--dim); text-transform:uppercase; }
 
 .quick-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(160px,1fr)); gap:12px; margin:20px 0; }
-.quick-card { border:1px solid var(--border); padding:15px; background:rgba(0,0,0,0.2); text-decoration:none; color:var(--text); transition:0.2s; }
+.quick-card { 
+    border:1px solid var(--border); padding:15px; background:rgba(0,0,0,0.2); 
+    text-decoration:none; color:var(--text); transition:0.2s; border-radius:6px; 
+}
 .quick-card:hover { border-color:var(--accent); background:rgba(0,170,255,0.05); transform:translateY(-2px); }
 .quick-card h3 { color:var(--accent); font-size:1rem; margin-bottom:5px; }
-.quick-card p { font-size:0.7rem; color:var(--dim); }
+.quick-card p { font-size:0.75rem; color:var(--dim); }
 
-.qa-card { border-left:2px solid var(--border); padding-left:1rem; margin-bottom:1.2rem; transition:0.2s; }
+.qa-card { border-left:2px solid var(--border); padding-left:1rem; margin-bottom:1.2rem; }
 .qa-card:hover { border-left-color:var(--accent); }
 
 .trust-links { display:flex; flex-wrap:wrap; justify-content:center; gap:8px; margin-top:15px; }
-.trust-link { border:1px solid var(--border); padding:4px 10px; font-size:0.7rem; color:var(--dim); text-decoration:none; transition:0.2s; }
-.trust-link:hover { border-color:var(--accent); color:var(--accent); background:rgba(0,170,255,0.05); }
+.trust-link { 
+    border:1px solid var(--border); padding:4px 10px; font-size:0.7rem; 
+    color:var(--dim); text-decoration:none; border-radius:20px; 
+}
+.trust-link:hover { border-color:var(--accent); color:var(--accent); }
 
-.cta-bar { position:fixed; bottom:0; left:0; right:0; background:#000; display:flex; z-index:100; border-top:1px solid var(--accent); box-shadow:0 -5px 20px rgba(0,0,0,0.8); }
-.cta-bar a { flex:1; text-align:center; padding:14px; text-decoration:none; font-weight:bold; text-transform:uppercase; letter-spacing:1px; font-size:0.9rem; }
+.cta-bar { 
+    position:fixed; bottom:0; left:0; right:0; background:#000; display:flex; 
+    z-index:100; border-top:1px solid var(--accent); box-shadow:0 -5px 20px rgba(0,0,0,0.8); 
+}
+.cta-bar a { 
+    flex:1; text-align:center; padding:14px; text-decoration:none; font-weight:bold; 
+    text-transform:uppercase; letter-spacing:1px; font-size:0.9rem; 
+}
 .cta-bar .telegram { background:var(--accent); color:#000; }
 .cta-bar .telegram:hover { box-shadow:0 0 20px var(--accent); }
 
-.footnote { font-size:0.6rem; color:var(--dim); border-top:1px solid var(--border); margin-top:20px; padding-top:12px; text-align:center; }
+.footnote { font-size:0.65rem; color:var(--dim); border-top:1px solid var(--border); margin-top:20px; padding-top:12px; text-align:center; }
 .back-to-top { text-align:right; margin-top:8px; }
 
+/* Language visibility */
 [data-lang] { display:none; }
-[data-lang="en"] { display:revert; }
-body[lang="en"] [data-lang="en"] { display:revert; }
-body[lang="ru"] [data-lang="ru"] { display:revert; }
-body[lang="hi"] [data-lang="hi"] { display:revert; }
-body[lang="de"] [data-lang="de"] { display:revert; }
-body[lang="en"] [data-lang]:not([data-lang="en"]) { display:none; }
-body[lang="ru"] [data-lang]:not([data-lang="ru"]) { display:none; }
-body[lang="hi"] [data-lang]:not([data-lang="hi"]) { display:none; }
-body[lang="de"] [data-lang]:not([data-lang="de"]) { display:none; }
+body.lang-en [data-lang="en"] { display:revert; }
+body.lang-ru [data-lang="ru"] { display:revert; }
+body.lang-es [data-lang="es"] { display:revert; }
+body.lang-pt [data-lang="pt"] { display:revert; }
+body.lang-hi [data-lang="hi"] { display:revert; }
+body.lang-de [data-lang="de"] { display:revert; }
+body.lang-fr [data-lang="fr"] { display:revert; }
+body.lang-it [data-lang="it"] { display:revert; }
+body.lang-ja [data-lang="ja"] { display:revert; }
+body.lang-zh [data-lang="zh"] { display:revert; }
+
+@media (max-width:640px) { 
+    h1 { font-size:1.5rem; } 
+    .container { padding:1rem; } 
+}
 </style>
 </head>
-
-<body lang="en">
-<canvas id="matrix"></canvas>
+<body class="lang-en">
+<canvas id="matrixCanvas"></canvas>
 
 <div class="container">
-    <div class="top-bar">
-        <div class="system-status">
-            <span class="pulse"></span>
-            <span id="top-badge">[ASTROSCAN // DETERMINISTIC CORE]</span>
-        </div>
-        <div class="lang-switcher">
-            <a id="en" class="active" href="#" role="button">EN</a>
-            <a id="ru" href="#" role="button">RU</a>
-            <a id="hi" href="#" role="button">HI</a>
-            <a id="de" href="#" role="button">DE</a>
-        </div>
+  <header class="top-bar">
+    <div class="system-status">
+      <span class="pulse"></span>
+      <span id="top-badge">[ASTROSCAN // DETERMINISTIC CORE]</span>
+    </div>
+    <div class="lang-switcher" id="lang-switcher"></div>
+  </header>
+
+  <!-- HERO -->
+  <section class="section">
+    <h1 data-lang="en">Your birth chart, finally explained.</h1>
+    <h1 data-lang="ru">Ваша натальная карта наконец-то понятна.</h1>
+    <h1 data-lang="es">Tu carta natal, finalmente explicada.</h1>
+    <h1 data-lang="pt">Seu mapa astral, finalmente explicado.</h1>
+    <h1 data-lang="hi">आपकी जन्म कुंडली, अब समझ में आई।</h1>
+    <h1 data-lang="de">Ihr Geburtshoroskop, endlich erklärt.</h1>
+    <h1 data-lang="fr">Votre thème astral, enfin expliqué.</h1>
+    <h1 data-lang="it">La tua carta natale, finalmente spiegata.</h1>
+    <h1 data-lang="ja">あなたの出生図、ついに解明。</h1>
+    <h1 data-lang="zh">你的出生星盘，终于讲清楚了。</h1>
+
+    <p data-lang="en">Tired of vague horoscopes? AstroScan shows you <strong>exactly</strong> why you feel the way you do — using real planetary positions calculated with NASA data.</p>
+    <p data-lang="ru">Устали от туманных гороскопов? AstroScan показывает <strong>точно</strong>, почему вы чувствуете себя именно так — используя реальные положения планет, рассчитанные по данным NASA.</p>
+    <p data-lang="es">¿Cansado de horóscopos vagos? AstroScan te muestra <strong>exactamente</strong> por qué te sientes como te sientes, usando posiciones planetarias reales calculadas con datos de la NASA.</p>
+    <p data-lang="pt">Cansado de horóscopos vagos? AstroScan mostra <strong>exatamente</strong> por que você se sente assim — usando posições planetárias reais calculadas com dados da NASA.</p>
+    <p data-lang="hi">अस्पष्ट राशिफल से थक गए? एस्ट्रोस्कैन आपको <strong>सटीक</strong> बताता है कि आप ऐसा क्यों महसूस करते हैं — नासा डेटा से गणना की गई वास्तविक ग्रह स्थितियों का उपयोग करके।</p>
+    <p data-lang="de">Müde von vagen Horoskopen? AstroScan zeigt Ihnen <strong>genau</strong>, warum Sie sich so fühlen – mit echten Planetenpositionen, berechnet mit NASA-Daten.</p>
+    <p data-lang="fr">Fatigué des horoscopes vagues ? AstroScan vous montre <strong>exactement</strong> pourquoi vous vous sentez comme vous le faites — en utilisant les positions planétaires réelles calculées avec les données de la NASA.</p>
+    <p data-lang="it">Stanco di oroscopi vaghi? AstroScan ti mostra <strong>esattamente</strong> perché ti senti come ti senti, usando le posizioni planetarie reali calcolate con i dati NASA.</p>
+    <p data-lang="ja">漠然とした星占いにうんざり？AstroScanは、NASAデータで計算された実際の惑星位置を使用して、あなたがなぜそのように感じるのかを<strong>正確に</strong>示します。</p>
+    <p data-lang="zh">厌倦了模糊的星座运势？AstroScan <strong>准确</strong> 展示你为何有如此感受 — 使用NASA数据计算的真实行星位置。</p>
+
+    <p class="text-sm text-[#5a8aaa] mt-2" data-lang="en">Powered by Swiss Ephemeris · NASA JPL DE431 · 0.001" precision</p>
+    <p class="text-sm text-[#5a8aaa] mt-2" data-lang="ru">На основе Swiss Ephemeris · NASA JPL DE431 · точность 0.001"</p>
+
+    <div class="precision-badge">
+      <div><div class="badge-value">0.001"</div><div class="badge-label" data-lang="en">Precision</div><div class="badge-label" data-lang="ru">Точность</div></div>
+      <div><div class="badge-value">NASA/JPL</div><div class="badge-label">DE431</div></div>
+      <div><div class="badge-value">2 min</div><div class="badge-label" data-lang="en">Audit</div><div class="badge-label" data-lang="ru">Аудит</div></div>
     </div>
 
-    <section class="section">
-        <h1 id="hero-title">AstroScan AI</h1>
-        <p id="hero-desc">Stop guessing. Start computing. 2‑minute deterministic personality audit.</p>
-        <div class="precision-badge">
-            <div><div class="badge-value">0.001"</div><div class="badge-label" data-lang="en">Precision</div><div class="badge-label" data-lang="ru">Точность</div><div class="badge-label" data-lang="hi">सटीकता</div><div class="badge-label" data-lang="de">Präzision</div></div>
-            <div><div class="badge-value">NASA/JPL</div><div class="badge-label">DE431</div></div>
-            <div><div class="badge-value">2 min</div><div class="badge-label" data-lang="en">Audit</div><div class="badge-label" data-lang="ru">Аудит</div><div class="badge-label" data-lang="hi">ऑडिट</div><div class="badge-label" data-lang="de">Audit</div></div>
-        </div>
-        <a href="https://t.me/astroscan_bot" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="cta-hero">⚡ LAUNCH PERSONAL AUDIT</a>
-        <div class="trust-links">
-            <a href="https://www.astro.com/swisseph/" target="_blank" rel="noopener noreferrer" class="trust-link">📐 Swiss Ephemeris</a>
-            <a href="https://ssd.jpl.nasa.gov/planets/eph_export.html" target="_blank" rel="noopener noreferrer" class="trust-link">🛰️ NASA JPL</a>
-        </div>
-    </section>
+    <a href="https://t.me/astroscan_bot" target="_blank" rel="noopener" class="btn btn-primary" id="cta-hero">
+      <span data-lang="en">⚡ GET YOUR AUDIT</span>
+      <span data-lang="ru">⚡ ПОЛУЧИТЬ АУДИТ</span>
+    </a>
 
-    <section class="section">
-        <h2 id="products-title">⚡ Choose Your Analysis</h2>
-        <div class="quick-grid">
-            <a href="https://t.me/astroscan_bot?start=natal" class="quick-card">
-                <h3>🌌 <span data-lang="en">Natal Chart</span><span data-lang="ru">Натальная карта</span><span data-lang="hi">जन्म कुंडली</span><span data-lang="de">Geburtshoroskop</span></h3>
-                <p data-lang="en">Sun, Moon, Rising + 12 houses.</p><p data-lang="ru">Солнце, Луна, Асцендент + 12 домов.</p><p data-lang="hi">सूर्य, चंद्र, लग्न + 12 भाव।</p><p data-lang="de">Sonne, Mond, Aszendent + 12 Häuser.</p>
-            </a>
-            <a href="https://t.me/astroscan_bot?start=compat" class="quick-card">
-                <h3>💞 <span data-lang="en">Compatibility</span><span data-lang="ru">Совместимость</span><span data-lang="hi">अनुकूलता</span><span data-lang="de">Kompatibilität</span></h3>
-                <p data-lang="en">Synastry analysis.</p><p data-lang="ru">Синастрический анализ.</p><p data-lang="hi">सिनैस्ट्री विश्लेषण।</p><p data-lang="de">Synastrie-Analyse.</p>
-            </a>
-            <a href="https://t.me/astroscan_bot?start=career" class="quick-card">
-                <h3>💰 <span data-lang="en">Career & Finance</span><span data-lang="ru">Карьера и финансы</span><span data-lang="hi">करियर और वित्त</span><span data-lang="de">Karriere & Finanzen</span></h3>
-                <p data-lang="en">Professional strengths.</p><p data-lang="ru">Профессиональные таланты.</p><p data-lang="hi">पेशेवर ताकत।</p><p data-lang="de">Berufliche Stärken.</p>
-            </a>
-            <a href="https://t.me/astroscan_bot?start=child" class="quick-card">
-                <h3>🧸 <span data-lang="en">Child's Chart</span><span data-lang="ru">Детская карта</span><span data-lang="hi">बाल कुंडली</span><span data-lang="de">Kinderhoroskop</span></h3>
-                <p data-lang="en">Understand potential.</p><p data-lang="ru">Раскройте потенциал.</p><p data-lang="hi">क्षमता समझें।</p><p data-lang="de">Potenzial erkennen.</p>
-            </a>
-        </div>
-    </section>
+    <div class="trust-links">
+      <a href="https://www.astro.com/swisseph/" target="_blank" rel="noopener" class="trust-link">📐 Swiss Ephemeris</a>
+      <a href="https://ssd.jpl.nasa.gov/planets/eph_export.html" target="_blank" rel="noopener" class="trust-link">🛰️ NASA JPL</a>
+    </div>
+  </section>
 
-    <section class="section">
-        <h2>🌍 <span data-lang="en">Western vs. Indian Astrology</span><span data-lang="ru">Западная vs. Индийская астрология</span><span data-lang="hi">पश्चिमी बनाम भारतीय ज्योतिष</span><span data-lang="de">Westliche vs. Indische Astrologie</span></h2>
-        <p data-lang="en"><strong>AstroScan uses the Western tropical zodiac</strong> (NASA JPL). Curious how your chart looks in the <strong>sidereal system (Lahiri)</strong> used in Vedic astrology? <a href="https://t.me/astroscan_bot" style="color:var(--accent);">Compare both versions →</a></p>
-        <p data-lang="ru"><strong>AstroScan использует западный тропический зодиак</strong> (NASA JPL). Хотите увидеть свою карту в <strong>сидерической системе (Лахири)</strong>, принятой в ведической астрологии? <a href="https://t.me/astroscan_bot" style="color:var(--accent);">Сравнить обе версии →</a></p>
-        <p data-lang="hi"><strong>AstroScan पश्चिमी उष्णकटिबंधीय राशि चक्र</strong> (NASA JPL) का उपयोग करता है। जानना चाहते हैं कि वैदिक ज्योतिष में प्रयुक्त <strong>नाक्षत्र प्रणाली (लाहिड़ी)</strong> में आपकी कुंडली कैसी दिखती है? <a href="https://t.me/astroscan_bot" style="color:var(--accent);">दोनों संस्करणों की तुलना करें →</a></p>
-        <p data-lang="de"><strong>AstroScan nutzt den westlichen tropischen Tierkreis</strong> (NASA JPL). Möchten Sie sehen, wie Ihr Horoskop im <strong>siderischen System (Lahiri)</strong> der vedischen Astrologie aussieht? <a href="https://t.me/astroscan_bot" style="color:var(--accent);">Beide Versionen vergleichen →</a></p>
-    </section>
+  <!-- АСТРОКАЛЕНДАРЬ -->
+  <section class="section">
+    <h2 data-lang="en">📡 Today's Astro Summary</h2>
+    <h2 data-lang="ru">📡 Астросводка на сегодня</h2>
+    <div id="astro-calendar" style="text-align:center;">Loading...</div>
+    <a href="https://t.me/astroscan_bot" class="btn btn-primary" style="display:block; width:auto; margin:20px auto 0;">
+      <span data-lang="en">⚡ SEE HOW IT AFFECTS YOU</span>
+      <span data-lang="ru">⚡ УЗНАТЬ, КАК ЭТО ВЛИЯЕТ НА ВАС</span>
+    </a>
+  </section>
 
-    <section class="section" style="border-color:var(--star);">
-        <h2 style="color:var(--star);">⭐️ <span data-lang="en">Best Way to Spend Telegram Stars</span><span data-lang="ru">Лучший способ потратить Telegram Stars</span><span data-lang="hi">टेलीग्राम स्टार्स खर्च करने का सबसे अच्छा तरीका</span><span data-lang="de">Beste Verwendung für Telegram Stars</span></h2>
-        <p><span data-lang="en">Instead of disposable stickers, invest your XTR in a lifelong deterministic personality blueprint. <strong>200 Stars ≈ $2.80 USD</strong> (Stars can be withdrawn to Toncoin via Fragment).</span><span data-lang="ru">Вместо одноразовых стикеров вложите XTR в пожизненный детерминированный портрет личности. <strong>200 Звезд ≈ 250-300 рублей</strong> (Звезды можно вывести в Toncoin через Fragment).</span><span data-lang="hi">डिस्पोजेबल स्टिकर के बजाय, अपने XTR को आजीवन नियतात्मक व्यक्तित्व ब्लूप्रिंट में निवेश करें। <strong>200 स्टार्स ≈ ₹230</strong> (स्टार्स को Fragment के माध्यम से Toncoin में बदला जा सकता है)।</span><span data-lang="de">Statt Wegwerf-Stickern investieren Sie Ihre XTR in eine lebenslange deterministische Persönlichkeitsanalyse. <strong>200 Stars ≈ 2,80 USD</strong> (Stars können über Fragment in Toncoin ausgezahlt werden).</span></p>
-        <div style="margin-top:10px;"><span class="trust-link" style="border-color:var(--star);">#TelegramStars</span><span class="trust-link" style="border-color:var(--star);">#XTR</span></div>
-    </section>
+  <!-- PRODUCT GRID -->
+  <section class="section">
+    <h2 data-lang="en">⚡ Choose Your Analysis</h2>
+    <h2 data-lang="ru">⚡ Выберите анализ</h2>
+    <div class="quick-grid">
+      <a href="https://t.me/astroscan_bot?start=natal" class="quick-card">
+        <h3 data-lang="en">🌌 Natal Chart</h3><h3 data-lang="ru">🌌 Натальная карта</h3>
+        <p data-lang="en">Sun, Moon, Rising + 12 houses.</p><p data-lang="ru">Солнце, Луна, Асцендент + 12 домов.</p>
+      </a>
+      <a href="https://t.me/astroscan_bot?start=compat" class="quick-card">
+        <h3 data-lang="en">💞 Compatibility</h3><h3 data-lang="ru">💞 Совместимость</h3>
+        <p data-lang="en">Synastry analysis.</p><p data-lang="ru">Синастрический анализ.</p>
+      </a>
+      <a href="https://t.me/astroscan_bot?start=career" class="quick-card">
+        <h3 data-lang="en">💰 Career & Finance</h3><h3 data-lang="ru">💰 Карьера и финансы</h3>
+        <p data-lang="en">Professional strengths.</p><p data-lang="ru">Профессиональные таланты.</p>
+      </a>
+      <a href="https://t.me/astroscan_bot?start=child" class="quick-card">
+        <h3 data-lang="en">🧸 Child's Chart</h3><h3 data-lang="ru">🧸 Детская карта</h3>
+        <p data-lang="en">Understand potential.</p><p data-lang="ru">Раскройте потенциал.</p>
+      </a>
+    </div>
+    <p class="text-center text-xs text-[#5a8aaa] mt-4" data-lang="en">All audits generated in 2 minutes, delivered as PDF.</p>
+    <p class="text-center text-xs text-[#5a8aaa] mt-4" data-lang="ru">Все аудиты генерируются за 2 минуты и приходят в PDF.</p>
+  </section>
 
-    <section class="section">
-        <h2>❓ <span data-lang="en">Frequently Asked Questions</span><span data-lang="ru">Часто задаваемые вопросы</span><span data-lang="hi">अक्सर पूछे जाने वाले प्रश्न</span><span data-lang="de">Häufig gestellte Fragen</span></h2>
-        <div class="qa-card">
-            <h3 style="color:var(--accent);">🌙 <span data-lang="en">Why is my Moon sign so weird?</span><span data-lang="ru">Почему мой лунный знак такой странный?</span><span data-lang="hi">मेरा चंद्र राशि इतना अजीब क्यों है?</span><span data-lang="de">Warum ist mein Mondzeichen so seltsam?</span></h3>
-            <p><span data-lang="en">Your Moon sign is your emotional subconscious — it feels 'weird' because it operates beneath your conscious Sun sign identity.</span><span data-lang="ru">Лунный знак — это ваше эмоциональное подсознание. Он кажется "странным", потому что показывает потребности, которые вы не всегда осознаёте.</span><span data-lang="hi">आपकी चंद्र राशि आपका भावनात्मक अवचेतन है — यह 'अजीब' लगती है क्योंकि यह आपकी चेतन सूर्य राशि की पहचान के नीचे काम करती है।</span><span data-lang="de">Ihr Mondzeichen ist Ihr emotionales Unterbewusstsein — es fühlt sich 'seltsam' an, weil es unter Ihrer bewussten Sonnenzeichen-Identität operiert.</span></p>
-        </div>
-        <div class="qa-card">
-            <h3 style="color:var(--accent);">🧮 <span data-lang="en">Is astrology math or magic?</span><span data-lang="ru">Астрология — математика или магия?</span><span data-lang="hi">ज्योतिष गणित है या जादू?</span><span data-lang="de">Ist Astrologie Mathematik oder Magie?</span></h3>
-            <p><span data-lang="en">Planetary positions are computed scientifically (NASA JPL DE431). Interpretation is symbolic modeling.</span><span data-lang="ru">Позиции планет вычисляются научно (NASA JPL DE431). Интерпретация — символическая модель.</span><span data-lang="hi">ग्रहों की स्थिति वैज्ञानिक रूप से गणना की जाती है (NASA JPL DE431)। व्याख्या प्रतीकात्मक मॉडलिंग है।</span><span data-lang="de">Planetenpositionen werden wissenschaftlich berechnet (NASA JPL DE431). Die Interpretation ist symbolische Modellierung.</span></p>
-        </div>
-        <div class="qa-card">
-            <h3 style="color:var(--accent);">✨ <span data-lang="en">What are my Big Three?</span><span data-lang="ru">Что такое "Большая тройка"?</span><span data-lang="hi">मेरे 'बिग थ्री' क्या हैं?</span><span data-lang="de">Was sind meine 'Big Three'?</span></h3>
-            <p><span data-lang="en">Sun (identity), Moon (emotions), and Ascendant (outer behavior).</span><span data-lang="ru">Солнце (личность), Луна (эмоции), Асцендент (поведение).</span><span data-lang="hi">सूर्य (पहचान), चंद्र (भावनाएँ), और लग्न (बाहरी व्यवहार)।</span><span data-lang="de">Sonne (Identität), Mond (Emotionen) und Aszendent (äußeres Verhalten).</span></p>
-        </div>
-    </section>
+  <!-- WESTERN VS VEDIC -->
+  <section class="section">
+    <h2 data-lang="en">🌍 Western vs. Vedic Astrology</h2>
+    <h2 data-lang="ru">🌍 Западная vs. Ведическая астрология</h2>
+    <p data-lang="en"><strong>AstroScan uses the Western tropical zodiac</strong> (NASA JPL). Curious how your chart looks in the <strong>sidereal system (Lahiri)</strong> used in Vedic astrology? <a href="https://t.me/astroscan_bot" style="color:var(--accent);">Compare both versions →</a></p>
+    <p data-lang="ru"><strong>AstroScan использует западный тропический зодиак</strong> (NASA JPL). Хотите увидеть свою карту в <strong>сидерической системе (Лахири)</strong>, принятой в ведической астрологии? <a href="https://t.me/astroscan_bot" style="color:var(--accent);">Сравнить обе версии →</a></p>
+  </section>
 
-    <footer class="footnote">
-        <p>© 2026 AstroScan Lab · Built on Swiss Ephemeris v2.10</p>
-        <p data-lang="en">Deterministic framework. Not a substitute for professional advice.</p>
-        <p data-lang="ru">Детерминированный фреймворк. Не заменяет профессиональную консультацию.</p>
-        <p data-lang="hi">नियतात्मक ढांचा। पेशेवर सलाह का विकल्प नहीं।</p>
-        <p data-lang="de">Deterministisches Framework. Kein Ersatz für professionelle Beratung.</p>
-        <p style="margin-top:8px;"><a href="llms.txt" target="_blank" style="color:var(--dim);">llms.txt</a> · <a href="privacy.html" style="color:var(--dim);">Privacy</a> · <a href="sitemap.xml" style="color:var(--dim);">Sitemap</a></p>
-        <div class="back-to-top"><a href="#" style="color:var(--accent);">↑ Back to top</a></div>
-    </footer>
+  <!-- TELEGRAM STARS -->
+  <section class="section" style="border-color:var(--star);">
+    <h2 style="color:var(--star);">⭐️ <span data-lang="en">Best Way to Spend Telegram Stars</span><span data-lang="ru">⭐️ Лучший способ потратить Telegram Stars</span></h2>
+    <p data-lang="en">Instead of disposable stickers, invest your XTR in a lifelong deterministic personality blueprint. <strong>200 Stars ≈ $2.80 USD</strong> (withdrawable to Toncoin via Fragment).</p>
+    <p data-lang="ru">Вместо одноразовых стикеров вложите XTR в пожизненный детерминированный портрет личности. <strong>200 Звезд ≈ 250-300 рублей</strong> (можно вывести в Toncoin через Fragment).</p>
+    <div style="margin-top:10px;"><span class="trust-link" style="border-color:var(--star);">#TelegramStars</span><span class="trust-link" style="border-color:var(--star);">#XTR</span></div>
+  </section>
+
+  <!-- ДЛЯ АСТРОЛОГОВ -->
+  <section class="section">
+    <h2 data-lang="en">🧑‍🏫 For Professional Astrologers</h2>
+    <h2 data-lang="ru">🧑‍🏫 Для практикующих астрологов</h2>
+    <p data-lang="en"><strong>Save hours on every consultation.</strong> Generate white‑label PDF reports in 2 minutes — use them as client deliverables or sell as standalone analyses.</p>
+    <p data-lang="ru"><strong>Экономьте часы на каждой консультации.</strong> Получайте white‑label PDF‑отчёты за 2 минуты — используйте как раздаточный материал или продавайте отдельно.</p>
+    <a href="https://t.me/astroscan_bot" class="btn btn-primary" style="display:inline-block; width:auto; margin-top:15px;">
+      <span data-lang="en">⚡ TRY FOR PROFESSIONALS</span>
+      <span data-lang="ru">⚡ ПОПРОБОВАТЬ ДЛЯ ПРОФИ</span>
+    </a>
+  </section>
+
+  <!-- КВИЗ -->
+  <section class="section">
+    <h2 data-lang="en">🧪 Quick Test: What's Your Astrotype?</h2>
+    <h2 data-lang="ru">🧪 Быстрый тест: Какой у тебя астротип?</h2>
+    <div id="astro-quiz"></div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <h2 data-lang="en">❓ Frequently Asked Questions</h2>
+    <h2 data-lang="ru">❓ Часто задаваемые вопросы</h2>
+    <div class="qa-card"><h3 style="color:var(--accent);">🌙 <span data-lang="en">Why is my Moon sign so weird?</span><span data-lang="ru">Почему мой лунный знак такой странный?</span></h3><p data-lang="en">Your Moon sign is your emotional subconscious — it feels "weird" because it operates beneath your conscious Sun sign identity.</p><p data-lang="ru">Лунный знак — это ваше эмоциональное подсознание. Он кажется "странным", потому что показывает потребности, которые вы не всегда осознаёте.</p></div>
+    <div class="qa-card"><h3 style="color:var(--accent);">🧮 <span data-lang="en">Is astrology math or magic?</span><span data-lang="ru">Астрология — математика или магия?</span></h3><p data-lang="en">Planetary positions are computed scientifically (NASA JPL DE431). Interpretation is symbolic modeling.</p><p data-lang="ru">Позиции планет вычисляются научно (NASA JPL DE431). Интерпретация — символическая модель.</p></div>
+    <div class="qa-card"><h3 style="color:var(--accent);">✨ <span data-lang="en">What are my Big Three?</span><span data-lang="ru">Что такое "Большая тройка"?</span></h3><p data-lang="en">Sun (identity), Moon (emotions), and Ascendant (outer behavior).</p><p data-lang="ru">Солнце (личность), Луна (эмоции), Асцендент (поведение).</p></div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footnote">
+    <p>© 2026 AstroScan Lab · Built on Swiss Ephemeris v2.10</p>
+    <p data-lang="en">Deterministic framework. Not a substitute for professional advice.</p>
+    <p data-lang="ru">Детерминированный фреймворк. Не заменяет профессиональную консультацию.</p>
+    <div style="margin-top:0.5rem; opacity:0.6;">
+      <span data-lang="en">🔬 Data sources: NASA JPL DE431 · Swiss Ephemeris v2.10 · 0.001" precision</span>
+      <span data-lang="ru">🔬 Источники данных: NASA JPL DE431 · Swiss Ephemeris v2.10 · точность 0.001"</span>
+    </div>
+    <p style="margin-top:8px;">
+      <a href="privacy.html" style="color:var(--dim);">Privacy</a> · 
+      <a href="terms.html" style="color:var(--dim);">Terms</a> · 
+      <a href="llms.txt" target="_blank" style="color:var(--dim);">llms.txt</a> · 
+      <a href="sitemap.xml" target="_blank" style="color:var(--dim);">Sitemap</a>
+    </p>
+    <div class="back-to-top"><a href="#" style="color:var(--accent);">↑ Back to top</a></div>
+  </footer>
 </div>
 
 <div class="cta-bar">
-    <a class="telegram" href="https://t.me/astroscan_bot" target="_blank" id="cta-footer">⚡ OPEN ASTROSCAN</a>
+  <a class="telegram" href="https://t.me/astroscan_bot" target="_blank" id="cta-footer">⚡ OPEN ASTROSCAN</a>
 </div>
 
 <script>
-const i18n = {
-    en: {
-        pageTitle: "AstroScan AI — Deterministic Astrology (NASA JPL + Swiss Ephemeris)",
-        topBadge: "[ASTROSCAN // DETERMINISTIC CORE]",
-        heroTitle: "AstroScan AI",
-        heroDesc: "Stop guessing. Start computing. 2‑minute deterministic personality audit.",
-        ctaHero: "⚡ LAUNCH PERSONAL AUDIT",
-        ctaFooter: "⚡ OPEN ASTROSCAN"
-    },
-    ru: {
-        pageTitle: "AstroScan AI — Детерминированная астрология (NASA JPL + Swiss Ephemeris)",
-        topBadge: "[ASTROSCAN // ДЕТЕРМИНИРОВАННОЕ ЯДРО]",
-        heroTitle: "AstroScan AI",
-        heroDesc: "Хватит гадать. Пора вычислять. 2-минутный детерминированный аудит личности.",
-        ctaHero: "⚡ ЗАПУСТИТЬ АУДИТ",
-        ctaFooter: "⚡ ОТКРЫТЬ ASTROSCAN"
-    },
-    hi: {
-        pageTitle: "AstroScan AI — नियतात्मक ज्योतिष (NASA JPL + Swiss Ephemeris)",
-        topBadge: "[ASTROSCAN // नियतात्मक कोर]",
-        heroTitle: "AstroScan AI",
-        heroDesc: "अनुमान लगाना बंद करें। गणना शुरू करें। 2-मिनट का नियतात्मक व्यक्तित्व ऑडिट।",
-        ctaHero: "⚡ व्यक्तिगत ऑडिट लॉन्च करें",
-        ctaFooter: "⚡ ASTROSCAN खोलें"
-    },
-    de: {
-        pageTitle: "AstroScan AI — Deterministische Astrologie (NASA JPL + Swiss Ephemeris)",
-        topBadge: "[ASTROSCAN // DETERMINISTISCHER KERN]",
-        heroTitle: "AstroScan AI",
-        heroDesc: "Hören Sie auf zu raten. Fangen Sie an zu rechnen. 2‑Minuten deterministisches Persönlichkeitsaudit.",
-        ctaHero: "⚡ PERSÖNLICHES AUDIT STARTEN",
-        ctaFooter: "⚡ ASTROSCAN ÖFFNEN"
-    }
+// ==================== LANGUAGE SYSTEM ====================
+const langs = ['en','ru','es','pt','hi','de','fr','it','ja','zh'];
+const langNames = {en:'English',ru:'Русский',es:'Español',pt:'Português',hi:'हिन्दी',de:'Deutsch',fr:'Français',it:'Italiano',ja:'日本語',zh:'中文'};
+
+const translations = {
+  en: {
+    topBadge: '[ASTROSCAN // DETERMINISTIC CORE]',
+    ctaHero: '⚡ GET YOUR AUDIT',
+    ctaFooter: '⚡ OPEN ASTROSCAN',
+    loading: 'Loading...',
+    lunarDay: 'lunar day',
+    moonIn: 'Moon in',
+    retake: 'Retake'
+  },
+  ru: {
+    topBadge: '[ASTROSCAN // ДЕТЕРМИНИРОВАННОЕ ЯДРО]',
+    ctaHero: '⚡ ПОЛУЧИТЬ АУДИТ',
+    ctaFooter: '⚡ ОТКРЫТЬ ASTROSCAN',
+    loading: 'Загрузка...',
+    lunarDay: 'лунный день',
+    moonIn: 'Луна в',
+    retake: 'Пройти заново'
+  }
+  // другие языки добавляются аналогично
 };
 
-let lang = "en";
-
-function setLanguage(l) {
-    lang = l;
-    document.body.setAttribute('lang', lang);
-    const t = i18n[lang] || i18n.en;
-    document.title = t.pageTitle;
-    document.getElementById('top-badge').innerText = t.topBadge;
-    document.getElementById('hero-title').innerText = t.heroTitle;
-    document.getElementById('hero-desc').innerText = t.heroDesc;
-    document.getElementById('cta-hero').innerHTML = t.ctaHero;
-    document.getElementById('cta-footer').innerHTML = t.ctaFooter;
-    document.querySelectorAll('.lang-switcher a').forEach(a => a.classList.remove('active'));
-    document.getElementById(lang).classList.add('active');
+function setLang(lang) {
+  document.body.className = document.body.className.replace(/lang-\w+/g,'');
+  document.body.classList.add(`lang-${lang}`);
+  localStorage.setItem('astroscan_lang', lang);
+  
+  // Обновляем активную кнопку
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(`lang-${lang}`)?.classList.add('active');
+  
+  // Локализуем элементы без data-lang
+  const t = translations[lang] || translations.en;
+  document.getElementById('top-badge').innerText = t.topBadge;
+  document.getElementById('cta-hero').innerHTML = t.ctaHero;
+  document.getElementById('cta-footer').innerHTML = t.ctaFooter;
+  
+  updateCalendar();
+  renderQuiz();
 }
 
-["en","ru","hi","de"].forEach(l => {
-    const el = document.getElementById(l);
-    if(el) el.onclick = (e) => { e.preventDefault(); setLanguage(l); };
-});
+function detectLang() {
+  const saved = localStorage.getItem('astroscan_lang');
+  if (saved && langs.includes(saved)) return saved;
+  const browser = navigator.language.split('-')[0];
+  return langs.includes(browser) ? browser : 'en';
+}
 
-// Matrix background
-const canvas=document.getElementById("matrix"), ctx=canvas.getContext("2d"); let w,h,cols;
-function resize(){ w=canvas.width=window.innerWidth; h=canvas.height=window.innerHeight; cols=Array(Math.floor(w/20)).fill(0); }
-window.onresize=resize; resize();
-function draw(){ ctx.fillStyle="rgba(3,6,8,0.1)"; ctx.fillRect(0,0,w,h); ctx.fillStyle="#1a3a5c"; ctx.font="14px monospace"; cols.forEach((y,i)=>{ ctx.fillText(Math.random()>0.5?"1":"0",i*20,y); cols[i]=y>h?0:y+14; }); requestAnimationFrame(draw); }
-draw();
+function initLangSwitcher() {
+  const container = document.getElementById('lang-switcher');
+  langs.forEach(l => {
+    const btn = document.createElement('button');
+    btn.id = `lang-${l}`;
+    btn.className = 'lang-btn';
+    btn.textContent = langNames[l];
+    btn.onclick = () => setLang(l);
+    container.appendChild(btn);
+  });
+  setLang(detectLang());
+}
 
-setLanguage('en');
+// ==================== МАТРИЦА ====================
+const canvas = document.getElementById('matrixCanvas');
+const ctx = canvas.getContext('2d');
+let w, h, cols;
+function resizeMatrix() { 
+  w = canvas.width = window.innerWidth; 
+  h = canvas.height = window.innerHeight; 
+  cols = Array(Math.floor(w / 20)).fill(0); 
+}
+window.addEventListener('resize', resizeMatrix);
+resizeMatrix();
+function drawMatrix() {
+  ctx.fillStyle = 'rgba(3,6,8,0.1)';
+  ctx.fillRect(0, 0, w, h);
+  ctx.fillStyle = '#1a3a5c';
+  ctx.font = '14px monospace';
+  cols.forEach((y, i) => {
+    ctx.fillText(Math.random() > 0.5 ? '1' : '0', i * 20, y);
+    cols[i] = y > h ? 0 : y + 14;
+  });
+  requestAnimationFrame(drawMatrix);
+}
+drawMatrix();
+
+// ==================== КАЛЕНДАРЬ ====================
+function updateCalendar() {
+  const today = new Date();
+  const lang = document.body.className.match(/lang-(\w+)/)?.[1] || 'en';
+  const months = {
+    en: ['January','February','March','April','May','June','July','August','September','October','November','December'],
+    ru: ['января','февраля','марта','апреля','мая','июня','июля','августа','сентября','октября','ноября','декабря']
+  };
+  const weekdays = {
+    en: ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
+    ru: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота']
+  };
+  const moonSigns = {
+    en: ['Aries','Taurus','Gemini','Cancer','Leo','Virgo','Libra','Scorpio','Sagittarius','Capricorn','Aquarius','Pisces'],
+    ru: ['Овен','Телец','Близнецы','Рак','Лев','Дева','Весы','Скорпион','Стрелец','Козерог','Водолей','Рыбы']
+  };
+  const month = (months[lang] || months.en)[today.getMonth()];
+  const wd = (weekdays[lang] || weekdays.en)[today.getDay()];
+  const dateStr = `${today.getDate()} ${month}`;
+
+  const base = new Date(Date.UTC(2000,0,6,18,14));
+  const diff = (today - base) / 86400000;
+  const age = (diff % 29.530588853 + 29.530588853) % 29.530588853;
+  const lunarDay = Math.floor(age) + 1;
+  const phase = age < 1 ? '🌑' : age < 7 ? '🌒' : age < 14 ? '🌓' : age < 21 ? '🌔' : age < 28 ? '🌕' : '🌖';
+  const moonLon = ((diff / 27.321661) * 360) % 360;
+  const moonSign = (moonSigns[lang] || moonSigns.en)[Math.floor(moonLon / 30)];
+
+  const container = document.getElementById('astro-calendar');
+  const t = translations[lang] || translations.en;
+  if (container) {
+    container.innerHTML = `
+      <div style="font-size:2rem;">${dateStr}, ${wd}</div>
+      <div style="font-size:1.2rem; margin:10px 0;">
+        🌙 ${lunarDay} ${t.lunarDay} · ${phase} ${t.moonIn} ${moonSign}
+      </div>
+    `;
+  }
+}
+
+// ==================== КВИЗ ====================
+const quizData = {
+  en: {
+    q1: "How do you make decisions?",
+    opts1: ["Quickly, by instinct","I analyze everything","I ask friends"],
+    q2: "What motivates you most?",
+    opts2: ["New ideas","Stability & comfort","Recognition"],
+    results: ["🔥 Mars type — action‑oriented","🌿 Venus type — harmony seeker","📡 Mercury type — curious mind"],
+    cta: "⚡ GET YOUR AUDIT"
+  },
+  ru: {
+    q1: "Как ты принимаешь решения?",
+    opts1: ["Быстро, по наитию","Всё анализирую","Спрашиваю друзей"],
+    q2: "Что тебя больше всего мотивирует?",
+    opts2: ["Новые идеи","Стабильность и комфорт","Признание"],
+    results: ["🔥 Тип Марса — действуешь быстро","🌿 Тип Венеры — ценишь гармонию","📡 Тип Меркурия — любопытный ум"],
+    cta: "⚡ ПОЛУЧИТЬ АУДИТ"
+  }
+};
+
+function renderQuiz() {
+  const lang = document.body.className.match(/lang-(\w+)/)?.[1] || 'en';
+  const data = quizData[lang] || quizData.en;
+  const t = translations[lang] || translations.en;
+  const container = document.getElementById('astro-quiz');
+  let qIdx = 0, answers = [];
+
+  function showQuestion() {
+    if (qIdx === 0) {
+      container.innerHTML = `<p style="margin-bottom:1rem;"><strong>${data.q1}</strong></p><div style="display:flex; flex-direction:column; gap:8px;">` +
+        data.opts1.map((opt,i) => `<button class="btn quiz-opt" data-val="${i}" style="text-align:left;">${opt}</button>`).join('') + '</div>';
+      container.querySelectorAll('.quiz-opt').forEach(b => b.onclick = (e) => {
+        answers.push(parseInt(e.target.dataset.val)); qIdx++; showQuestion();
+      });
+    } else if (qIdx === 1) {
+      container.innerHTML = `<p style="margin-bottom:1rem;"><strong>${data.q2}</strong></p><div style="display:flex; flex-direction:column; gap:8px;">` +
+        data.opts2.map((opt,i) => `<button class="btn quiz-opt" data-val="${i}" style="text-align:left;">${opt}</button>`).join('') + '</div>';
+      container.querySelectorAll('.quiz-opt').forEach(b => b.onclick = (e) => {
+        answers.push(parseInt(e.target.dataset.val)); qIdx++; showQuestion();
+      });
+    } else {
+      const score = answers.reduce((a,b) => a + b, 0) % data.results.length;
+      container.innerHTML = `
+        <p style="margin-bottom:1rem;">${data.results[score]}</p>
+        <a href="https://t.me/astroscan_bot" class="btn btn-primary">${data.cta}</a>
+        <button class="btn" id="quiz-restart" style="margin-left:10px;">↻ ${t.retake}</button>
+      `;
+      document.getElementById('quiz-restart').onclick = () => { qIdx = 0; answers = []; showQuestion(); };
+    }
+  }
+  showQuestion();
+}
+
+// ==================== ИНИЦИАЛИЗАЦИЯ ====================
+initLangSwitcher();
+updateCalendar();
+renderQuiz();
+
+// Telegram Mini App
+if (window.Telegram?.WebApp) {
+  Telegram.WebApp.ready();
+  Telegram.WebApp.expand();
+}
 </script>
 </body>
 </html>
