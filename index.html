@@ -114,7 +114,7 @@
     .cta-bar a { flex: 1; text-align: center; padding: 14px; text-decoration: none; font-weight: bold; text-transform: uppercase; color: var(--text-light); }
     .cta-bar .telegram-cta { background: var(--accent-primary); color: #0a0718; }
     
-    .lazy-section { min-height: 300px; }
+    .lazy-section { min-height: 300px; contain: layout; }
     [data-lang] { display: none; }
     body.lang-en [data-lang="en"] { display: revert; }
     body.lang-ru [data-lang="ru"] { display: revert; }
@@ -198,8 +198,9 @@
   
   <div id="appRoot" aria-live="polite"></div>
 
-  <section class="card lazy-section" id="section-tech" data-loaded="false"></section>
-  <section class="card lazy-section" id="section-services" data-loaded="false"></section>
+  <!-- Исправлено: section -> div (устранены предупреждения о заголовках) -->
+  <div class="card lazy-section" id="section-tech" data-loaded="false"></div>
+  <div class="card lazy-section" id="section-services" data-loaded="false"></div>
   
   <!-- Блок "О проекте" с дополнительной текстовой информацией для SEO -->
   <section class="card" id="about-section">
@@ -237,10 +238,10 @@
     <span data-lang="pt">AstroScan é uma ferramenta de autodescoberta. Os resultados não são conclusões médicas ou preditivas.</span>
     <span data-lang="id">AstroScan adalah alat penemuan diri. Hasil bukanlah kesimpulan medis atau prediktif.</span></p>
     
-    <!-- Счётчики -->
+    <!-- Счётчики: добавлены width/height для устранения CLS -->
     <div style="margin-top: 0.5rem;">
       <a href="https://librecounter.org/referer/show" style="display: inline-block; margin-right: 1rem;">
-        <img src="https://librecounter.org/counter.svg" referrerPolicy="unsafe-url" alt="Visitor Counter" style="height: 20px; width: auto;" />
+        <img src="https://librecounter.org/counter.svg" referrerPolicy="unsafe-url" alt="Visitor Counter" width="20" height="20" style="height: auto;" />
       </a>
       <div style="display: inline-block; text-align: left; font-size: 0.8rem; background: rgba(0,0,0,0.2); padding: 0.3rem 0.8rem; border-radius: 1rem;">
         <span style="color: var(--text-dim);">👁️ <span data-placeholder="now">...</span> | <span data-lang="en">Today</span><span data-lang="ru">Сегодня</span><span data-lang="es">Hoy</span><span data-lang="ar">اليوم</span><span data-lang="hi">आज</span><span data-lang="de">Heute</span><span data-lang="pt">Hoje</span><span data-lang="id">Hari ini</span>: <span data-placeholder="24h">...</span> | <span data-lang="en">Total</span><span data-lang="ru">Всего</span><span data-lang="es">Total</span><span data-lang="ar">المجموع</span><span data-lang="hi">कुल</span><span data-lang="de">Gesamt</span><span data-lang="pt">Total</span><span data-lang="id">Total</span>: <span data-placeholder="month">...</span></span>
@@ -253,7 +254,8 @@
   <a class="telegram-cta" href="https://t.me/ASTROSCAN_BOT" target="_blank" id="cta-footer">⚡ ПОЛУЧИТЬ ПОЛНЫЙ РАЗБОР В TELEGRAM (БЕСПЛАТНО!)</a>
 </div>
 
-<script src="https://api.learntogoogle.de/OpenCounterAPI.js" data-page="astroscan_home"></script>
+<!-- Скрипт счётчика загружается асинхронно -->
+<script async src="https://api.learntogoogle.de/OpenCounterAPI.js" data-page="astroscan_home"></script>
 <script>
   (function(){
     "use strict";
