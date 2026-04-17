@@ -1,8 +1,149 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Английская версия (основная) -->
   <url>
     <loc>https://astroscan-lab.github.io/astroscan_bot/</loc>
-    <lastmod>2026-04-03</lastmod>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://astroscan-lab.github.io/astroscan_bot/?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/?lang=hi"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://astroscan-lab.github.io/astroscan_bot/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://astroscan-lab.github.io/astroscan_bot/?lang=pt"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://astroscan-lab.github.io/astroscan_bot/?lang=id"/>
+  </url>
+  
+  <!-- Русская версия -->
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/?lang=ru</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://astroscan-lab.github.io/astroscan_bot/?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/?lang=hi"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://astroscan-lab.github.io/astroscan_bot/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://astroscan-lab.github.io/astroscan_bot/?lang=pt"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://astroscan-lab.github.io/astroscan_bot/?lang=id"/>
+  </url>
+  
+  <!-- Испанская версия -->
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/?lang=es</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://astroscan-lab.github.io/astroscan_bot/?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/?lang=hi"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://astroscan-lab.github.io/astroscan_bot/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://astroscan-lab.github.io/astroscan_bot/?lang=pt"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://astroscan-lab.github.io/astroscan_bot/?lang=id"/>
+  </url>
+  
+  <!-- Арабская версия -->
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/?lang=ar</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://astroscan-lab.github.io/astroscan_bot/?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/?lang=hi"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://astroscan-lab.github.io/astroscan_bot/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://astroscan-lab.github.io/astroscan_bot/?lang=pt"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://astroscan-lab.github.io/astroscan_bot/?lang=id"/>
+  </url>
+  
+  <!-- Хинди -->
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/?lang=hi</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://astroscan-lab.github.io/astroscan_bot/?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/?lang=hi"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://astroscan-lab.github.io/astroscan_bot/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://astroscan-lab.github.io/astroscan_bot/?lang=pt"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://astroscan-lab.github.io/astroscan_bot/?lang=id"/>
+  </url>
+  
+  <!-- Немецкая версия -->
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/?lang=de</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://astroscan-lab.github.io/astroscan_bot/?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/?lang=hi"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://astroscan-lab.github.io/astroscan_bot/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://astroscan-lab.github.io/astroscan_bot/?lang=pt"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://astroscan-lab.github.io/astroscan_bot/?lang=id"/>
+  </url>
+  
+  <!-- Португальская версия -->
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/?lang=pt</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://astroscan-lab.github.io/astroscan_bot/?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/?lang=hi"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://astroscan-lab.github.io/astroscan_bot/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://astroscan-lab.github.io/astroscan_bot/?lang=pt"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://astroscan-lab.github.io/astroscan_bot/?lang=id"/>
+  </url>
+  
+  <!-- Индонезийская версия -->
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/?lang=id</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://astroscan-lab.github.io/astroscan_bot/?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/?lang=hi"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://astroscan-lab.github.io/astroscan_bot/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://astroscan-lab.github.io/astroscan_bot/?lang=pt"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://astroscan-lab.github.io/astroscan_bot/?lang=id"/>
+  </url>
+  
+  <!-- Страница условий -->
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/terms.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <!-- Страница политики конфиденциальности -->
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/privacy.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>
