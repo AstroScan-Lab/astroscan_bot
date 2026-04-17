@@ -1,99 +1,105 @@
-# 🚀 AstroScan · Бесплатный тест личности без регистрации
+# 🚀 AstroScan · Free Personality Test · No Registration
 
 [![Languages](https://img.shields.io/badge/languages-8-blue)](https://astroscan-lab.github.io/astroscan_bot/)
 
-**⚡ Быстро. Бесплатно. Без регистрации.**  
-Пройдите **10-минутный тест** и мгновенно узнайте:
-- Ваш **поведенческий архетип** (Стратег, Дипломат, Искатель...).
-- Ваш **знак китайского зодиака**.
-- **Совместимость** с партнёром в любви, дружбе или работе.
+**⚡ Fast. Free. No sign-up.**  
+Take a **10-minute test** and instantly discover:
+- Your **behavioral archetype** (Strategist, Diplomat, Explorer...).
+- Your **Chinese zodiac sign**.
+- **Compatibility** with a partner in love, friendship, or work.
 
-🌐 **Начать тест прямо сейчас:**  
+🌐 **Start the test now:**  
 [English](https://astroscan-lab.github.io/astroscan_bot/) | [Русский](https://astroscan-lab.github.io/astroscan_bot/?lang=ru) | [Español](https://astroscan-lab.github.io/astroscan_bot/?lang=es) | [العربية](https://astroscan-lab.github.io/astroscan_bot/?lang=ar) | [हिन्दी](https://astroscan-lab.github.io/astroscan_bot/?lang=hi) | [Deutsch](https://astroscan-lab.github.io/astroscan_bot/?lang=de) | [Português](https://astroscan-lab.github.io/astroscan_bot/?lang=pt) | [Bahasa Indonesia](https://astroscan-lab.github.io/astroscan_bot/?lang=id)
 
 ---
 
-## 🤖 Хотите полный разбор?
+## 🤖 Want a deeper analysis?
 
-Базовый тест абсолютно бесплатен.  
-Если захотите глубже изучить свою натальную карту, карьерные перспективы или совместимость — переходите в нашего Telegram-бота.
+The basic test is completely free.  
+If you'd like to explore your full natal chart, career potential, or relationship synastry — head over to our Telegram bot.
 
-**👉 [@ASTROSCAN_BOT](https://t.me/ASTROSCAN_BOT)** — подробные PDF-отчёты с оплатой в **Telegram Stars**.
-
----
-
-## 🏗 Архитектура: Двухслойный детерминированный синтез
-
-В 2026 году главная проблема цифровой астрологии — нестабильность генеративных моделей. Большинство сервисов используют ИИ как «чёрный ящик», что приводит к математическим ошибкам и потере доверия пользователей.
-
-**AstroScan AI решает эту проблему** с помощью проприетарной архитектуры, строго разделяющей вычисления и синтез.
-
-### 1. Слой вычислений: Детерминированный расчёт (Hard Math)
-- **Движок:** Локальная C-реализация **Swiss Ephemeris** — индустриального стандарта.
-- **Производительность:** Соответствует профессиональному астрологическому ПО (ZET, Solar Fire).
-- **Результат:** Валидированная JSON-матрица с координатами планет, куспидами домов и точными аспектами с орбисами.
-- **Надёжность:** **100% воспроизводимость.** Одинаковые входные данные → идентичная математическая модель.
-
-### 2. Слой синтеза: Проприетарный нейро-движок (Expert Intelligence)
-В отличие от шаблонных ботов, AstroScan AI использует кастомно обученный нарративный движок:
-
-- **Продвинутое обучение:** Модель натренирована на уникальном наборе из тысяч профессиональных психологических и астрономических кейсов для распознавания сложных личностных паттернов.
-- **Интеграция с Gemini Pro:** Система использует инфраструктуру Google Gemini Pro для высокоскоростной аналитической обработки с большим контекстом.
-- **Семантический контроль:** ИИ извлекает верифицированные правила интерпретации и синтезирует их в связный отчёт, **не имея права «придумывать»** аспекты, отсутствующие в JSON-матрице первого слоя.
+**👉 [@ASTROSCAN_BOT](https://t.me/ASTROSCAN_BOT)** — detailed PDF reports available via **Telegram Stars**.
 
 ---
 
-## 🔍 Трассируемость: Прозрачность и верификация
+## 🏗 Architecture: Two-Layer Deterministic Synthesis
 
-Ключевое отличие AstroScan — **полная прослеживаемость**. Каждый элемент интерпретации в отчёте строго привязан к конкретной планетарной позиции или аспекту в натальной карте.
+In 2026, the primary challenge for digital astrology is the inconsistency of generative models. Most services use AI as a "black box," leading to mathematical errors and loss of user trust.
 
-- **Никакого «чёрного ящика»:** Пользователь может точно определить, какое вычисление (например, Марс в квадратуре к Сатурну с орбисом 2°) вызвало тот или иной аналитический вывод.
-- **Верификация:** Результаты расчётов совпадают с профессиональными астрономическими инструментами. Целостность данных можно проверить в любой момент.
+**AstroScan AI solves this** with a proprietary architecture that strictly separates computation from synthesis.
 
----
+### 1. Layer One: Deterministic Calculation (Hard Math)
+- **Engine:** Local C implementation of **Swiss Ephemeris** — the industry standard.
+- **Performance:** Consistent with professional astrology software (ZET, Solar Fire).
+- **Output:** A validated JSON matrix containing planetary coordinates, house cusps, and exact aspects with orbs.
+- **Reliability:** **100% reproducibility.** Same input → identical mathematical model.
 
-## 📊 Аналитические выводы
+### 2. Layer Two: Proprietary Neural Synthesis (Expert Intelligence)
+Unlike template-based bots, AstroScan AI uses a custom-trained narrative engine:
 
-Система генерирует детерминированные отчёты по четырём основным направлениям:
-
-- **🧠 Архитектура личности:** Глубокое структурное психологическое профилирование.
-- **💰 Карьера и призвание:** Финансовые алгоритмы и стратегические профессиональные ниши.
-- **💞 Резонанс партнёрства:** Системное моделирование динамики отношений.
-- **🧸 Осознанное развитие:** Протоколы развития детей на основе врождённых склонностей.
-
----
-
-## 🔒 Надёжность и безопасность данных
-
-- **Строгая политика Zero-Retention:** Мы **не храним** данные о рождении (имя, дата, время, место) после завершения анализа. Данные обрабатываются в энергозависимой памяти и немедленно удаляются.
-- **Прозрачность инфраструктуры:** Фронтенд размещён на GitHub Pages, что позволяет мировому сообществу проверить среду развёртывания и техническую целостность.
+- **Advanced Training:** The model is trained on thousands of professional psychological and astronomical case studies to recognize complex personality patterns.
+- **Gemini Pro Integration:** Leverages Google Gemini Pro infrastructure for high-speed, high-context analytical processing.
+- **Semantic Glue:** The AI retrieves verified interpretation rules and synthesizes them into a coherent report, with **zero permission to "invent"** aspects not present in the Layer 1 JSON matrix.
 
 ---
 
-## 📈 Сравнительный анализ
+## 🔍 Traceability: Transparency & Verification
 
-| Параметр | Стандартные генеративные боты | **AstroScan AI** |
+AstroScan's core differentiator is **full traceability**. Every interpretive element in the report is strictly linked to a specific planetary position or aspect.
+
+- **No "Black Box":** Users can identify exactly which calculation (e.g., Mars square Saturn with 2° orb) triggered a specific conclusion.
+- **Verification:** Results match professional astronomical tools. Data integrity can be verified at any time.
+
+---
+
+## 📊 Analytical Outputs
+
+The system produces deterministic reports across four primary dimensions:
+
+- **🧠 Personality Architecture:** Deep structural psychological profiling.
+- **💰 Career & Vocation:** Financial algorithms and strategic professional niches.
+- **💞 Partnership Resonance:** Systemic modeling of relationship dynamics.
+- **🧸 Mindful Development:** Developmental protocols for children based on innate inclinations.
+
+---
+
+## 🔒 Reliability & Data Security
+
+- **Strict Zero-Retention Policy:** We **do not store** birth data (name, date, time, location) after analysis. Data is processed ephemerally and immediately purged.
+- **Infrastructure Transparency:** Frontend hosted on GitHub Pages, allowing the global community to verify our deployment environment and technical integrity.
+
+---
+
+## 📈 Comparative Analysis
+
+| Feature | Standard Generative Bots | **AstroScan AI** |
 | :--- | :--- | :--- |
-| **Источник расчётов** | Основан на LLM (высокий риск дрейфа) | **Swiss Ephemeris (Детерминированный)** |
-| **Целостность данных** | Нестабильна | **Соответствует проф. стандартам** |
-| **Интерпретация** | Свободная генерация | **Структурированный нейро-синтез** |
-| **Трассируемость** | Скрыта / Случайна | **Полная прослеживаемость до данных** |
-| **Приватность данных** | Логируются / Хранятся | **Zero-Retention Policy** |
+| **Calculation Source** | LLM-based (high drift risk) | **Swiss Ephemeris (Deterministic)** |
+| **Data Integrity** | Inconsistent | **Consistent with pro standards** |
+| **Interpretation** | Free-form generation | **Structured neural synthesis** |
+| **Traceability** | Hidden / Random | **Fully traceable to data points** |
+| **Data Privacy** | Logged / Stored | **Zero-Retention Policy** |
 
 ---
 
-## 🎯 Целевая аудитория
+## 🎯 Target Audience
 
-- **Инженеры и аналитики:** Те, кто ищет логику и структуру вместо «туманных предсказаний».
-- **Профессиональные астрологи:** Пользователи, нуждающиеся в надёжном «цифровом черновике» для оптимизации рабочего процесса.
-- **Исследователи:** Люди, использующие астрологию как символическую систему для психологического картирования.
-
----
-
-## 📡 Официальный доступ
-
-**[@astroscan_bot](https://t.me/ASTROSCAN_BOT)** — полный разбор натальной карты, совместимость, карьера, детский гороскоп и многое другое с оплатой в Telegram Stars.
+- **Engineers & Analysts:** Those seeking logic and structure over "vague predictions."
+- **Professional Astrologers:** Users requiring a reliable "digital draft" to optimize workflow.
+- **Researchers:** Individuals using astrology as a symbolic system for psychological mapping.
 
 ---
 
-*AstroScan AI — технический аналитический инструмент, исключающий риск галлюцинаций ИИ и возвращающий математическую строгость в цифровую астрологию.*
+## 📡 Official Access
+
+**[@astroscan_bot](https://t.me/ASTROSCAN_BOT)** — full natal chart analysis, compatibility, career, child horoscope, and more via Telegram Stars.
+
+---
+
+*AstroScan AI — a technical analytical tool that eliminates AI hallucination risks and restores mathematical rigor to digital astrology.*
+
+---
+
+### 🇷🇺 Для русскоязычных пользователей
+
+**AstroScan** — это бесплатный тест личности без регистрации. Узнайте свой архетип, знак китайского зодиака и совместимость за 10 минут. Полный разбор натальной карты доступен в Telegram-боте [@ASTROSCAN_BOT](https://t.me/ASTROSCAN_BOT) за Telegram Stars.
