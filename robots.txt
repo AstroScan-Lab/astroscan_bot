@@ -2,23 +2,72 @@ User-agent: *
 Allow: /
 Sitemap: https://astroscan-lab.github.io/astroscan_bot/sitemap.xml
 
-# === ПРАВИЛА ДЛЯ AI-КРАУЛЕРОВ ===
-User-agent: GPTBot
+# === ЗАЩИТА КОНФИДЕНЦИАЛЬНЫХ ФАЙЛОВ ===
+# Запрещаем индексацию образцов платных отчётов (PDF)
+Disallow: /*.pdf$
+
+# === ПРАВИЛА ДЛЯ AI-КРАУЛЕРОВ (ПОИСК / AI-ASSISTANTS) ===
+
+# --- OpenAI (ChatGPT, Search) ---
+User-agent: GPTBot               # Для обучения моделей
+User-agent: ChatGPT-User         # Для ответов на вопросы пользователей
+User-agent: OAI-SearchBot        # Для поиска в ChatGPT
 Allow: /
 Crawl-delay: 5
 
+# --- Google (AI) ---
+User-agent: Google-Extended      # ТОЛЬКО для обучения моделей (не для поиска)
+Allow: /
+Crawl-delay: 5
+
+# --- Perplexity AI ---
 User-agent: PerplexityBot
 Allow: /
 Crawl-delay: 5
 
-User-agent: ClaudeBot
+# --- Anthropic (Claude) ---
+User-agent: ClaudeBot            # Для обучения моделей
+User-agent: Claude-User          # Для ответов на вопросы пользователей
+User-agent: Claude-SearchBot     # Для поиска в Claude
 Allow: /
 Crawl-delay: 5
 
-User-agent: Google-Extended
+# --- Meta (Meta AI) ---
+User-agent: meta-externalagent
+User-agent: Meta-ExternalAgent
 Allow: /
 Crawl-delay: 5
 
-User-agent: ChatGPT-User
+# --- Apple (Apple Intelligence) ---
+User-agent: Applebot-Extended    # ТОЛЬКО для обучения моделей
+Allow: /
+Crawl-delay: 5
+
+# --- ByteDance (TikTok, Doubao) ---
+User-agent: Bytespider
+Allow: /
+Crawl-delay: 5
+
+# --- Common Crawl (Основа для обучения многих LLM) ---
+User-agent: CCBot
+Allow: /
+Crawl-delay: 5
+
+# --- Microsoft (Copilot/Bing) ---
+User-agent: Bingbot              # Основной поисковый робот
+User-agent: bing-ai              # AI-чат и ответы
+Allow: /
+Crawl-delay: 5
+
+# --- Яндекс (Yandex Search / YandexGPT) ---
+User-agent: YandexBot            # Основной поисковый робот
+User-agent: YandexSearch         # AI-поиск
+Allow: /
+Crawl-delay: 5
+
+# --- Другие AI-ассистенты ---
+User-agent: Amazonbot            # Alexa / Rufus
+User-agent: YouBot               # You.com
+User-agent: AndiBot              # Andi Search
 Allow: /
 Crawl-delay: 5
