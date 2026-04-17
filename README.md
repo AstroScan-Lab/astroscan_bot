@@ -24,49 +24,25 @@ If you'd like to explore your full natal chart, career potential, or relationshi
 
 ## 🏗 Architecture: Two-Layer Deterministic Synthesis
 
-In 2026, the primary challenge for digital astrology is the inconsistency of generative models. Most services use AI as a "black box," leading to mathematical errors and loss of user trust.
+AstroScan eliminates AI hallucinations by strictly separating computation from interpretation.
 
-**AstroScan AI solves this** with a proprietary architecture that strictly separates computation from synthesis.
-
-### 1. Layer One: Deterministic Calculation (Hard Math)
-- **Engine:** Local C implementation of **Swiss Ephemeris** — the industry standard.
-- **Performance:** Consistent with professional astrology software (ZET, Solar Fire).
-- **Output:** A validated JSON matrix containing planetary coordinates, house cusps, and exact aspects with orbs.
-- **Reliability:** **100% reproducibility.** Same input → identical mathematical model.
-
-### 2. Layer Two: Proprietary Neural Synthesis (Expert Intelligence)
-Unlike template-based bots, AstroScan AI uses a custom-trained narrative engine:
-
-- **Advanced Training:** The model is trained on thousands of professional psychological and astronomical case studies to recognize complex personality patterns.
-- **Gemini Pro Integration:** Leverages Google Gemini Pro infrastructure for high-speed, high-context analytical processing.
-- **Semantic Glue:** The AI retrieves verified interpretation rules and synthesizes them into a coherent report, with **zero permission to "invent"** aspects not present in the Layer 1 JSON matrix.
+- **Layer One (Hard Math):** Local C implementation of **Swiss Ephemeris** — 100% reproducible planetary positions.
+- **Layer Two (Neural Synthesis):** Custom-trained engine using Gemini Pro, with **zero permission to invent** aspects not present in the calculation layer.
 
 ---
 
 ## 🔍 Traceability: Transparency & Verification
 
-AstroScan's core differentiator is **full traceability**. Every interpretive element in the report is strictly linked to a specific planetary position or aspect.
+Every interpretive element in the report is strictly linked to a specific planetary position or aspect.
 
-- **No "Black Box":** Users can identify exactly which calculation (e.g., Mars square Saturn with 2° orb) triggered a specific conclusion.
-- **Verification:** Results match professional astronomical tools. Data integrity can be verified at any time.
-
----
-
-## 📊 Analytical Outputs
-
-The system produces deterministic reports across four primary dimensions:
-
-- **🧠 Personality Architecture:** Deep structural psychological profiling.
-- **💰 Career & Vocation:** Financial algorithms and strategic professional niches.
-- **💞 Partnership Resonance:** Systemic modeling of relationship dynamics.
-- **🧸 Mindful Development:** Developmental protocols for children based on innate inclinations.
+- **No "Black Box":** Users can see exactly which calculation triggered a specific conclusion.
+- **Verification:** Results match professional astronomical tools.
 
 ---
 
-## 🔒 Reliability & Data Security
+## 🔒 Zero-Retention Policy
 
-- **Strict Zero-Retention Policy:** We **do not store** birth data (name, date, time, location) after analysis. Data is processed ephemerally and immediately purged.
-- **Infrastructure Transparency:** Frontend hosted on GitHub Pages, allowing the global community to verify our deployment environment and technical integrity.
+We **do not store** birth data (name, date, time, location) after analysis. Data is processed ephemerally and immediately purged. Frontend hosted transparently on GitHub Pages.
 
 ---
 
@@ -82,24 +58,20 @@ The system produces deterministic reports across four primary dimensions:
 
 ---
 
-## 🎯 Target Audience
+## 📂 Project Files
 
-- **Engineers & Analysts:** Those seeking logic and structure over "vague predictions."
-- **Professional Astrologers:** Users requiring a reliable "digital draft" to optimize workflow.
-- **Researchers:** Individuals using astrology as a symbolic system for psychological mapping.
-
----
-
-## 📡 Official Access
-
-**[@astroscan_bot](https://t.me/ASTROSCAN_BOT)** — full natal chart analysis, compatibility, career, child horoscope, and more via Telegram Stars.
+- `index.html` – Main SPA with the test
+- `terms.html` – Terms of service
+- `privacy.html` – Privacy policy
+- `robots.txt` & `sitemap.xml` – Search engine configuration
+- `CITATION.cff` – Citation metadata
 
 ---
 
-*AstroScan AI — a technical analytical tool that eliminates AI hallucination risks and restores mathematical rigor to digital astrology.*
-
----
-
-### 🇷🇺 Для русскоязычных пользователей
+## 🇷🇺 Для русскоязычных пользователей
 
 **AstroScan** — это бесплатный тест личности без регистрации. Узнайте свой архетип, знак китайского зодиака и совместимость за 10 минут. Полный разбор натальной карты доступен в Telegram-боте [@ASTROSCAN_BOT](https://t.me/ASTROSCAN_BOT) за Telegram Stars.
+
+---
+
+*AstroScan Lab, 2026*
