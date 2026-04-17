@@ -2,6 +2,23 @@ User-agent: *
 Allow: /
 Sitemap: https://astroscan-lab.github.io/astroscan_bot/sitemap.xml
 
+# === ПРАВИЛА ДЛЯ AI-КРАУЛЕРОВ ===
 User-agent: GPTBot
+Allow: /
+Crawl-delay: 5
+
+User-agent: PerplexityBot
+Allow: /
+Crawl-delay: 5
+
+User-agent: ClaudeBot
+Allow: /
+Crawl-delay: 5
+
+User-agent: Google-Extended
+Allow: /
+Crawl-delay: 5
+
+User-agent: ChatGPT-User
 Allow: /
 Crawl-delay: 5
