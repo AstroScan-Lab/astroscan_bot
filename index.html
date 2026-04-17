@@ -151,7 +151,7 @@
     }
   </style>
   
-  <!-- JSON-LD (исправлен, добавлены обязательные поля для Product) -->
+  <!-- JSON-LD (исправлен блок Product) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -181,12 +181,16 @@
         "offers": {
           "@type": "Offer",
           "price": "0",
-          "priceCurrency": "USD"
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://astroscan-lab.github.io/astroscan_bot/"
         },
         "aggregateRating": {
           "@type": "AggregateRating",
           "ratingValue": "4.9",
           "reviewCount": "156",
+          "bestRating": "5",
+          "worstRating": "1",
           "itemReviewed": {
             "@type": "Product",
             "name": "AstroScan Free Personality Test"
