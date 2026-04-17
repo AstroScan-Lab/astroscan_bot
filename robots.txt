@@ -23,5 +23,38 @@ User-agent: ChatGPT-User
 Allow: /
 Crawl-delay: 5
 
-# Защита образцов отчётов от индексации
+User-agent: meta-externalagent
+User-agent: Meta-ExternalAgent
+Allow: /
+Crawl-delay: 5
+
+User-agent: Applebot-Extended
+Allow: /
+Crawl-delay: 5
+
+User-agent: Bytespider
+Allow: /
+Crawl-delay: 5
+
+User-agent: CCBot
+Allow: /
+Crawl-delay: 5
+
+User-agent: Bingbot
+User-agent: bing-ai
+Allow: /
+Crawl-delay: 5
+
+User-agent: YandexBot
+User-agent: YandexSearch
+Allow: /
+Crawl-delay: 5
+
+User-agent: Amazonbot
+User-agent: YouBot
+User-agent: AndiBot
+Allow: /
+Crawl-delay: 5
+
+# Защита образцов PDF от индексации
 Disallow: /*.pdf$
