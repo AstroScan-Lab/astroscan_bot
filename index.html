@@ -25,7 +25,7 @@
   <link rel="alternate" hreflang="id" href="https://astroscan-lab.github.io/astroscan_bot/?lang=id">
   
   <!-- Open Graph (английский) -->
-  <meta property="og:title" content="AstroScan · Free Personality Test & Compatibility Without Registration">
+  <meta property="og:title" content="AstroScan · Free Personality Test &amp; Compatibility Without Registration">
   <meta property="og:description" content="Discover your archetype, Chinese zodiac sign, and compatibility for free. No registration. Compare Western and Vedic astrology.">
   <meta property="og:image" content="https://astroscan-lab.github.io/astroscan_bot/cover.jpg">
   <meta property="og:type" content="website">
@@ -38,7 +38,7 @@
   <!-- Preconnect для шрифтов -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
   
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -152,7 +152,7 @@
     }
   </style>
   
-  <!-- JSON-LD (исправлен блок Product) -->
+  <!-- JSON-LD (исправлен, ошибка устранена через @id) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -176,6 +176,7 @@
       },
       {
         "@type": "Product",
+        "@id": "#product",
         "name": "AstroScan Free Personality Test",
         "description": "Free online test to discover your Chinese zodiac sign, behavioral archetype, and compatibility. No registration required. Compare Western and Vedic astrology. Based on Swiss Ephemeris calculations.",
         "image": "https://astroscan-lab.github.io/astroscan_bot/cover.jpg",
@@ -193,8 +194,7 @@
           "bestRating": "5",
           "worstRating": "1",
           "itemReviewed": {
-            "@type": "Product",
-            "name": "AstroScan Free Personality Test"
+            "@id": "#product"
           }
         }
       },
@@ -257,14 +257,14 @@
   
   <!-- СТАТИЧЕСКИЙ КОНТЕНТ С КЛЮЧЕВЫМИ СЛОВАМИ -->
   <div class="static-hero">
-    <h1 data-lang="en">Discover Your Archetype & Compatibility</h1>
+    <h1 data-lang="en">Discover Your Archetype &amp; Compatibility</h1>
     <h1 data-lang="ru">Узнайте свой архетип и совместимость</h1>
     <h1 data-lang="es">Descubre tu arquetipo y compatibilidad</h1>
     <h1 data-lang="ar">اكتشف نموذجك الأصلي والتوافق</h1>
     <h1 data-lang="hi">अपने आर्कटाइप और अनुकूलता की खोज करें</h1>
-    <h1 data-lang="de">Entdecken Sie Ihren Archetyp & Kompatibilität</h1>
+    <h1 data-lang="de">Entdecken Sie Ihren Archetyp &amp; Kompatibilität</h1>
     <h1 data-lang="pt">Descubra seu Arquétipo e Compatibilidade</h1>
-    <h1 data-lang="id">Temukan Arketipe & Kompatibilitas Anda</h1>
+    <h1 data-lang="id">Temukan Arketipe &amp; Kompatibilitas Anda</h1>
     
     <div class="subhead" data-lang="en">A deep personality test at the intersection of psychology and precise astronomical algorithms.</div>
     <div class="subhead" data-lang="ru">Глубокий тест личности на стыке психологии и точных астрономических алгоритмов.</div>
@@ -329,7 +329,7 @@
     </div>
     
     <div style="margin-top: 1rem;">
-      <a href="https://t.me/ASTROSCAN_BOT" target="_blank" class="telegram-link" style="display: inline-flex;">📧 Contact & Support: @ASTROSCAN_BOT</a>
+      <a href="https://t.me/ASTROSCAN_BOT" target="_blank" class="telegram-link" style="display: inline-flex;">📧 Contact &amp; Support: @ASTROSCAN_BOT</a>
     </div>
   </section>
 
@@ -346,7 +346,7 @@
     
     <div style="margin-top: 0.5rem;">
       <a href="https://librecounter.org/referer/show" style="display: inline-block; margin-right: 1rem;">
-        <img src="https://librecounter.org/counter.svg" referrerPolicy="unsafe-url" alt="Visitor Counter" width="20" height="20" style="height: auto;" />
+        <img src="https://librecounter.org/counter.svg" referrerPolicy="unsafe-url" alt="Visitor Counter" width="20" height="20" style="height: auto;">
       </a>
       <div style="display: inline-block; text-align: left; font-size: 0.8rem; background: rgba(0,0,0,0.2); padding: 0.3rem 0.8rem; border-radius: 1rem;">
         <span style="color: var(--text-dim);">👁️ <span data-placeholder="now">...</span> | <span data-lang="en">Today</span><span data-lang="ru">Сегодня</span><span data-lang="es">Hoy</span><span data-lang="ar">اليوم</span><span data-lang="hi">आज</span><span data-lang="de">Heute</span><span data-lang="pt">Hoje</span><span data-lang="id">Hari ini</span>: <span data-placeholder="24h">...</span> | <span data-lang="en">Total</span><span data-lang="ru">Всего</span><span data-lang="es">Total</span><span data-lang="ar">المجموع</span><span data-lang="hi">कुल</span><span data-lang="de">Gesamt</span><span data-lang="pt">Total</span><span data-lang="id">Total</span>: <span data-placeholder="month">...</span></span>
@@ -520,7 +520,7 @@
         dynamicCTAText: 'We use Swiss Ephemeris to calculate your full natal chart. Get a detailed PDF report in our Telegram bot!',
         dynamicCTABtn: '⚡ GET MY FULL AUDIT',
         selectPartner: 'Select partner sign',
-        techTitle: '📡 Technology & Astrological Traditions',
+        techTitle: '📡 Technology &amp; Astrological Traditions',
         techDesc: '<strong>AstroScan uses the Western tropical zodiac</strong> and professional Swiss Ephemeris v2.10. But how does your chart look in other systems?',
         westernVedic: '🌍 Western vs. Vedic (Jyotish)',
         westernVedicDesc: 'Western astrology focuses on the tropical zodiac (seasons), while Vedic astrology uses the sidereal zodiac (fixed stars). The difference is about 24° (Ayanamsha). Curious how your planets shift? In our Telegram bot, you can get both charts and compare the interpretations side by side.',
@@ -534,7 +534,7 @@
         compat: '💞 Compat',
         compatDesc: 'Synastry',
         career: '💰 Career',
-        careerDesc: 'Career & Finance',
+        careerDesc: 'Career &amp; Finance',
         child: '🧸 Child',
         childDesc: 'Child\'s Chart',
         faqTitle: '❓ FAQ',
@@ -735,7 +735,7 @@
         dynamicCTAText: 'Wir verwenden Swiss Ephemeris, um Ihr vollständiges Geburtshoroskop zu berechnen. Erhalten Sie einen detaillierten PDF-Bericht in unserem Telegram-Bot!',
         dynamicCTABtn: '⚡ MEIN VOLLSTÄNDIGES AUDIT ERHALTEN',
         selectPartner: 'Partnerzeichen auswählen',
-        techTitle: '📡 Technologie & Astrologische Traditionen',
+        techTitle: '📡 Technologie &amp; Astrologische Traditionen',
         techDesc: '<strong>AstroScan verwendet den westlichen tropischen Tierkreis</strong> und professionelle Swiss Ephemeris v2.10. Aber wie sieht Ihr Horoskop in anderen Systemen aus?',
         westernVedic: '🌍 Westlich vs. Vedisch (Jyotish)',
         westernVedicDesc: 'Die westliche Astrologie konzentriert sich auf den tropischen Tierkreis (Jahreszeiten), während die vedische Astrologie den siderischen Tierkreis (Fixsterne) verwendet. Der Unterschied beträgt etwa 24° (Ayanamsha). Neugierig, wie sich Ihre Planeten verschieben? In unserem Telegram-Bot können Sie beide Horoskope erhalten und die Interpretationen nebeneinander vergleichen.',
@@ -749,7 +749,7 @@
         compat: '💞 Kompatibilität',
         compatDesc: 'Synastrie',
         career: '💰 Karriere',
-        careerDesc: 'Karriere & Finanzen',
+        careerDesc: 'Karriere &amp; Finanzen',
         child: '🧸 Kind',
         childDesc: 'Kinderhoroskop',
         faqTitle: '❓ FAQ',
@@ -821,7 +821,7 @@
         dynamicCTAText: 'Kami menggunakan Swiss Ephemeris untuk menghitung bagan kelahiran lengkap Anda. Dapatkan laporan PDF terperinci di bot Telegram kami!',
         dynamicCTABtn: '⚡ DAPATKAN AUDIT LENGKAP SAYA',
         selectPartner: 'Pilih tanda pasangan',
-        techTitle: '📡 Teknologi & Tradisi Astrologi',
+        techTitle: '📡 Teknologi &amp; Tradisi Astrologi',
         techDesc: '<strong>AstroScan menggunakan zodiak tropis Barat</strong> dan Swiss Ephemeris profesional v2.10. Tapi bagaimana bagan Anda terlihat di sistem lain?',
         westernVedic: '🌍 Barat vs. Weda (Jyotish)',
         westernVedicDesc: 'Astrologi Barat berfokus pada zodiak tropis (musim), sementara astrologi Weda menggunakan zodiak sideris (bintang tetap). Perbedaannya sekitar 24° (Ayanamsha). Penasaran bagaimana planet Anda bergeser? Di bot Telegram kami, Anda bisa mendapatkan kedua bagan dan membandingkan interpretasinya secara berdampingan.',
@@ -835,7 +835,7 @@
         compat: '💞 Kompatibilitas',
         compatDesc: 'Sinastri',
         career: '💰 Karier',
-        careerDesc: 'Karier & Keuangan',
+        careerDesc: 'Karier &amp; Keuangan',
         child: '🧸 Anak',
         childDesc: 'Bagan Anak',
         faqTitle: '❓ Pertanyaan Umum',
@@ -856,7 +856,6 @@
       document.body.classList.add(`lang-${lang}`);
       localStorage.setItem('astroscan_lang', lang);
       
-      // Динамическое обновление канонической ссылки
       const canonicalUrl = lang === 'en' 
           ? 'https://astroscan-lab.github.io/astroscan_bot/' 
           : `https://astroscan-lab.github.io/astroscan_bot/?lang=${lang}`;
@@ -1182,7 +1181,6 @@
       });
     }, { rootMargin: '100px', threshold: 0.1 });
 
-    // ---------- ИНИЦИАЛИЗАЦИЯ ----------
     function init() {
       buildLangBar();
       renderApp();
