@@ -24,6 +24,9 @@ Allow: /
 Crawl-delay: 5
 
 User-agent: meta-externalagent
+Allow: /
+Crawl-delay: 5
+
 User-agent: Meta-ExternalAgent
 Allow: /
 Crawl-delay: 5
@@ -41,20 +44,33 @@ Allow: /
 Crawl-delay: 5
 
 User-agent: Bingbot
+Allow: /
+Crawl-delay: 5
+
 User-agent: bing-ai
 Allow: /
 Crawl-delay: 5
 
 User-agent: YandexBot
+Allow: /
+Crawl-delay: 5
+
 User-agent: YandexSearch
 Allow: /
 Crawl-delay: 5
 
 User-agent: Amazonbot
+Allow: /
+Crawl-delay: 5
+
 User-agent: YouBot
+Allow: /
+Crawl-delay: 5
+
 User-agent: AndiBot
 Allow: /
 Crawl-delay: 5
 
-# Защита образцов PDF от индексации
+# Защита PDF от индексации (только для обычных роботов, не для Яндекса — если нужно)
+User-agent: *
 Disallow: /*.pdf$
