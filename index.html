@@ -132,6 +132,13 @@
     
     .trust-badge { display: flex; gap: 1.5rem; flex-wrap: wrap; margin-top: 1.5rem; }
     .trust-item { display: flex; align-items: center; gap: 0.5rem; }
+        /* === Prevent CLS for dynamic content === */
+    #appRoot {
+      min-height: 600px;      /* Reserve space for quiz card */
+    }
+    .lazy-section {
+      min-height: 300px;      /* Reserve space for tech/services sections */
+    }
 
     /* Анимация пульсации для Telegram-кнопки */
     @keyframes gentle-pulse {
@@ -946,19 +953,18 @@
       document.getElementById('global-cta-bar').classList.add('visible');
     }
 
-    function showDynamicCTA() {
-      const t = translations[currentLang];
-      const container = document.getElementById('dynamic-cta');
-      if (container) {
-        container.innerHTML = `
-          <div class="result-card" style="border-left-color: #fbbf24;">
-            <h3 style="color: #fbbf24; margin-bottom: 0.5rem;">${t.dynamicCTATitle}</h3>
-            <p style="margin-bottom: 1rem;">${t.dynamicCTAText}</p>
-            <a href="https://t.me/ASTROSCAN_BOT" target="_blank" class="btn-primary" style="display: inline-block;">${t.dynamicCTABtn}</a>
-          </div>
-        `;
-      }
-    }
+      function showDynamicCTA() {
+    const t = translations[currentLang];
+    const container = document.getElementById('dynamic-cta');
+    if (!container) return;
+    container.innerHTML = `
+      <div class="result-card" style="border-left-color: #fbbf24;">
+        <h3 style="color: #fbbf24; margin-bottom: 0.5rem;">${t.dynamicCTATitle}</h3>
+        <p style="margin-bottom: 1rem;">${t.dynamicCTAText}</p>
+        <a href="https://t.me/ASTROSCAN_BOT" target="_blank" class="btn-primary" style="display: inline-block;">${t.dynamicCTABtn}</a>
+      </div>
+    `;
+  }
 
     function renderApp() {
       const app = document.getElementById('appRoot');
@@ -1062,7 +1068,16 @@
         }
       });
       
-      let trackerData = JSON.parse(localStorage.getItem('astro_tracker') || '{}');
+            function getTrackerData() {
+        try {
+          return JSON.parse(localStorage.getItem('astro_tracker') || '{}');
+        } catch (e) {
+          console.warn('Tracker data corrupted, resetting.');
+          localStorage.removeItem('astro_tracker');
+          return {};
+        }
+      }
+      let trackerData = getTrackerData();
       function updateTrackerUI() {
         let today = new Date().toISOString().slice(0,10);
         let val = trackerData[today] || 5;
