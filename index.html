@@ -27,13 +27,8 @@
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#0a0718">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://api.learntogoogle.de https://librecounter.org; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: https://librecounter.org; frame-ancestors 'self' https://web.telegram.org https://telegram.org https://*.telegram.org;">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="font" href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_f8tM7Q.woff2" crossorigin="anonymous" type="font/woff2">
-<style>body { font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; }</style>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" onload="this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"></noscript>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://api.learntogoogle.de https://librecounter.org; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https: https://librecounter.org; frame-ancestors 'self' https://web.telegram.org https://telegram.org https://*.telegram.org;">
+<style>body { system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; }</style>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     :root {
@@ -50,7 +45,7 @@
     }
     body {
       background: radial-gradient(ellipse at 30% 40%, #120c2c, var(--bg-deep));
-      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
       line-height: 1.5;
       color: var(--text-light);
       padding: 1.5rem;
@@ -306,7 +301,7 @@
     <h2 data-lang="id" style="color: var(--text-light); border-left: 5px solid var(--accent-primary); padding-left: 1.2rem; margin-bottom: 1rem;">📌 Tentang Proyek</h2>
     <div style="display: flex; align-items: flex-start; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
       <div style="flex: 0 0 180px; max-width: 100%;">
-        <img src="cover.jpg" alt="AstroScan Lab – Deterministic Astrology Framework" style="width: 100%; border-radius: 1.2rem; box-shadow: 0 15px 30px -10px rgba(0,0,0,0.6); border: 1px solid var(--border-dim);" loading="lazy">
+        <img src="cover.jpg" width="312" height="164" alt="AstroScan Lab – Deterministic Astrology Framework" style="width:100%;height:auto;border-radius:1.2rem;box-shadow:0 15px 30px -10px rgba(0,0,0,0.6);border:1px solid var(--border-dim);" loading="lazy">
       </div>
       <div style="flex: 1; min-width: 250px;">
         <p data-lang="en"><strong>AstroScan Lab</strong> is an independent research project exploring the intersection of behavioral psychology and computational astronomy. We do not claim supernatural powers — our algorithms are based on verified Swiss Ephemeris data and established personality typologies. The test is provided for educational and self-reflection purposes.</p>
