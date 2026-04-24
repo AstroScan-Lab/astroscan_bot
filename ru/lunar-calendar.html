@@ -72,7 +72,7 @@
       <h2>📖 Что такое лунный календарь?</h2>
       <p><strong>Лунный календарь</strong> — разновидность календаря, в основе которого лежит период смены фаз Луны, то есть синодический месяц. Поскольку каждый лунный цикл длится примерно 29,5 дней, месяцы в лунном календаре обычно чередуются между 29 и 30 днями. Лунный год из 12 таких циклов составляет 354 дня, 8 часов, 48 минут, 34 секунды — примерно на 11–12 дней короче солнечного года.</p>
       <h3>🌿 Истоки: кто и когда придумал</h3>
-      <p>Учёные полагают, что древние охотники проводили регулярные астрономические наблюдения Луны ещё в верхнем палеолите. Сэмюэл Л. Мейси датирует earliest использование Луны как устройства для измерения времени 28 000–30 000 лет назад. <span class="highlight">Шумеры</span>, вероятно, первыми разработали календарь, полностью основанный на смене лунных фаз. Каждый шумеро-вавилонский месяц начинался в первый день видимости новой Луны. Лунно-солнечный календарь происходит от более древнего шумерского календаря, использовавшегося в 4-м и 3-м тысячелетиях до н. э.</p>
+      <p>Учёные полагают, что древние охотники проводили регулярные астрономические наблюдения Луны ещё в верхнем палеолите. Сэмюэл Л. Мейси датирует самое раннее использование Луны как инструмента измерения времени 28 000–30 000 лет назад. <span class="highlight">Шумеры</span>, вероятно, первыми разработали календарь, полностью основанный на смене лунных фаз. Каждый шумеро-вавилонский месяц начинался в первый день видимости новой Луны. Лунно-солнечный календарь происходит от более древнего шумерского календаря, использовавшегося в 4-м и 3-м тысячелетиях до н. э.</p>
       <h3>🏛 Кто сегодня считается авторитетом</h3>
       <p>Современные научные расчёты лунных фаз основаны на работах полимата <span class="highlight">Иоганна Генриха Ламберта</span> (1728–1777), внёсшего важный вклад в астрономию, фотометрию и математику. В его честь назван кратер на Луне. Самые точные эфемериды сегодня публикуются Лабораторией реактивного движения NASA (JPL). Swiss Ephemeris — используемая в нашем основном тесте — является сжатой версией эфемерид JPL DE431 и охватывает период с 13 000 года до н. э. по 17 000 год н. э.</p>
       <h3>🌎 Луна сегодня: от мифов к точности</h3>
@@ -103,13 +103,6 @@
       const todaySolar = Solar.fromDate(new Date());
       const todayLunar = todaySolar.getLunar();
 
-      document.getElementById('lunar-date').textContent = 
-        `Сегодня: ${todayLunar.getYearInChinese()}年 ${todayLunar.getMonthInChinese()}月 ${todayLunar.getDayInChinese()}日`;
-      document.getElementById('lunar-info').textContent = 
-        `Фаза Луны: ${todayLunar.getYueXiang()} | ${todayLunar.getGanZhiYear()}年 ${todayLunar.getGanZhiMonth()}月 ${todayLunar.getGanZhiDay()}日`;
-
-      const yueXiang = todayLunar.getYueXiang();
-
       // Русские названия фаз
       const phaseNamesRu = {
         '朔': 'Новолуние', '新月': 'Новая луна', '峨眉月': 'Молодая луна',
@@ -118,7 +111,16 @@
         '亏凸月': 'Убывающая луна', '下弦月': 'Последняя четверть',
         '残月': 'Старая луна'
       };
-      document.getElementById('moon-phase-name').textContent = phaseNamesRu[yueXiang] || yueXiang;
+
+      const yueXiang = todayLunar.getYueXiang();
+      const phaseRus = phaseNamesRu[yueXiang] || yueXiang;
+
+      // Дата и фаза на русском
+      document.getElementById('lunar-date').textContent = 
+        `Сегодня: ${todayLunar.getYear()} год, ${todayLunar.getMonth()} месяц, ${todayLunar.getDay()} лунный день`;
+      document.getElementById('lunar-info').textContent = 
+        `Фаза Луны: ${phaseRus}`;
+      document.getElementById('moon-phase-name').textContent = phaseRus;
 
       const phaseIcons = {
         '朔': '🌑', '新月': '🌑', '峨眉月': '🌒', '上弦月': '🌓',
@@ -127,14 +129,14 @@
       };
       document.getElementById('moon-phase-icon').textContent = phaseIcons[yueXiang] || '🌙';
 
-      let currentYear = todaySolar.getYear();
-      let currentMonth = todaySolar.getMonth();
+      let currentYear = todaySolar.getYear();  // григорианский год
+      let currentMonth = todaySolar.getMonth(); // месяц (1-12)
 
       function renderCalendar(year, month) {
-        document.getElementById('calendar-month-year').textContent = `${year}年 ${month}月`;
+        document.getElementById('calendar-month-year').textContent = `${year} год, ${month} месяц`;
         const daysInMonth = SolarUtil.getDaysOfMonth(year, month);
         const firstDaySolar = Solar.fromYmd(year, month, 1);
-        const firstDayOfWeek = firstDaySolar.getWeek();
+        const firstDayOfWeek = firstDaySolar.getWeek(); // 0 - воскресенье
 
         let html = '';
         const weekDays = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'];
@@ -149,13 +151,13 @@
         for (let d = 1; d <= daysInMonth; d++) {
           const solar = Solar.fromYmd(year, month, d);
           const lunar = solar.getLunar();
-          const lunarDay = lunar.getDayInChinese();
+          const lunarDayNumber = lunar.getDay(); // число лунного дня (1-30)
           const isToday = (d === todaySolar.getDay() && month === todaySolar.getMonth() && year === todaySolar.getYear());
 
           const bgStyle = isToday ? 'background: var(--accent-primary); color: #0a0718; font-weight: bold; border-radius: 50%;' : '';
           html += `<div style="padding: 0.5rem; ${bgStyle}">
             <div style="font-size: 0.9rem;">${d}</div>
-            <div style="font-size: 0.7rem; color: var(--text-dim);">${lunarDay}</div>
+            <div style="font-size: 0.7rem; color: var(--text-dim);">${lunarDayNumber}</div>
           </div>`;
         }
         document.getElementById('calendar-grid').innerHTML = html;
