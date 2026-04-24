@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-  <!-- Английская версия (основная) -->
   <url>
     <loc>https://astroscan-lab.github.io/astroscan_bot/</loc>
     <lastmod>2026-04-24</lastmod>
@@ -12,8 +10,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/"/>
   </url>
-  
-  <!-- Русская версия -->
   <url>
     <loc>https://astroscan-lab.github.io/astroscan_bot/ru/</loc>
     <lastmod>2026-04-24</lastmod>
@@ -21,8 +17,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/"/>
   </url>
-  
-  <!-- Остальные страницы -->
   <url>
     <loc>https://astroscan-lab.github.io/astroscan_bot/terms.html</loc>
     <lastmod>2026-04-24</lastmod>
