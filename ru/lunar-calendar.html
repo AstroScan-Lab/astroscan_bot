@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Лунный календарь на сегодня – Фаза Луны, история и астрономические данные</title>
-  <meta name="description" content="Актуальный лунный календарь на сегодня: фаза Луны, лунный день и месяц. История лунных календарей от шумеров до NASA. Точные астрономические расчёты.">
-  <meta name="keywords" content="лунный календарь, фаза луны, лунный день, лунный месяц, история, шумеры, астрономия">
+  <title>Lunar Calendar Today – Moon Phase, History &amp; Astronomical Data</title>
+  <meta name="description" content="Today's lunar calendar: moon phase, lunar day, month view. History of lunar calendars from Sumerians to NASA. Accurate JavaScript ephemeris.">
+  <meta name="keywords" content="lunar calendar, moon phase, lunar day, lunar month, history, Sumerians, astronomy, NASA, JPL, Swiss Ephemeris">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/x-icon" href="/astroscan_bot/favicon.ico">
   <style>
@@ -41,16 +41,16 @@
 <body>
   <div class="container">
     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
-      <a href="/astroscan_bot/ru/" class="btn-primary" style="text-decoration: none;">← На главную</a>
-      <h1 style="font-size: 2rem; font-weight: 800;">🌙 Лунный календарь</h1>
+      <a href="/astroscan_bot/" class="btn-primary" style="text-decoration: none;">← Back to Home</a>
+      <h1 style="font-size: 2rem; font-weight: 800;">🌙 Lunar Calendar</h1>
       <div></div>
     </div>
 
     <div class="card" id="today-card">
       <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
         <div>
-          <h2 id="lunar-date">Загрузка...</h2>
-          <p id="lunar-info" style="color: var(--text-dim);">Получаем данные...</p>
+          <h2 id="lunar-date">Loading...</h2>
+          <p id="lunar-info" style="color: var(--text-dim);">Fetching data...</p>
         </div>
         <div style="text-align: center;">
           <div id="moon-phase-icon" style="font-size: 3rem; margin-bottom: 0.5rem;">🌕</div>
@@ -61,33 +61,33 @@
 
     <div class="card">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
-        <button id="prev-month" class="btn-primary">← Предыдущий</button>
+        <button id="prev-month" class="btn-primary">← Previous</button>
         <h2 id="calendar-month-year">...</h2>
-        <button id="next-month" class="btn-primary">Следующий →</button>
+        <button id="next-month" class="btn-primary">Next →</button>
       </div>
       <div id="calendar-grid" style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 0.5rem; text-align: center;"></div>
     </div>
 
     <div class="card article-text">
-      <h2>📖 Что такое лунный календарь?</h2>
-      <p><strong>Лунный календарь</strong> — разновидность календаря, в основе которого лежит период смены фаз Луны, то есть синодический месяц. Поскольку каждый лунный цикл длится примерно 29,5 дней, месяцы в лунном календаре обычно чередуются между 29 и 30 днями. Лунный год из 12 таких циклов составляет 354 дня, 8 часов, 48 минут, 34 секунды — примерно на 11–12 дней короче солнечного года.</p>
-      <h3>🌿 Истоки: кто и когда придумал</h3>
-      <p>Учёные полагают, что древние охотники проводили регулярные астрономические наблюдения Луны ещё в верхнем палеолите. Сэмюэл Л. Мейси датирует самое раннее использование Луны как инструмента измерения времени 28 000–30 000 лет назад. <span class="highlight">Шумеры</span>, вероятно, первыми разработали календарь, полностью основанный на смене лунных фаз. Каждый шумеро-вавилонский месяц начинался в первый день видимости новой Луны. Лунно-солнечный календарь происходит от более древнего шумерского календаря, использовавшегося в 4-м и 3-м тысячелетиях до н. э.</p>
-      <h3>🏛 Кто сегодня считается авторитетом</h3>
-      <p>Современные научные расчёты лунных фаз основаны на работах полимата <span class="highlight">Иоганна Генриха Ламберта</span> (1728–1777), внёсшего важный вклад в астрономию, фотометрию и математику. В его честь назван кратер на Луне. Самые точные эфемериды сегодня публикуются Лабораторией реактивного движения NASA (JPL). Swiss Ephemeris — используемая в нашем основном тесте — является сжатой версией эфемерид JPL DE431 и охватывает период с 13 000 года до н. э. по 17 000 год н. э.</p>
-      <h3>🌎 Луна сегодня: от мифов к точности</h3>
-      <p>Хотя лунный календарь часто ассоциируется с астрологией и народными приметами, его астрономическая основа остаётся строго научной. Сегодня лунные циклы изучают для планирования сельскохозяйственных работ, рыболовства, медицинских исследований и даже биржевых торгов. Самый распространённый чисто лунный календарь сегодня — исламский.</p>
-      <h3>📚 Источники и дополнительное чтение</h3>
+      <h2>📖 What is a Lunar Calendar?</h2>
+      <p><strong>Lunar calendar</strong> is a calendar based on the monthly cycles of the Moon's phases (synodic months), in contrast to solar calendars, whose annual cycles are based on the solar year. Since each lunation is approximately 29.5 days, it is common for the months of a lunar calendar to alternate between 29 and 30 days. A lunar year of 12 such lunations is 354 days, 8 hours, 48 minutes, 34 seconds — about 11 to 12 days shorter than the solar year.</p>
+      <h3>🌿 Origins: Who invented the lunar calendar</h3>
+      <p>Scholars have argued that ancient hunters conducted regular astronomical observations of the Moon back in the Upper Palaeolithic. Samuel L. Macey dates the earliest uses of the Moon as a time-measuring device back to 28,000–30,000 years ago. The <span class="highlight">Sumerians</span> were probably the first to develop a calendar based entirely on the recurrence of lunar phases. Each Sumero-Babylonian month began on the first day of visibility of the new Moon. The lunisolar calendar descends from an older Sumerian calendar used in the 4th and 3rd millennia BCE.</p>
+      <h3>🏛 Who is the authority today</h3>
+      <p>Modern scientific calculation of lunar phases builds upon the work of polymath <span class="highlight">Johann Heinrich Lambert</span> (1728–1777), who made important contributions to astronomy, photometry, and mathematics. A crater on the Moon is named after him. The most precise ephemerides today are published by NASA's Jet Propulsion Laboratory (JPL). The Swiss Ephemeris — used by our main test — is a compressed version of the JPL DE431 ephemeris, covering the time range 13,000 BCE to 17,000 CE.</p>
+      <h3>🌎 The Moon Today: From Myths to Precision</h3>
+      <p>Though often linked with astrology and folklore, the lunar calendar's astronomical basis remains strictly scientific. Today, lunar cycles are studied for agriculture, fishing, medical research, and even stock trading. The most widely observed pure lunar calendar today is the Islamic calendar.</p>
+      <h3>📚 Sources and Further Reading</h3>
       <ul>
-        <li><a href="https://ru.wikipedia.org/wiki/Лунный_календарь" target="_blank">Лунный календарь – Википедия</a></li>
-        <li><a href="https://www.britannica.com/science/lunar-calendar" target="_blank">Лунный календарь – Britannica</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Lunar_calendar" target="_blank">Lunar Calendar – Wikipedia</a></li>
+        <li><a href="https://www.britannica.com/science/lunar-calendar" target="_blank">Lunar Calendar – Britannica</a></li>
         <li><a href="https://ssd.jpl.nasa.gov/" target="_blank">JPL Solar System Dynamics (NASA)</a></li>
-        <li><a href="https://www.esa.int/Science_Exploration/Space_Science/Moon" target="_blank">ESA – Исследование Луны</a></li>
+        <li><a href="https://www.esa.int/Science_Exploration/Space_Science/Moon" target="_blank">ESA – Moon Exploration</a></li>
       </ul>
     </div>
 
     <div style="text-align: center; margin: 2rem 0;">
-      <a href="/astroscan_bot/ru/" class="btn-primary" style="text-decoration: none; font-size: 1.1rem;">← На главную</a>
+      <a href="/astroscan_bot/" class="btn-primary" style="text-decoration: none; font-size: 1.1rem;">← Back to Home</a>
     </div>
   </div>
 
@@ -96,31 +96,30 @@
       const Solar = window.Solar;
       const SolarUtil = window.SolarUtil;
       if (!Solar || !SolarUtil) {
-        document.getElementById('lunar-date').textContent = 'Ошибка загрузки библиотеки';
+        document.getElementById('lunar-date').textContent = 'Library loading error';
         return;
       }
 
       const todaySolar = Solar.fromDate(new Date());
       const todayLunar = todaySolar.getLunar();
 
-      // Русские названия фаз
-      const phaseNamesRu = {
-        '朔': 'Новолуние', '新月': 'Новая луна', '峨眉月': 'Молодая луна',
-        '上弦月': 'Первая четверть', '盈凸月': 'Растущая луна',
-        '望': 'Полнолуние', '满月': 'Полная луна',
-        '亏凸月': 'Убывающая луна', '下弦月': 'Последняя четверть',
-        '残月': 'Старая луна'
+      // English phase names
+      const phaseNamesEn = {
+        '朔': 'New Moon', '新月': 'New Moon', '峨眉月': 'Waxing Crescent',
+        '上弦月': 'First Quarter', '盈凸月': 'Waxing Gibbous',
+        '望': 'Full Moon', '满月': 'Full Moon',
+        '亏凸月': 'Waning Gibbous', '下弦月': 'Last Quarter',
+        '残月': 'Waning Crescent'
       };
 
       const yueXiang = todayLunar.getYueXiang();
-      const phaseRus = phaseNamesRu[yueXiang] || yueXiang;
+      const phaseEn = phaseNamesEn[yueXiang] || yueXiang;
 
-      // Дата и фаза на русском
       document.getElementById('lunar-date').textContent = 
-        `Сегодня: ${todayLunar.getYear()} год, ${todayLunar.getMonth()} месяц, ${todayLunar.getDay()} лунный день`;
+        `Today: Year ${todayLunar.getYear()}, Month ${todayLunar.getMonth()}, Lunar Day ${todayLunar.getDay()}`;
       document.getElementById('lunar-info').textContent = 
-        `Фаза Луны: ${phaseRus}`;
-      document.getElementById('moon-phase-name').textContent = phaseRus;
+        `Moon Phase: ${phaseEn}`;
+      document.getElementById('moon-phase-name').textContent = phaseEn;
 
       const phaseIcons = {
         '朔': '🌑', '新月': '🌑', '峨眉月': '🌒', '上弦月': '🌓',
@@ -129,17 +128,17 @@
       };
       document.getElementById('moon-phase-icon').textContent = phaseIcons[yueXiang] || '🌙';
 
-      let currentYear = todaySolar.getYear();  // григорианский год
-      let currentMonth = todaySolar.getMonth(); // месяц (1-12)
+      let currentYear = todaySolar.getYear();
+      let currentMonth = todaySolar.getMonth();
 
       function renderCalendar(year, month) {
-        document.getElementById('calendar-month-year').textContent = `${year} год, ${month} месяц`;
+        document.getElementById('calendar-month-year').textContent = `${year}, Month ${month}`;
         const daysInMonth = SolarUtil.getDaysOfMonth(year, month);
         const firstDaySolar = Solar.fromYmd(year, month, 1);
-        const firstDayOfWeek = firstDaySolar.getWeek(); // 0 - воскресенье
+        const firstDayOfWeek = firstDaySolar.getWeek();
 
         let html = '';
-        const weekDays = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'];
+        const weekDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
         weekDays.forEach(day => {
           html += `<div style="font-weight: bold; padding: 0.5rem; color: var(--text-dim);">${day}</div>`;
         });
@@ -151,7 +150,7 @@
         for (let d = 1; d <= daysInMonth; d++) {
           const solar = Solar.fromYmd(year, month, d);
           const lunar = solar.getLunar();
-          const lunarDayNumber = lunar.getDay(); // число лунного дня (1-30)
+          const lunarDayNumber = lunar.getDay();
           const isToday = (d === todaySolar.getDay() && month === todaySolar.getMonth() && year === todaySolar.getYear());
 
           const bgStyle = isToday ? 'background: var(--accent-primary); color: #0a0718; font-weight: bold; border-radius: 50%;' : '';
