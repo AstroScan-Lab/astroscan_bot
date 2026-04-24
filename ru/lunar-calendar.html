@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title id="page-title">Lunar Calendar Today – Moon Phase, History &amp; Astronomical Data</title>
-  <meta name="description" id="page-description" content="Today's lunar calendar: moon phase, lunar day, month view. History of lunar calendars from Sumerians to NASA. Accurate JavaScript ephemeris.">
-  <meta name="keywords" content="lunar calendar, moon phase, lunar day, lunar month, history, Sumerians, astronomy, NASA, JPL, Swiss Ephemeris">
+  <title>Лунный календарь на сегодня – Фаза Луны, история и астрономические данные</title>
+  <meta name="description" content="Актуальный лунный календарь на сегодня: фаза Луны, лунный день и месяц. История лунных календарей от шумеров до NASA. Точные астрономические расчёты.">
+  <meta name="keywords" content="лунный календарь, фаза луны, лунный день, лунный месяц, история, шумеры, астрономия">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/x-icon" href="/astroscan_bot/favicon.ico">
   <style>
@@ -41,16 +41,16 @@
 <body>
   <div class="container">
     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
-      <a href="/astroscan_bot/" class="btn-primary" style="text-decoration: none;" id="back-link">← Back to Home</a>
-      <h1 style="font-size: 2rem; font-weight: 800;" id="page-heading">🌙 Lunar Calendar</h1>
+      <a href="/astroscan_bot/ru/" class="btn-primary" style="text-decoration: none;">← На главную</a>
+      <h1 style="font-size: 2rem; font-weight: 800;">🌙 Лунный календарь</h1>
       <div></div>
     </div>
 
     <div class="card" id="today-card">
       <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
         <div>
-          <h2 id="lunar-date">Loading...</h2>
-          <p id="lunar-info" style="color: var(--text-dim);">Fetching data...</p>
+          <h2 id="lunar-date">Загрузка...</h2>
+          <p id="lunar-info" style="color: var(--text-dim);">Получаем данные...</p>
         </div>
         <div style="text-align: center;">
           <div id="moon-phase-icon" style="font-size: 3rem; margin-bottom: 0.5rem;">🌕</div>
@@ -61,269 +61,74 @@
 
     <div class="card">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
-        <button id="prev-month" class="btn-primary" id="prev-btn">← Previous</button>
+        <button id="prev-month" class="btn-primary">← Предыдущий</button>
         <h2 id="calendar-month-year">...</h2>
-        <button id="next-month" class="btn-primary" id="next-btn">Next →</button>
+        <button id="next-month" class="btn-primary">Следующий →</button>
       </div>
       <div id="calendar-grid" style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 0.5rem; text-align: center;"></div>
     </div>
 
     <div class="card article-text">
-      <h2 id="art-title">📖 What is a Lunar Calendar?</h2>
-      <p id="art-desc">A <strong>lunar calendar</strong> is a calendar based on the monthly cycles of the Moon's phases (synodic months), in contrast to solar calendars, whose annual cycles are based on the solar year. Since each lunation is approximately 29.5 days, it is common for the months of a lunar calendar to alternate between 29 and 30 days. A lunar year of 12 such lunations is 354 days, 8 hours, 48 minutes, 34 seconds — about 11 to 12 days shorter than the solar year.[reference:0][reference:1]</p>
-      <h3 id="art-origins-title">🌿 Origins: Who invented the lunar calendar</h3>
-      <p id="art-origins-text">Scholars have argued that ancient hunters conducted regular astronomical observations of the Moon back in the Upper Palaeolithic. Samuel L. Macey dates the earliest uses of the Moon as a time-measuring device back to 28,000–30,000 years ago.[reference:2] The <span class="highlight">Sumerians</span> were probably the first to develop a calendar based entirely on the recurrence of lunar phases. Each Sumero-Babylonian month began on the first day of visibility of the new Moon.[reference:3] The lunisolar calendar descends from an older Sumerian calendar used in the 4th and 3rd millennia BCE.[reference:4]</p>
-      <h3 id="art-authority-title">🏛 Who is the authority today</h3>
-      <p id="art-authority-text">Modern scientific calculation of lunar phases builds upon the work of polymath <span class="highlight">Johann Heinrich Lambert</span> (1728–1777), who made important contributions to astronomy, photometry, and mathematics. A crater on the Moon is named after him.[reference:5][reference:6] The most precise ephemerides today are published by NASA's Jet Propulsion Laboratory (JPL). The Swiss Ephemeris — used by our main test — is a compressed version of the JPL DE431 ephemeris, covering the time range 13,000 BCE to 17,000 CE.[reference:7][reference:8]</p>
-      <h3 id="art-today-title">🌎 The Moon Today: From Myths to Precision</h3>
-      <p id="art-today-text">Though often linked with astrology and folklore, the lunar calendar's astronomical basis remains strictly scientific. Today, lunar cycles are studied for agriculture, fishing, medical research, and even stock trading. The most widely observed pure lunar calendar today is the Islamic calendar.[reference:9]</p>
-      <h3 id="art-sources-title">📚 Sources and Further Reading</h3>
+      <h2>📖 Что такое лунный календарь?</h2>
+      <p><strong>Лунный календарь</strong> — разновидность календаря, в основе которого лежит период смены фаз Луны, то есть синодический месяц. Поскольку каждый лунный цикл длится примерно 29,5 дней, месяцы в лунном календаре обычно чередуются между 29 и 30 днями. Лунный год из 12 таких циклов составляет 354 дня, 8 часов, 48 минут, 34 секунды — примерно на 11–12 дней короче солнечного года.</p>
+      <h3>🌿 Истоки: кто и когда придумал</h3>
+      <p>Учёные полагают, что древние охотники проводили регулярные астрономические наблюдения Луны ещё в верхнем палеолите. Сэмюэл Л. Мейси датирует earliest использование Луны как устройства для измерения времени 28 000–30 000 лет назад. <span class="highlight">Шумеры</span>, вероятно, первыми разработали календарь, полностью основанный на смене лунных фаз. Каждый шумеро-вавилонский месяц начинался в первый день видимости новой Луны. Лунно-солнечный календарь происходит от более древнего шумерского календаря, использовавшегося в 4-м и 3-м тысячелетиях до н. э.</p>
+      <h3>🏛 Кто сегодня считается авторитетом</h3>
+      <p>Современные научные расчёты лунных фаз основаны на работах полимата <span class="highlight">Иоганна Генриха Ламберта</span> (1728–1777), внёсшего важный вклад в астрономию, фотометрию и математику. В его честь назван кратер на Луне. Самые точные эфемериды сегодня публикуются Лабораторией реактивного движения NASA (JPL). Swiss Ephemeris — используемая в нашем основном тесте — является сжатой версией эфемерид JPL DE431 и охватывает период с 13 000 года до н. э. по 17 000 год н. э.</p>
+      <h3>🌎 Луна сегодня: от мифов к точности</h3>
+      <p>Хотя лунный календарь часто ассоциируется с астрологией и народными приметами, его астрономическая основа остаётся строго научной. Сегодня лунные циклы изучают для планирования сельскохозяйственных работ, рыболовства, медицинских исследований и даже биржевых торгов. Самый распространённый чисто лунный календарь сегодня — исламский.</p>
+      <h3>📚 Источники и дополнительное чтение</h3>
       <ul>
-        <li><a href="https://en.wikipedia.org/wiki/Lunar_calendar" target="_blank" id="source-wiki">Lunar Calendar – Wikipedia</a></li>
-        <li><a href="https://www.britannica.com/science/lunar-calendar" target="_blank">Lunar Calendar – Britannica</a></li>
+        <li><a href="https://ru.wikipedia.org/wiki/Лунный_календарь" target="_blank">Лунный календарь – Википедия</a></li>
+        <li><a href="https://www.britannica.com/science/lunar-calendar" target="_blank">Лунный календарь – Britannica</a></li>
         <li><a href="https://ssd.jpl.nasa.gov/" target="_blank">JPL Solar System Dynamics (NASA)</a></li>
-        <li><a href="https://www.esa.int/Science_Exploration/Space_Science/Moon" target="_blank">ESA – Moon Exploration</a></li>
+        <li><a href="https://www.esa.int/Science_Exploration/Space_Science/Moon" target="_blank">ESA – Исследование Луны</a></li>
       </ul>
     </div>
 
     <div style="text-align: center; margin: 2rem 0;">
-      <a href="/astroscan_bot/" class="btn-primary" style="text-decoration: none; font-size: 1.1rem;" id="back-link-bottom">← Back to Home</a>
+      <a href="/astroscan_bot/ru/" class="btn-primary" style="text-decoration: none; font-size: 1.1rem;">← На главную</a>
     </div>
   </div>
 
   <script>
     (function() {
-      const path = window.location.pathname;
-      const match = path.match(/\/(ru|es|ar|hi|de|pt|id)\//);
-      const lang = match ? match[1] : 'en';
-
-      const T = {
-        en: {
-          pageTitle: 'Lunar Calendar Today – Moon Phase, History & Astronomical Data',
-          pageDesc: 'Today\'s lunar calendar: moon phase, lunar day, month view. History of lunar calendars from Sumerians to NASA. Accurate JavaScript ephemeris.',
-          backLink: '← Back to Home',
-          heading: '🌙 Lunar Calendar',
-          prevBtn: '← Previous',
-          nextBtn: 'Next →',
-          weekDays: ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],
-          artTitle: '📖 What is a Lunar Calendar?',
-          artDesc: 'A <strong>lunar calendar</strong> is a calendar based on the monthly cycles of the Moon\'s phases (synodic months), in contrast to solar calendars, whose annual cycles are based on the solar year. Since each lunation is approximately 29.5 days, it is common for the months of a lunar calendar to alternate between 29 and 30 days. A lunar year of 12 such lunations is 354 days, 8 hours, 48 minutes, 34 seconds — about 11 to 12 days shorter than the solar year.',
-          originsTitle: '🌿 Origins: Who invented the lunar calendar',
-          originsText: 'Scholars have argued that ancient hunters conducted regular astronomical observations of the Moon back in the Upper Palaeolithic. Samuel L. Macey dates the earliest uses of the Moon as a time-measuring device back to 28,000–30,000 years ago. The <span class="highlight">Sumerians</span> were probably the first to develop a calendar based entirely on the recurrence of lunar phases. Each Sumero-Babylonian month began on the first day of visibility of the new Moon. The lunisolar calendar descends from an older Sumerian calendar used in the 4th and 3rd millennia BCE.',
-          authorityTitle: '🏛 Who is the authority today',
-          authorityText: 'Modern scientific calculation of lunar phases builds upon the work of polymath <span class="highlight">Johann Heinrich Lambert</span> (1728–1777), who made important contributions to astronomy, photometry, and mathematics. A crater on the Moon is named after him. The most precise ephemerides today are published by NASA\'s Jet Propulsion Laboratory (JPL). The Swiss Ephemeris — used by our main test — is a compressed version of the JPL DE431 ephemeris, covering the time range 13,000 BCE to 17,000 CE.',
-          todayBodyTitle: '🌎 The Moon Today: From Myths to Precision',
-          todayBodyText: 'Though often linked with astrology and folklore, the lunar calendar\'s astronomical basis remains strictly scientific. Today, lunar cycles are studied for agriculture, fishing, medical research, and even stock trading. The most widely observed pure lunar calendar today is the Islamic calendar.',
-          sourcesTitle: '📚 Sources and Further Reading',
-          wikiLink: 'Lunar Calendar – Wikipedia',
-          lunarDatePrefix: 'Today: ',
-          lunarInfoTemplate: (lunar) => `Moon phase: ${lunar.getYueXiang()} | ${lunar.getGanZhiYear()}年 ${lunar.getGanZhiMonth()}月 ${lunar.getGanZhiDay()}日`,
-          dynamicTitleTemplate: (solar, lunar) => `Lunar Calendar ${solar.toFullString()} – ${lunar.getDayInChinese()} Lunar Day`,
-          dynamicDescTemplate: (lunar) => `Today is ${lunar.getDayInChinese()} lunar day. Moon phase: ${lunar.getYueXiang()}. Monthly lunar calendar, history and origins.`
-        },
-        ru: {
-          pageTitle: 'Лунный календарь на сегодня – Фаза Луны, история и астрономические данные',
-          pageDesc: 'Актуальный лунный календарь на сегодня: фаза Луны, лунный день и месяц. История лунных календарей от шумеров до NASA. Точные астрономические расчёты.',
-          backLink: '← На главную',
-          heading: '🌙 Лунный календарь',
-          prevBtn: '← Предыдущий',
-          nextBtn: 'Следующий →',
-          weekDays: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
-          artTitle: '📖 Что такое лунный календарь?',
-          artDesc: '<strong>Лунный календарь</strong> — разновидность календаря, в основе которого лежит период смены фаз Луны, то есть синодический месяц. Поскольку каждый лунный цикл длится примерно 29,5 дней, месяцы в лунном календаре обычно чередуются между 29 и 30 днями. Лунный год из 12 таких циклов составляет 354 дня, 8 часов, 48 минут, 34 секунды — примерно на 11–12 дней короче солнечного года.',
-          originsTitle: '🌿 Истоки: кто и когда придумал лунный календарь',
-          originsText: 'Учёные полагают, что древние охотники проводили регулярные астрономические наблюдения Луны ещё в верхнем палеолите. Сэмюэл Л. Мейси датирует earliest использование Луны как устройства для измерения времени 28 000–30 000 лет назад. <span class="highlight">Шумеры</span>, вероятно, первыми разработали календарь, полностью основанный на смене лунных фаз. Каждый шумеро-вавилонский месяц начинался в первый день видимости новой Луны. Лунно-солнечный календарь происходит от более древнего шумерского календаря, использовавшегося в 4-м и 3-м тысячелетиях до н. э.',
-          authorityTitle: '🏛 Кто сегодня считается авторитетом',
-          authorityText: 'Современные научные расчёты лунных фаз основаны на работах полимата <span class="highlight">Иоганна Генриха Ламберта</span> (1728–1777), внёсшего важный вклад в астрономию, фотометрию и математику. В его честь назван кратер на Луне. Самые точные эфемериды сегодня публикуются Лабораторией реактивного движения NASA (JPL). Swiss Ephemeris — используемая в нашем основном тесте — является сжатой версией эфемерид JPL DE431 и охватывает период с 13 000 года до н. э. по 17 000 год н. э.',
-          todayBodyTitle: '🌎 Луна сегодня: от мифов к точности',
-          todayBodyText: 'Хотя лунный календарь часто ассоциируется с астрологией и народными приметами, его астрономическая основа остаётся строго научной. Сегодня лунные циклы изучают для планирования сельскохозяйственных работ, рыболовства, медицинских исследований и даже биржевых торгов. Самый распространённый чисто лунный календарь сегодня — исламский.',
-          sourcesTitle: '📚 Источники и дополнительное чтение',
-          wikiLink: 'Лунный календарь – Википедия',
-          lunarDatePrefix: 'Сегодня: ',
-          lunarInfoTemplate: (lunar) => `Фаза Луны: ${lunar.getYueXiang()} | ${lunar.getGanZhiYear()}年 ${lunar.getGanZhiMonth()}月 ${lunar.getGanZhiDay()}日`,
-          dynamicTitleTemplate: (solar, lunar) => `Лунный календарь на ${solar.toFullString()} – ${lunar.getDayInChinese()} день Луны`,
-          dynamicDescTemplate: (lunar) => `Сегодня ${lunar.getDayInChinese()} лунный день. Фаза Луны: ${lunar.getYueXiang()}. Лунный календарь на месяц, история и происхождение.`
-        },
-        es: {
-          pageTitle: 'Calendario Lunar Hoy – Fase Lunar, Historia y Datos Astronómicos',
-          pageDesc: 'Calendario lunar de hoy: fase lunar, día lunar, vista mensual. Historia de los calendarios lunares desde los sumerios hasta la NASA. Cálculos astronómicos precisos.',
-          backLink: '← Volver al inicio',
-          heading: '🌙 Calendario Lunar',
-          prevBtn: '← Anterior',
-          nextBtn: 'Siguiente →',
-          weekDays: ['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'],
-          artTitle: '📖 ¿Qué es un calendario lunar?',
-          artDesc: 'Un <strong>calendario lunar</strong> es un calendario basado en los ciclos mensuales de las fases de la Luna (meses sinódicos), a diferencia de los calendarios solares, cuyos ciclos anuales se basan en el año solar. Dado que cada lunación dura aproximadamente 29,5 días, es común que los meses de un calendario lunar alternen entre 29 y 30 días. Un año lunar de 12 de tales lunaciones es 354 días, 8 horas, 48 minutos, 34 segundos — aproximadamente 11 a 12 días más corto que el año solar.',
-          originsTitle: '🌿 Orígenes: Quién inventó el calendario lunar',
-          originsText: 'Los eruditos sostienen que los antiguos cazadores realizaban observaciones astronómicas regulares de la Luna en el Paleolítico Superior. Samuel L. Macey data los primeros usos de la Luna como dispositivo de medición del tiempo hace 28.000–30.000 años. Los <span class="highlight">sumerios</span> fueron probablemente los primeros en desarrollar un calendario basado completamente en la recurrencia de las fases lunares. Cada mes sumero-babilónico comenzaba el primer día de visibilidad de la Luna nueva. El calendario lunisolar desciende de un calendario sumerio más antiguo utilizado en el IV y III milenio a.C.',
-          authorityTitle: '🏛 Quién es la autoridad hoy',
-          authorityText: 'El cálculo científico moderno de las fases lunares se basa en el trabajo del polímata <span class="highlight">Johann Heinrich Lambert</span> (1728–1777), quien hizo importantes contribuciones a la astronomía, la fotometría y las matemáticas. Un cráter en la Luna lleva su nombre. Las efemérides más precisas hoy son publicadas por el Jet Propulsion Laboratory (JPL) de la NASA. Las Swiss Ephemeris — utilizadas en nuestra prueba principal — son una versión comprimida de las efemérides JPL DE431, que cubren el rango temporal del 13.000 a.C. al 17.000 d.C.',
-          todayBodyTitle: '🌎 La Luna hoy: de los mitos a la precisión',
-          todayBodyText: 'Aunque a menudo vinculado con la astrología y el folclore, la base astronómica del calendario lunar sigue siendo estrictamente científica. Hoy en día, los ciclos lunares se estudian para la agricultura, la pesca, la investigación médica e incluso el comercio bursátil. El calendario puramente lunar más ampliamente observado hoy es el calendario islámico.',
-          sourcesTitle: '📚 Fuentes y lecturas adicionales',
-          wikiLink: 'Calendario lunar – Wikipedia',
-          lunarDatePrefix: 'Hoy: ',
-          lunarInfoTemplate: (lunar) => `Fase lunar: ${lunar.getYueXiang()} | ${lunar.getGanZhiYear()}年 ${lunar.getGanZhiMonth()}月 ${lunar.getGanZhiDay()}日`,
-          dynamicTitleTemplate: (solar, lunar) => `Calendario Lunar ${solar.toFullString()} – ${lunar.getDayInChinese()} Día Lunar`,
-          dynamicDescTemplate: (lunar) => `Hoy es el ${lunar.getDayInChinese()} día lunar. Fase lunar: ${lunar.getYueXiang()}. Calendario lunar mensual, historia y orígenes.`
-        },
-        ar: {
-          pageTitle: 'التقويم القمري اليوم – مرحلة القمر، التاريخ والبيانات الفلكية',
-          pageDesc: 'التقويم القمري لليوم: مرحلة القمر، اليوم القمري، عرض شهري. تاريخ التقاويم القمرية من السومريين إلى ناسا. حسابات فلكية دقيقة.',
-          backLink: '← العودة إلى الرئيسية',
-          heading: '🌙 التقويم القمري',
-          prevBtn: '← السابق',
-          nextBtn: 'التالي ←',
-          weekDays: ['أحد','اثنين','ثلاثاء','أربعاء','خميس','جمعة','سبت'],
-          artTitle: '📖 ما هو التقويم القمري؟',
-          artDesc: '<strong>التقويم القمري</strong> هو تقويم يعتمد على الدورات الشهرية لمراحل القمر (الأشهر القمرية)، على عكس التقاويم الشمسية التي تعتمد دوراتها السنوية على السنة الشمسية. بما أن كل دورة قمرية تستغرق حوالي 29.5 يومًا، فمن الشائع أن تتعاقب أشهر التقويم القمري بين 29 و30 يومًا. السنة القمرية المكونة من 12 دورة من هذا القبيل هي 354 يومًا و8 ساعات و48 دقيقة و34 ثانية — أي أقصر بحوالي 11 إلى 12 يومًا من السنة الشمسية.',
-          originsTitle: '🌿 الأصول: من اخترع التقويم القمري',
-          originsText: 'يرى العلماء أن الصيادين القدماء أجروا أرصادًا فلكية منتظمة للقمر في العصر الحجري القديم العلوي. يؤرخ صموئيل ل. ماسي أول استخدامات القمر كأداة لقياس الوقت إلى 28,000–30,000 سنة مضت. كان <span class="highlight">السومريون</span> على الأرجح أول من طور تقويمًا يعتمد بالكامل على تكرار مراحل القمر. كان كل شهر سومري-بابلي يبدأ في أول يوم من رؤية القمر الجديد. ينحدر التقويم القمري-الشمسي من تقويم سومري أقدم استُخدم في الألفية الرابعة والثالثة قبل الميلاد.',
-          authorityTitle: '🏛 من هو المرجع اليوم',
-          authorityText: 'يعتمد الحساب العلمي الحديث لمراحل القمر على أعمال الموسوعي <span class="highlight">يوهان هاينريش لامبرت</span> (1728–1777)، الذي قدم مساهمات مهمة في علم الفلك والقياس الضوئي والرياضيات. فوهة على القمر تحمل اسمه. تنشر أدق التقاويم الفلكية اليوم من قبل مختبر الدفع النفاث (JPL) التابع لناسا. التقاويم الفلكية السويسرية (Swiss Ephemeris) — المستخدمة في اختبارنا الرئيسي — هي نسخة مضغوطة من تقاويم JPL DE431، وتغطي النطاق الزمني من 13,000 ق.م. إلى 17,000 م.',
-          todayBodyTitle: '🌎 القمر اليوم: من الأساطير إلى الدقة',
-          todayBodyText: 'على الرغم من ارتباطه غالبًا بالتنجيم والفولكلور، يبقى الأساس الفلكي للتقويم القمري علميًا بحتًا. اليوم، تُدرس الدورات القمرية للزراعة وصيد الأسماك والبحث الطبي وحتى تداول الأسهم. أكثر تقويم قمري بحت مُستخدم على نطاق واسع اليوم هو التقويم الإسلامي.',
-          sourcesTitle: '📚 المصادر والقراءات الإضافية',
-          wikiLink: 'التقويم القمري – ويكيبيديا',
-          lunarDatePrefix: 'اليوم: ',
-          lunarInfoTemplate: (lunar) => `مرحلة القمر: ${lunar.getYueXiang()} | ${lunar.getGanZhiYear()}年 ${lunar.getGanZhiMonth()}月 ${lunar.getGanZhiDay()}日`,
-          dynamicTitleTemplate: (solar, lunar) => `التقويم القمري ${solar.toFullString()} – ${lunar.getDayInChinese()} يوم قمري`,
-          dynamicDescTemplate: (lunar) => `اليوم هو ${lunar.getDayInChinese()} يوم قمري. مرحلة القمر: ${lunar.getYueXiang()}. تقويم قمري شهري، تاريخ وأصول.`
-        },
-        hi: {
-          pageTitle: 'चंद्र कैलेंडर आज – चंद्रमा चरण, इतिहास और खगोलीय डेटा',
-          pageDesc: 'आज का चंद्र कैलेंडर: चंद्रमा चरण, चंद्र दिवस, मासिक दृश्य। सुमेरियों से नासा तक चंद्र कैलेंडर का इतिहास। सटीक खगोलीय गणना।',
-          backLink: '← होम पेज पर वापस',
-          heading: '🌙 चंद्र कैलेंडर',
-          prevBtn: '← पिछला',
-          nextBtn: 'अगला →',
-          weekDays: ['रवि','सोम','मंगल','बुध','गुरु','शुक्र','शनि'],
-          artTitle: '📖 चंद्र कैलेंडर क्या है?',
-          artDesc: '<strong>चंद्र कैलेंडर</strong> चंद्रमा के चरणों (सिनोडिक महीनों) के मासिक चक्रों पर आधारित कैलेंडर है, सौर कैलेंडरों के विपरीत जिनके वार्षिक चक्र सौर वर्ष पर आधारित होते हैं। चूंकि प्रत्येक चंद्र चक्र लगभग 29.5 दिनों का होता है, चंद्र कैलेंडर के महीनों का 29 और 30 दिनों के बीच बारी-बारी से आना आम बात है। ऐसे 12 चक्रों का चंद्र वर्ष 354 दिन, 8 घंटे, 48 मिनट, 34 सेकंड का होता है — सौर वर्ष से लगभग 11 से 12 दिन छोटा।',
-          originsTitle: '🌿 उत्पत्ति: चंद्र कैलेंडर का आविष्कार किसने किया',
-          originsText: 'विद्वानों का मानना है कि प्राचीन शिकारी ऊपरी पुरापाषाण काल में चंद्रमा का नियमित खगोलीय अवलोकन करते थे। सैमुअल एल. मेसी चंद्रमा के समय-मापन उपकरण के रूप में सबसे पहले उपयोग को 28,000–30,000 वर्ष पूर्व का बताते हैं। <span class="highlight">सुमेरियन</span> संभवतः पहले थे जिन्होंने पूरी तरह से चंद्र चरणों की पुनरावृत्ति पर आधारित कैलेंडर विकसित किया। प्रत्येक सुमेरियन-बेबीलोनियन महीना नए चंद्रमा की दृश्यता के पहले दिन शुरू होता था। चंद्र-सौर कैलेंडर चौथी और तीसरी सहस्राब्दी ईसा पूर्व में उपयोग किए जाने वाले पुराने सुमेरियन कैलेंडर से निकला है।',
-          authorityTitle: '🏛 आज का अधिकारी कौन है',
-          authorityText: 'चंद्र चरणों की आधुनिक वैज्ञानिक गणना बहुश्रुत <span class="highlight">योहान हाइनरिख लैम्बर्ट</span> (1728–1777) के काम पर आधारित है, जिन्होंने खगोल विज्ञान, प्रकाशमिति और गणित में महत्वपूर्ण योगदान दिया। चंद्रमा पर एक क्रेटर उनके नाम पर है। आज सबसे सटीक पंचांग नासा की जेट प्रोपल्शन लेबोरेटरी (JPL) द्वारा प्रकाशित किए जाते हैं। स्विस एफेमेरिस — हमारे मुख्य परीक्षण में उपयोग किया जाता है — JPL DE431 पंचांग का संपीडित संस्करण है, जो 13,000 ईसा पूर्व से 17,000 ईस्वी तक की समय सीमा को कवर करता है।',
-          todayBodyTitle: '🌎 चंद्रमा आज: मिथकों से सटीकता तक',
-          todayBodyText: 'हालांकि अक्सर ज्योतिष और लोककथाओं से जुड़ा होता है, चंद्र कैलेंडर का खगोलीय आधार पूरी तरह से वैज्ञानिक बना हुआ है। आज, चंद्र चक्रों का अध्ययन कृषि, मत्स्य पालन, चिकित्सा अनुसंधान और यहां तक कि शेयर बाजार व्यापार के लिए किया जाता है। आज सबसे व्यापक रूप से मनाया जाने वाला शुद्ध चंद्र कैलेंडर इस्लामी कैलेंडर है।',
-          sourcesTitle: '📚 स्रोत और आगे का अध्ययन',
-          wikiLink: 'चंद्र कैलेंडर – विकिपीडिया',
-          lunarDatePrefix: 'आज: ',
-          lunarInfoTemplate: (lunar) => `चंद्र चरण: ${lunar.getYueXiang()} | ${lunar.getGanZhiYear()}年 ${lunar.getGanZhiMonth()}月 ${lunar.getGanZhiDay()}日`,
-          dynamicTitleTemplate: (solar, lunar) => `चंद्र कैलेंडर ${solar.toFullString()} – ${lunar.getDayInChinese()} चंद्र दिवस`,
-          dynamicDescTemplate: (lunar) => `आज ${lunar.getDayInChinese()} चंद्र दिवस है। चंद्र चरण: ${lunar.getYueXiang()}. मासिक चंद्र कैलेंडर, इतिहास और उत्पत्ति।`
-        },
-        de: {
-          pageTitle: 'Mondkalender heute – Mondphase, Geschichte & astronomische Daten',
-          pageDesc: 'Aktueller Mondkalender: Mondphase, Mondtag, Monatsansicht. Geschichte der Mondkalender von den Sumerern bis zur NASA. Präzise astronomische Berechnungen.',
-          backLink: '← Zurück zur Startseite',
-          heading: '🌙 Mondkalender',
-          prevBtn: '← Zurück',
-          nextBtn: 'Weiter →',
-          weekDays: ['So','Mo','Di','Mi','Do','Fr','Sa'],
-          artTitle: '📖 Was ist ein Mondkalender?',
-          artDesc: 'Ein <strong>Mondkalender</strong> ist ein Kalender, der auf den monatlichen Zyklen der Mondphasen (synodischen Monaten) basiert, im Gegensatz zu Solarkalendern, deren Jahreszyklen auf dem Sonnenjahr beruhen. Da jede Lunation etwa 29,5 Tage dauert, wechseln sich die Monate eines Mondkalenders üblicherweise mit 29 und 30 Tagen ab. Ein Mondjahr aus 12 solcher Lunationen ist 354 Tage, 8 Stunden, 48 Minuten, 34 Sekunden lang — etwa 11 bis 12 Tage kürzer als das Sonnenjahr.',
-          originsTitle: '🌿 Ursprünge: Wer erfand den Mondkalender',
-          originsText: 'Wissenschaftler gehen davon aus, dass bereits in der Jungpaläolithikum Jäger regelmäßige astronomische Beobachtungen des Mondes durchführten. Samuel L. Macey datiert die frühesten Verwendungen des Mondes als Zeitmessgerät auf 28.000–30.000 Jahre zurück. Die <span class="highlight">Sumerer</span> waren wahrscheinlich die ersten, die einen Kalender entwickelten, der vollständig auf der Wiederkehr der Mondphasen basierte. Jeder sumerisch-babylonische Monat begann am ersten Tag der Sichtbarkeit des Neumondes. Der Lunisolarkalender stammt von einem älteren sumerischen Kalender ab, der im 4. und 3. Jahrtausend v. Chr. verwendet wurde.',
-          authorityTitle: '🏛 Wer ist heute die Autorität',
-          authorityText: 'Die moderne wissenschaftliche Berechnung der Mondphasen baut auf der Arbeit des Universalgelehrten <span class="highlight">Johann Heinrich Lambert</span> (1728–1777) auf, der bedeutende Beiträge zur Astronomie, Photometrie und Mathematik leistete. Ein Krater auf dem Mond ist nach ihm benannt. Die präzisesten Ephemeriden werden heute vom Jet Propulsion Laboratory (JPL) der NASA veröffentlicht. Die Swiss Ephemeris — verwendet in unserem Haupttest — ist eine komprimierte Version der JPL DE431 Ephemeriden und deckt den Zeitraum von 13.000 v. Chr. bis 17.000 n. Chr. ab.',
-          todayBodyTitle: '🌎 Der Mond heute: Von Mythen zur Präzision',
-          todayBodyText: 'Obwohl oft mit Astrologie und Folklore verbunden, bleibt die astronomische Grundlage des Mondkalenders streng wissenschaftlich. Heute werden Mondzyklen für Landwirtschaft, Fischerei, medizinische Forschung und sogar den Aktienhandel untersucht. Der am weitesten verbreitete reine Mondkalender heute ist der islamische Kalender.',
-          sourcesTitle: '📚 Quellen und weiterführende Literatur',
-          wikiLink: 'Mondkalender – Wikipedia',
-          lunarDatePrefix: 'Heute: ',
-          lunarInfoTemplate: (lunar) => `Mondphase: ${lunar.getYueXiang()} | ${lunar.getGanZhiYear()}年 ${lunar.getGanZhiMonth()}月 ${lunar.getGanZhiDay()}日`,
-          dynamicTitleTemplate: (solar, lunar) => `Mondkalender ${solar.toFullString()} – ${lunar.getDayInChinese()} Mondtag`,
-          dynamicDescTemplate: (lunar) => `Heute ist der ${lunar.getDayInChinese()} Mondtag. Mondphase: ${lunar.getYueXiang()}. Monatlicher Mondkalender, Geschichte und Ursprünge.`
-        },
-        pt: {
-          pageTitle: 'Calendário Lunar Hoje – Fase da Lua, História e Dados Astronômicos',
-          pageDesc: 'Calendário lunar de hoje: fase da lua, dia lunar, visão mensal. História dos calendários lunares dos sumérios à NASA. Cálculos astronômicos precisos.',
-          backLink: '← Voltar ao início',
-          heading: '🌙 Calendário Lunar',
-          prevBtn: '← Anterior',
-          nextBtn: 'Seguinte →',
-          weekDays: ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'],
-          artTitle: '📖 O que é um calendário lunar?',
-          artDesc: 'Um <strong>calendário lunar</strong> é um calendário baseado nos ciclos mensais das fases da Lua (meses sinódicos), em contraste com os calendários solares, cujos ciclos anuais se baseiam no ano solar. Como cada lunação dura aproximadamente 29,5 dias, é comum que os meses de um calendário lunar alternem entre 29 e 30 dias. Um ano lunar de 12 dessas lunações tem 354 dias, 8 horas, 48 minutos, 34 segundos — cerca de 11 a 12 dias mais curto que o ano solar.',
-          originsTitle: '🌿 Origens: Quem inventou o calendário lunar',
-          originsText: 'Estudiosos argumentam que caçadores antigos realizavam observações astronômicas regulares da Lua no Paleolítico Superior. Samuel L. Macey data os primeiros usos da Lua como dispositivo de medição do tempo há 28.000–30.000 anos. Os <span class="highlight">sumérios</span> foram provavelmente os primeiros a desenvolver um calendário baseado inteiramente na recorrência das fases lunares. Cada mês sumero-babilônico começava no primeiro dia de visibilidade da Lua nova. O calendário lunissolar descende de um calendário sumério mais antigo usado no 4º e 3º milênio a.C.',
-          authorityTitle: '🏛 Quem é a autoridade hoje',
-          authorityText: 'O cálculo científico moderno das fases lunares baseia-se no trabalho do polímata <span class="highlight">Johann Heinrich Lambert</span> (1728–1777), que fez contribuições importantes para a astronomia, fotometria e matemática. Uma cratera na Lua tem o seu nome. As efemérides mais precisas hoje são publicadas pelo Jet Propulsion Laboratory (JPL) da NASA. As Swiss Ephemeris — usadas no nosso teste principal — são uma versão comprimida das efemérides JPL DE431, cobrindo o intervalo de tempo de 13.000 a.C. a 17.000 d.C.',
-          todayBodyTitle: '🌎 A Lua hoje: dos mitos à precisão',
-          todayBodyText: 'Embora frequentemente ligado à astrologia e ao folclore, a base astronômica do calendário lunar permanece estritamente científica. Hoje, os ciclos lunares são estudados para agricultura, pesca, pesquisa médica e até mesmo comércio de ações. O calendário puramente lunar mais amplamente observado hoje é o calendário islâmico.',
-          sourcesTitle: '📚 Fontes e leituras adicionais',
-          wikiLink: 'Calendário lunar – Wikipédia',
-          lunarDatePrefix: 'Hoje: ',
-          lunarInfoTemplate: (lunar) => `Fase da lua: ${lunar.getYueXiang()} | ${lunar.getGanZhiYear()}年 ${lunar.getGanZhiMonth()}月 ${lunar.getGanZhiDay()}日`,
-          dynamicTitleTemplate: (solar, lunar) => `Calendário Lunar ${solar.toFullString()} – ${lunar.getDayInChinese()} Dia Lunar`,
-          dynamicDescTemplate: (lunar) => `Hoje é ${lunar.getDayInChinese()} dia lunar. Fase da lua: ${lunar.getYueXiang()}. Calendário lunar mensal, história e origens.`
-        },
-        id: {
-          pageTitle: 'Kalender Lunar Hari Ini – Fase Bulan, Sejarah & Data Astronomi',
-          pageDesc: 'Kalender lunar hari ini: fase bulan, hari lunar, tampilan bulanan. Sejarah kalender lunar dari Sumeria hingga NASA. Perhitungan astronomi yang akurat.',
-          backLink: '← Kembali ke Beranda',
-          heading: '🌙 Kalender Lunar',
-          prevBtn: '← Sebelumnya',
-          nextBtn: 'Berikutnya →',
-          weekDays: ['Min','Sen','Sel','Rab','Kam','Jum','Sab'],
-          artTitle: '📖 Apa itu Kalender Lunar?',
-          artDesc: '<strong>Kalender lunar</strong> adalah kalender yang didasarkan pada siklus bulanan fase-fase Bulan (bulan sinodis), berbeda dengan kalender surya yang siklus tahunannya didasarkan pada tahun surya. Karena setiap lunasi berlangsung sekitar 29,5 hari, umum bagi bulan-bulan dalam kalender lunar untuk bergantian antara 29 dan 30 hari. Satu tahun lunar dari 12 lunasi tersebut adalah 354 hari, 8 jam, 48 menit, 34 detik — sekitar 11 hingga 12 hari lebih pendek dari tahun surya.',
-          originsTitle: '🌿 Asal-usul: Siapa yang menciptakan kalender lunar',
-          originsText: 'Para ahli berpendapat bahwa pemburu purba melakukan pengamatan astronomi rutin terhadap Bulan pada Paleolitikum Atas. Samuel L. Macey memperkirakan penggunaan Bulan sebagai alat pengukur waktu paling awal terjadi 28.000–30.000 tahun yang lalu. Bangsa <span class="highlight">Sumeria</span> kemungkinan adalah yang pertama mengembangkan kalender yang sepenuhnya didasarkan pada perulangan fase-fase Bulan. Setiap bulan Sumero-Babilonia dimulai pada hari pertama visibilitas Bulan baru. Kalender lunisolar berasal dari kalender Sumeria yang lebih tua yang digunakan pada milenium ke-4 dan ke-3 SM.',
-          authorityTitle: '🏛 Siapa yang berwenang saat ini',
-          authorityText: 'Perhitungan ilmiah modern tentang fase Bulan didasarkan pada karya polimatik <span class="highlight">Johann Heinrich Lambert</span> (1728–1777), yang memberikan kontribusi penting pada astronomi, fotometri, dan matematika. Sebuah kawah di Bulan dinamai untuk menghormatinya. Efemeris paling akurat saat ini diterbitkan oleh Jet Propulsion Laboratory (JPL) NASA. Swiss Ephemeris — yang digunakan dalam tes utama kami — adalah versi terkompresi dari efemeris JPL DE431, yang mencakup rentang waktu 13.000 SM hingga 17.000 M.',
-          todayBodyTitle: '🌎 Bulan Hari Ini: Dari Mitos ke Presisi',
-          todayBodyText: 'Meskipun sering dikaitkan dengan astrologi dan cerita rakyat, dasar astronomi kalender lunar tetap sepenuhnya ilmiah. Saat ini, siklus lunar dipelajari untuk pertanian, perikanan, penelitian medis, dan bahkan perdagangan saham. Kalender lunar murni yang paling banyak diamati saat ini adalah kalender Islam.',
-          sourcesTitle: '📚 Sumber dan Bacaan Lebih Lanjut',
-          wikiLink: 'Kalender Lunar – Wikipedia',
-          lunarDatePrefix: 'Hari ini: ',
-          lunarInfoTemplate: (lunar) => `Fase bulan: ${lunar.getYueXiang()} | ${lunar.getGanZhiYear()}年 ${lunar.getGanZhiMonth()}月 ${lunar.getGanZhiDay()}日`,
-          dynamicTitleTemplate: (solar, lunar) => `Kalender Lunar ${solar.toFullString()} – ${lunar.getDayInChinese()} Hari Lunar`,
-          dynamicDescTemplate: (lunar) => `Hari ini adalah ${lunar.getDayInChinese()} hari lunar. Fase bulan: ${lunar.getYueXiang()}. Kalender lunar bulanan, sejarah dan asal-usul.`
-        }
-      };
-
-      const t = T[lang] || T['en'];
-      document.documentElement.lang = lang;
-      document.getElementById('page-title').textContent = t.pageTitle;
-      document.querySelector('meta[name="description"]').setAttribute('content', t.pageDesc);
-      document.getElementById('back-link').textContent = t.backLink;
-      document.getElementById('page-heading').textContent = t.heading;
-      document.getElementById('prev-month').textContent = t.prevBtn;
-      document.getElementById('next-month').textContent = t.nextBtn;
-      document.getElementById('art-title').innerHTML = t.artTitle;
-      document.getElementById('art-desc').innerHTML = t.artDesc;
-      document.getElementById('art-origins-title').textContent = t.originsTitle;
-      document.getElementById('art-origins-text').innerHTML = t.originsText;
-      document.getElementById('art-authority-title').textContent = t.authorityTitle;
-      document.getElementById('art-authority-text').innerHTML = t.authorityText;
-      document.getElementById('art-today-title').textContent = t.todayBodyTitle;
-      document.getElementById('art-today-text').innerHTML = t.todayBodyText;
-      document.getElementById('art-sources-title').textContent = t.sourcesTitle;
-      document.getElementById('source-wiki').textContent = t.wikiLink;
-      document.getElementById('back-link-bottom').textContent = t.backLink;
+      const Solar = window.Solar;
+      const SolarUtil = window.SolarUtil;
+      if (!Solar || !SolarUtil) {
+        document.getElementById('lunar-date').textContent = 'Ошибка загрузки библиотеки';
+        return;
+      }
 
       const todaySolar = Solar.fromDate(new Date());
       const todayLunar = todaySolar.getLunar();
 
-      document.title = t.dynamicTitleTemplate(todaySolar, todayLunar);
-      document.querySelector('meta[name="description"]').setAttribute('content', t.dynamicDescTemplate(todayLunar));
+      document.getElementById('lunar-date').textContent = 
+        `Сегодня: ${todayLunar.getYearInChinese()}年 ${todayLunar.getMonthInChinese()}月 ${todayLunar.getDayInChinese()}日`;
+      document.getElementById('lunar-info').textContent = 
+        `Фаза Луны: ${todayLunar.getYueXiang()} | ${todayLunar.getGanZhiYear()}年 ${todayLunar.getGanZhiMonth()}月 ${todayLunar.getGanZhiDay()}日`;
 
-      document.getElementById('lunar-date').textContent = t.lunarDatePrefix + 
-        `${todayLunar.getYearInChinese()}年 ${todayLunar.getMonthInChinese()}月 ${todayLunar.getDayInChinese()}日`;
-      document.getElementById('lunar-info').textContent = t.lunarInfoTemplate(todayLunar);
-      document.getElementById('moon-phase-name').textContent = todayLunar.getYueXiang();
+      const yueXiang = todayLunar.getYueXiang();
+
+      // Русские названия фаз
+      const phaseNamesRu = {
+        '朔': 'Новолуние', '新月': 'Новая луна', '峨眉月': 'Молодая луна',
+        '上弦月': 'Первая четверть', '盈凸月': 'Растущая луна',
+        '望': 'Полнолуние', '满月': 'Полная луна',
+        '亏凸月': 'Убывающая луна', '下弦月': 'Последняя четверть',
+        '残月': 'Старая луна'
+      };
+      document.getElementById('moon-phase-name').textContent = phaseNamesRu[yueXiang] || yueXiang;
 
       const phaseIcons = {
         '朔': '🌑', '新月': '🌑', '峨眉月': '🌒', '上弦月': '🌓',
         '盈凸月': '🌔', '望': '🌕', '满月': '🌕', '亏凸月': '🌖',
         '下弦月': '🌗', '残月': '🌘'
       };
-      document.getElementById('moon-phase-icon').textContent = phaseIcons[todayLunar.getYueXiang()] || '🌙';
+      document.getElementById('moon-phase-icon').textContent = phaseIcons[yueXiang] || '🌙';
 
-      const currentYear = todaySolar.getYear();
-      const currentMonth = todaySolar.getMonth();
+      let currentYear = todaySolar.getYear();
+      let currentMonth = todaySolar.getMonth();
 
       function renderCalendar(year, month) {
         document.getElementById('calendar-month-year').textContent = `${year}年 ${month}月`;
@@ -332,7 +137,8 @@
         const firstDayOfWeek = firstDaySolar.getWeek();
 
         let html = '';
-        t.weekDays.forEach(day => {
+        const weekDays = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'];
+        weekDays.forEach(day => {
           html += `<div style="font-weight: bold; padding: 0.5rem; color: var(--text-dim);">${day}</div>`;
         });
 
@@ -358,17 +164,23 @@
       renderCalendar(currentYear, currentMonth);
 
       document.getElementById('prev-month').addEventListener('click', () => {
-        let newMonth = currentMonth - 1;
-        let newYear = currentYear;
-        if (newMonth < 1) { newMonth = 12; newYear--; }
-        window.location.href = `?year=${newYear}&month=${newMonth}`;
+        if (currentMonth === 1) {
+          currentYear--;
+          currentMonth = 12;
+        } else {
+          currentMonth--;
+        }
+        renderCalendar(currentYear, currentMonth);
       });
 
       document.getElementById('next-month').addEventListener('click', () => {
-        let newMonth = currentMonth + 1;
-        let newYear = currentYear;
-        if (newMonth > 12) { newMonth = 1; newYear++; }
-        window.location.href = `?year=${newYear}&month=${newMonth}`;
+        if (currentMonth === 12) {
+          currentYear++;
+          currentMonth = 1;
+        } else {
+          currentMonth++;
+        }
+        renderCalendar(currentYear, currentMonth);
       });
     })();
   </script>
