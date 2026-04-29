@@ -1,0 +1,18 @@
+# AstroScan Lab
+> Free personality test without registration. Discover your behavioral archetype, Chinese zodiac sign, compatibility, and compare Western vs Vedic astrology.
+
+## Core pages
+- [Home](https://astroscan-lab.github.io/astroscan_bot/): Main test and result.
+- [Telegram Bot](https://t.me/ASTROSCAN_BOT): Detailed natal chart reports with Swiss Ephemeris.
+- [Privacy Policy](https://astroscan-lab.github.io/astroscan_bot/privacy.html)
+- [Terms of Service](https://astroscan-lab.github.io/astroscan_bot/terms.html)
+
+## Key sections (on main page)
+- [About the project](https://astroscan-lab.github.io/astroscan_bot/#about-section)
+- [Technology & Western vs Vedic](https://astroscan-lab.github.io/astroscan_bot/#section-tech)
+- [Services & FAQ](https://astroscan-lab.github.io/astroscan_bot/#section-services)
+
+## Resources
+- [Sitemap](https://astroscan-lab.github.io/astroscan_bot/sitemap.xml)
+- [Sample Career Report (English)](https://astroscan-lab.github.io/astroscan_bot/astroscan_career_sample_en.pdf)
+- [Sample Career Report (Russian)](https://astroscan-lab.github.io/astroscan_bot/astroscan_career_sample_ru.pdf)
