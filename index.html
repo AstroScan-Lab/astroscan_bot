@@ -7,8 +7,8 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <title>AstroScan · Free Personality Test Without Registration: Archetype, Compatibility, Astrology Comparison</title>
-  <meta name="description" content="Take the free personality test without registration. Discover your behavioral archetype, Chinese zodiac sign, and compatibility. Compare Western and Vedic astrology">
-  <meta name="keywords" content="free personality test, no registration, archetype, compatibility, Chinese zodiac, western astrology, vedic astrology, jyotish, astrology comparison, free test, Swiss Ephemeris">
+  <meta name="description" content="Take the free personality test without registration. Discover your behavioral archetype, Chinese zodiac sign, and compatibility. Compare Western and Vedic astrology.">
+  <meta name="keywords" content="free personality test, no registration, archetype, compatibility, Chinese zodiac, western astrology, vedic astrology, jyotish, astrology comparison">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://astroscan-lab.github.io/astroscan_bot/">
   <link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/">
@@ -73,64 +73,22 @@
     .static-hero p { color: #d4cef0; max-width: 800px; margin-bottom: 1.5rem; }
     .card { background: var(--card-bg); backdrop-filter: blur(10px); border-radius: 1.8rem; padding: 1.5rem; margin-bottom: 1.5rem; border: 1px solid rgba(183,110,255,0.3); box-shadow: var(--shadow); transition: 0.3s; }
     .card:hover { border-color: var(--accent-primary); box-shadow: 0 0 20px var(--accent-glow); }
-    .btn-primary { background: transparent; color: var(--accent-primary); border: 2px solid var(--accent-primary); padding: 0.7rem 1.8rem; border-radius: 3rem; font-weight: 700; cursor: pointer; transition: 0.2s; }
-    .btn-primary:hover { background: var(--accent-primary); color: #0a0718; box-shadow: 0 0 16px var(--accent-glow); }
-    .btn-secondary { background: rgba(255,255,255,0.05); border: 1px solid var(--border-dim); color: var(--text-dim); padding: 0.5rem 1.2rem; border-radius: 2rem; cursor: pointer; }
-    .btn-secondary:hover { background: var(--accent-primary); border-color: var(--accent-primary); color: #0a0718; }
-    .progress-bar { width: 100%; height: 6px; background: var(--border-dim); border-radius: 3px; margin: 1rem 0; }
-    .progress-fill { width: 0%; height: 100%; background: var(--accent-primary); border-radius: 3px; transition: width 0.3s; }
-    .question-text { font-size: 1.2rem; font-weight: 600; margin-bottom: 1.2rem; }
-    .options { display: flex; flex-direction: column; gap: 0.7rem; }
-    .option-btn { background: rgba(10,7,24,0.7); border: 1.5px solid var(--border-dim); border-radius: 3rem; padding: 0.8rem 1.2rem; cursor: pointer; transition: 0.15s; color: var(--text-dim); font-size: 0.95rem; }
-    .option-btn:hover, .option-btn.selected { background: var(--accent-primary); border-color: var(--accent-primary); color: #0a0718; font-weight: 600; }
-    .result-card { background: rgba(0,0,0,0.5); border-radius: 1.2rem; padding: 1.2rem; border-left: 6px solid var(--accent-secondary); margin-top: 1.2rem; }
-    .compat-score { font-size: 2.5rem; font-weight: 800; color: var(--accent-secondary); text-align: center; margin: 0.5rem 0; }
-    .context-tabs { display: flex; gap: 0.8rem; margin: 1rem 0; flex-wrap: wrap; }
-    .context-tab { background: transparent; border: 1px solid var(--border-dim); padding: 0.4rem 1rem; border-radius: 2rem; cursor: pointer; }
-    .context-tab.active { background: var(--accent-primary); border-color: var(--accent-primary); color: #0a0718; }
-    .tracker-slider { width: 100%; margin: 1rem 0; }
-    .chart-bars { display: flex; gap: 0.4rem; align-items: flex-end; margin: 1rem 0; flex-wrap: wrap; }
-    .chart-bar { flex: 1; min-width: 35px; display: flex; flex-direction: column; align-items: center; gap: 0.2rem; }
-    .bar-fill { width: 100%; background: var(--accent-primary); border-radius: 6px 6px 3px 3px; transition: height 0.2s; }
     .telegram-link { display: inline-flex; align-items: center; gap: 0.5rem; background: #1f2a48; padding: 0.6rem 1.2rem; border-radius: 3rem; color: white; text-decoration: none; margin-top: 1rem; transition: 0.2s; }
     .telegram-link:hover { background: #2a3a60; transform: scale(1.02); }
     footer { text-align: center; font-size: 0.7rem; color: var(--text-dim); margin-top: 2rem; border-top: 1px solid var(--border-dim); padding-top: 1rem; }
     .cta-bar { position: fixed; bottom: 0; left: 0; right: 0; background: #0a0718; display: none; z-index: 100; border-top: 1px solid var(--accent-primary); }
     .cta-bar.visible { display: flex; }
     .cta-bar a { flex: 1; text-align: center; padding: 14px; text-decoration: none; font-weight: bold; text-transform: uppercase; color: var(--text-light); }
-    .cta-bar .telegram-cta { background: var(--accent-primary); color: #0a0718; }
-    .lazy-section { min-height: 300px; contain: layout; }
-    [data-lang] { display: none; }
-    body.lang-en [data-lang="en"] { display: revert; }
-    body.lang-ru [data-lang="ru"] { display: revert; }
-    body.lang-es [data-lang="es"] { display: revert; }
-    body.lang-ar [data-lang="ar"] { display: revert; }
-    body.lang-hi [data-lang="hi"] { display: revert; }
-    body.lang-de [data-lang="de"] { display: revert; }
-    body.lang-pt [data-lang="pt"] { display: revert; }
-    body.lang-id [data-lang="id"] { display: revert; }
-    *:focus-visible { outline: 2px solid var(--accent-primary); outline-offset: 2px; }
-    @media (max-width: 700px) { body { padding: 1rem; } .static-hero h1 { font-size: 1.8rem; } .card { padding: 1rem; } .static-hero { min-height: 500px; } }
-    .hidden { display: none; }
-    .trust-badge { display: flex; gap: 1.5rem; flex-wrap: wrap; margin-top: 1.5rem; }
-    .trust-item { display: flex; align-items: center; gap: 0.5rem; }
-    #appRoot { min-height: 600px; }
-    .lazy-section { min-height: 300px; }
+    .cta-bar .telegram-cta { background: var(--accent-primary); color: #0a0718; animation: gentle-pulse 2.5s infinite; }
     @keyframes gentle-pulse {
       0% { box-shadow: 0 0 0 0 rgba(183, 110, 255, 0.5); }
       70% { box-shadow: 0 0 0 12px rgba(183, 110, 255, 0); }
       100% { box-shadow: 0 0 0 0 rgba(183, 110, 255, 0); }
     }
-    .telegram-cta { animation: gentle-pulse 2.5s infinite; }
-    .fade-up {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
-    }
-    .fade-up.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    .trust-badge { display: flex; gap: 1.5rem; flex-wrap: wrap; margin-top: 1.5rem; }
+    .trust-item { display: flex; align-items: center; gap: 0.5rem; }
+    *:focus-visible { outline: 2px solid var(--accent-primary); outline-offset: 2px; }
+    @media (max-width: 700px) { body { padding: 1rem; } .static-hero h1 { font-size: 1.8rem; } .card { padding: 1rem; } }
   </style>
   <script type="application/ld+json">
   {
@@ -152,50 +110,6 @@
         "name": "AstroScan",
         "url": "https://astroscan-lab.github.io/astroscan_bot/",
         "inLanguage": ["en","ru","es","ar","hi","de","pt","id"]
-      },
-      {
-        "@type": "Product",
-        "@id": "#product",
-        "name": "AstroScan Free Personality Test",
-        "description": "Free online test to discover your Chinese zodiac sign, behavioral archetype, and compatibility. No registration required. Compare Western and Vedic astrology. Based on Swiss Ephemeris.",
-        "image": "https://astroscan-lab.github.io/astroscan_bot/cover.jpg",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD",
-          "availability": "https://schema.org/InStock",
-          "url": "https://astroscan-lab.github.io/astroscan_bot/"
-        }
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "How does the test determine a zodiac sign without birth date?",
-            "acceptedAnswer": { "@type": "Answer", "text": "We use 10 questions about behavior: conflict style, decision-making, emotionality, social energy, and attitude to risk. Answers are compared to psychological patterns of Chinese zodiac signs." }
-          },
-          {
-            "@type": "Question",
-            "name": "What are behavioral archetypes?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Archetypes are psychological profiles (Strategist, Diplomat, Explorer, Guardian, etc.) that describe how you act in relationships and at work." }
-          },
-          {
-            "@type": "Question",
-            "name": "Is it really free?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes, the basic test and compatibility are completely free and require no registration. Extended PDF reports and personal consultations are available separately." }
-          }
-        ]
-      },
-      {
-        "@type": "HowTo",
-        "name": "How to use AstroScan",
-        "step": [
-          { "@type": "HowToStep", "text": "Answer 10 questions about your behavior." },
-          { "@type": "HowToStep", "text": "Receive your Chinese zodiac sign and archetype." },
-          { "@type": "HowToStep", "text": "Choose a partner's sign and context (love/friendship/work)." },
-          { "@type": "HowToStep", "text": "See compatibility percentage and personalized insights." }
-        ]
       }
     ]
   }
@@ -212,95 +126,48 @@
   <div class="container">
     <div class="lang-bar" id="lang-bar"></div>
     <div class="static-hero">
-      <h1 data-lang="en">Discover Your Archetype &amp; Compatibility</h1>
-      <h1 data-lang="ru">Узнайте свой архетип и совместимость</h1>
-      <h1 data-lang="es">Descubre tu arquetipo y compatibilidad</h1>
-      <h1 data-lang="ar">اكتشف نموذجك الأصلي والتوافق</h1>
-      <h1 data-lang="hi">अपने आर्कटाइप और अनुकूलता की खोज करें</h1>
-      <h1 data-lang="de">Entdecken Sie Ihren Archetyp &amp; Kompatibilität</h1>
-      <h1 data-lang="pt">Descubra seu Arquétipo e Compatibilidade</h1>
-      <h1 data-lang="id">Temukan Arketipe &amp; Kompatibilitas Anda</h1>
-      <div class="subhead" data-lang="en">A deep personality test at the intersection of psychology and precise astronomical algorithms.</div>
-      <div class="subhead" data-lang="ru">Глубокий тест личности на стыке психологии и точных астрономических алгоритмов.</div>
-      <div class="subhead" data-lang="es">Una prueba de personalidad profunda en la intersección de la psicología y algoritmos astronómicos precisos.</div>
-      <div class="subhead" data-lang="ar">اختبار شخصية عميق عند تقاطع علم النفس والخوارزميات الفلكية الدقيقة.</div>
-      <div class="subhead" data-lang="hi">मनोविज्ञान और सटीक खगोलीय एल्गोरिदम के चौराहे पर एक गहन व्यक्तित्व परीक्षण।</div>
-      <div class="subhead" data-lang="de">Ein tiefer Persönlichkeitstest an der Schnittstelle von Psychologie und präzisen astronomischen Algorithmen.</div>
-      <div class="subhead" data-lang="pt">Um teste de personalidade profundo na interseção da psicologia e algoritmos astronômicos precisos.</div>
-      <div class="subhead" data-lang="id">Tes kepribadian mendalam di persimpangan psikologi dan algoritma astronomi yang presisi.</div>
-      <p data-lang="en"><strong>Free • No registration • Instant results.</strong> AstroScan is a <strong>free online personality test</strong> that determines your <strong>behavioral archetype</strong> and <strong>compatibility</strong> based on Chinese zodiac and Jungian psychology.</p>
-      <p data-lang="en" style="color:#fbbf24; font-weight:500; margin-bottom:1.5rem;">💡 The Chinese zodiac gives you a quick personality and compatibility snapshot — no personal data needed. For detailed birth chart analysis, use our Telegram bot.</p>
-      <p data-lang="ru"><strong>Бесплатно • Без регистрации • Мгновенный результат.</strong> AstroScan — это <strong>бесплатный онлайн-тест личности</strong>, который определяет ваш <strong>архетип поведения</strong> и <strong>совместимость</strong> на основе китайского зодиака и юнгианской психологии.</p>
-      <p data-lang="ru" style="color:#fbbf24; font-weight:500; margin-bottom:1.5rem;">💡 Китайский зодиак позволяет быстро получить общее представление о вашей личности и совместимости — без личных данных. Для подробного анализа натальной карты используйте наш Telegram-бот.</p>
-      <p data-lang="es"><strong>Gratis • Sin registro • Resultados instantáneos.</strong> AstroScan es una <strong>prueba de personalidad gratuita en línea</strong> que determina tu <strong>arquetipo de comportamiento</strong> y <strong>compatibilidad</strong> basada en el zodíaco chino y la psicología junguiana.</p>
-      <p data-lang="es" style="color:#fbbf24; font-weight:500; margin-bottom:1.5rem;">💡 El zodíaco chino te da una idea rápida de tu personalidad y compatibilidad sin necesidad de datos personales. Para análisis detallado de la carta natal, usa nuestro bot de Telegram.</p>
-      <p data-lang="ar"><strong>مجاني • بدون تسجيل • نتائج فورية.</strong> AstroScan هي <strong>أداة مجانية لاختبار الشخصية عبر الإنترنت</strong> تحدد <strong>نموذجك الأصلي للسلوك</strong> و<strong>التوافق</strong> بناءً على الأبراج الصينية وعلم النفس اليونغي.</p>
-      <p data-lang="ar" style="color:#fbbf24; font-weight:500; margin-bottom:1.5rem;">💡 الأبراج الصينية تمنحك نظرة عامة سريعة عن شخصيتك وتوافقك دون الحاجة إلى بيانات شخصية. للحصول على تحليل مفصل للخريطة الميلادية، استخدم بوتنا في Telegram.</p>
-      <p data-lang="hi"><strong>निःशुल्क • कोई पंजीकरण नहीं • तत्काल परिणाम।</strong> AstroScan एक <strong>मुफ्त ऑनलाइन व्यक्तित्व परीक्षण</strong> है जो <strong>आपकी व्यवहार आर्कटाइप</strong> और <strong>संगतता</strong> को चीनी राशि और यूंगियन मनोविज्ञान के आधार पर निर्धारित करता है।</p>
-      <p data-lang="hi" style="color:#fbbf24; font-weight:500; margin-bottom:1.5rem;">💡 चीनी राशि आपको व्यक्तित्व और संगतता का एक त्वरित स्नैपशॉट देती है — कोई व्यक्तिगत डेटा आवश्यक नहीं। विस्तृत जन्म चार्ट विश्लेषण के लिए हमारे Telegram बॉट का उपयोग करें।</p>
-      <p data-lang="de"><strong>Kostenlos • Keine Registrierung • Sofortige Ergebnisse.</strong> AstroScan ist ein <strong>kostenloser Online-Persönlichkeitstest</strong>, der Ihren <strong>Verhaltensarchetyp</strong> und <strong>Kompatibilität</strong> auf der Grundlage des chinesischen Tierkreises und der Jungschen Psychologie bestimmt.</p>
-      <p data-lang="de" style="color:#fbbf24; font-weight:500; margin-bottom:1.5rem;">💡 Das chinesische Horoskop gibt Ihnen einen schnellen Überblick über Ihre Persönlichkeit und Partnerschaft — ohne persönliche Daten. Für eine detaillierte Geburtskartenanalyse nutzen Sie unseren Telegram-Bot.</p>
-      <p data-lang="pt"><strong>Grátis • Sem registro • Resultados instantâneos.</strong> AstroScan é um <strong>teste de personalidade online gratuito</strong> que determina seu <strong>arquétipo comportamental</strong> e <strong>compatibilidade</strong> com base no zodíaco chinês e na psicologia junguiana.</p>
-      <p data-lang="pt" style="color:#fbbf24; font-weight:500; margin-bottom:1.5rem;">💡 O zodíaco chinês oferece uma visão geral rápida da sua personalidade e compatibilidade sem precisar de dados pessoais. Para análise detalhada da carta natal, use nosso bot Telegram.</p>
-      <p data-lang="id"><strong>Gratis • Tanpa registrasi • Hasil instan.</strong> AstroScan adalah <strong>tes kepribadian online gratis</strong> yang menentukan <strong>arketipe perilaku</strong> dan <strong>kompatibilitas</strong> Anda berdasarkan zodiak Cina dan psikologi Jungian.</p>
-      <p data-lang="id" style="color:#fbbf24; font-weight:500; margin-bottom:1.5rem;">💡 Zodiak Cina memberi Anda gambaran singkat tentang kepribadian dan kecocokan hubungan tanpa perlu data pribadi. Untuk analisis bagan lahir yang detail, gunakan bot Telegram kami.</p>
+      <h1>Discover Your Archetype &amp; Compatibility</h1>
+      <div class="subhead">A deep personality test at the intersection of psychology and precise astronomical algorithms.</div>
+      <p><strong>Free • No registration • Instant results.</strong> AstroScan is a <strong>free online personality test</strong> that determines your <strong>behavioral archetype</strong> and <strong>compatibility</strong> based on Chinese zodiac and Jungian psychology.</p>
+      <p style="color:#fbbf24; font-weight:500; margin-bottom:1.5rem;">💡 The Chinese zodiac gives you a quick personality and compatibility snapshot — no personal data needed. For detailed birth chart analysis, use our Telegram bot.</p>
       <div class="trust-badge">
-        <div class="trust-item"><span style="font-size:1.5rem;">🆓</span> <span data-lang="en">Free Forever</span><span data-lang="ru">Бесплатно навсегда</span><span data-lang="es">Gratis para siempre</span><span data-lang="ar">مجاني للأبد</span><span data-lang="hi">हमेशा के लिए निःशुल्क</span><span data-lang="de">Kostenlos für immer</span><span data-lang="pt">Grátis para sempre</span><span data-lang="id">Gratis selamanya</span></div>
+        <div class="trust-item"><span style="font-size:1.5rem;">🆓</span> <span>Free Forever</span></div>
         <div class="trust-item"><span style="font-size:1.5rem;">📐</span> Swiss Ephemeris</div>
         <div class="trust-item"><span style="font-size:1.5rem;">🧠</span> Jungian Archetypes</div>
         <div class="trust-item"><span style="font-size:1.5rem;">📊</span> 10-min Assessment</div>
       </div>
     </div>
-    <div id="appRoot" aria-live="polite"></div>
-    <h2 style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;" data-lang="en">Interactive Personality Quiz</h2>
-    <h2 style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;" data-lang="ru">Интерактивный тест личности</h2>
-    <div class="card lazy-section" id="section-tech" data-loaded="false"></div>
-    <div class="card lazy-section" id="section-services" data-loaded="false"></div>
     <section class="card" id="about-section">
-      <h2 data-lang="en" style="color: var(--text-light); border-left: 5px solid var(--accent-primary); padding-left: 1.2rem; margin-bottom: 1rem;">📌 About the Project</h2>
-      <h2 data-lang="ru" style="color: var(--text-light); border-left: 5px solid var(--accent-primary); padding-left: 1.2rem; margin-bottom: 1rem;">📌 О проекте</h2>
-      <h2 data-lang="es" style="color: var(--text-light); border-left: 5px solid var(--accent-primary); padding-left: 1.2rem; margin-bottom: 1rem;">📌 Sobre el proyecto</h2>
-      <h2 data-lang="ar" style="color: var(--text-light); border-left: 5px solid var(--accent-primary); padding-left: 1.2rem; margin-bottom: 1rem;">📌 عن المشروع</h2>
-      <h2 data-lang="hi" style="color: var(--text-light); border-left: 5px solid var(--accent-primary); padding-left: 1.2rem; margin-bottom: 1rem;">📌 परियोजना के बारे में</h2>
-      <h2 data-lang="de" style="color: var(--text-light); border-left: 5px solid var(--accent-primary); padding-left: 1.2rem; margin-bottom: 1rem;">📌 Über das Projekt</h2>
-      <h2 data-lang="pt" style="color: var(--text-light); border-left: 5px solid var(--accent-primary); padding-left: 1.2rem; margin-bottom: 1rem;">📌 Sobre o Projeto</h2>
-      <h2 data-lang="id" style="color: var(--text-light); border-left: 5px solid var(--accent-primary); padding-left: 1.2rem; margin-bottom: 1rem;">📌 Tentang Proyek</h2>
+      <h2 style="color: var(--text-light); border-left: 5px solid var(--accent-primary); padding-left: 1.2rem; margin-bottom: 1rem;">📌 About the Project</h2>
       <div style="display: flex; align-items: flex-start; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
         <div style="flex: 0 0 180px; max-width: 100%;">
           <img src="cover.jpg" width="312" height="164" alt="AstroScan Lab – Deterministic Astrology Framework" style="width:100%;height:auto;border-radius:1.2rem;box-shadow:0 15px 30px -10px rgba(0,0,0,0.3)">
         </div>
         <div style="flex: 1; min-width: 250px;">
-          <p data-lang="en"><strong>AstroScan Lab</strong> is an independent research project exploring the intersection of behavioral psychology and computational astronomy. We do not claim supernatural powers — only a systematic, data-driven approach to self-discovery.</p>
-          <p data-lang="ru"><strong>AstroScan Lab</strong> — независимый исследовательский проект на стыке поведенческой психологии и вычислительной астрономии. Мы не претендуем на сверхъестественные способности — только на систематический, основанный на данных подход к самопознанию.</p>
-          <p data-lang="es"><strong>AstroScan Lab</strong> es un proyecto de investigación independiente que explora la intersección de la psicología conductual y la astronomía computacional. No afirmamos poderes sobrenaturales, solo un enfoque sistemático basado en datos para la autodescubrimiento.</p>
-          <p data-lang="ar"><strong>AstroScan Lab</strong> هو مشروع بحثي مستقل يستكشف تقاطع علم النفس السلوكي وعلم الفلك الحسابي. نحن لا نزعم امتلاك قوى خارقة — فقط نهج منهجي يعتمد على البيانات لاكتشاف الذات.</p>
-          <p data-lang="hi"><strong>AstroScan Lab</strong> व्यवहारिक मनोविज्ञान और कम्प्यूटेशनल खगोल विज्ञान के चौराहे की खोज करने वाली एक स्वतंत्र अनुसंधान परियोजना है। हम अलौकिक शक्तियों का दावा नहीं करते — केवल आत्म-खोज के लिए एक व्यवस्थित, डेटा-संचालित दृष्टिकोण।</p>
-          <p data-lang="de"><strong>AstroScan Lab</strong> ist ein unabhängiges Forschungsprojekt, das die Schnittstelle zwischen Verhaltenspsychologie und Computational Astronomy erforscht. Wir beanspruchen keine übernatürlichen Kräfte — nur einen systematischen, datengesteuerten Ansatz zur Selbstentdeckung.</p>
-          <p data-lang="pt"><strong>AstroScan Lab</strong> é um projeto de pesquisa independente que explora a intersecção da psicologia comportamental e da astronomia computacional. Não reivindicamos poderes sobrenaturais — apenas uma abordagem sistemática e baseada em dados para a autodescoberta.</p>
-          <p data-lang="id"><strong>AstroScan Lab</strong> adalah proyek penelitian independen yang mengeksplorasi persimpangan psikologi perilaku dan astronomi komputasi. Kami tidak mengklaim kekuatan gaib — hanya pendekatan sistematis berbasis data untuk penemuan diri.</p>
+          <p><strong>AstroScan Lab</strong> is an independent research project exploring the intersection of behavioral psychology and computational astronomy. We do not claim supernatural powers — only a systematic, data-driven approach to self-discovery.</p>
           <p style="margin-top: 0.8rem; text-align: center;">
             <a href="terms.html" style="color: var(--text-dim); text-decoration: underline;">Terms of Service</a> · 
             <a href="privacy.html" style="color: var(--text-dim); text-decoration: underline;">Privacy Policy</a>
           </p>
-          <p><span data-lang="en">AstroScan is a self-discovery tool. Results are not medical or predictive conclusions.</span><span data-lang="ru">AstroScan — это инструмент самопознания. Результаты не являются медицинским или предсказательным заключением.</span><span data-lang="es">AstroScan es una herramienta de autodescubrimiento. Los resultados no son conclusiones médicas o predictivas.</span><span data-lang="ar">AstroScan هي أداة لاكتشاف الذات. النتائج ليست استنتاجات طبية أو تنبؤية.</span><span data-lang="hi">AstroScan एक आत्म-खोज उपकरण है। परिणाम चिकित्सा या भविष्य कहनेवाला निष्कर्ष नहीं हैं।</span><span data-lang="de">AstroScan ist ein Werkzeug zur Selbstfindung. Die Ergebnisse sind keine medizinischen oder vorhersagenden Schlussfolgerungen.</span><span data-lang="pt">AstroScan é uma ferramenta de autodescoberta. Os resultados não são conclusões médicas ou preditivas.</span><span data-lang="id">AstroScan adalah alat penemuan diri. Hasil bukanlah kesimpulan medis atau prediktif.</span></p>
+          <p><strong>Disclaimer:</strong> AstroScan is a self-discovery tool. Results are not medical or predictive conclusions.</p>
+          <div style="margin-top: 0.5rem;">
+            <a href="https://librecounter.org/referer/show" style="display: inline-block; margin-right: 1rem;">
+              <img src="https://librecounter.org/counter.svg" referrerPolicy="unsafe-url" alt="Visitor Counter" width="20" height="20" style="height: auto;">
+            </a>
+          </div>
         </div>
       </div>
-      <div style="margin-top: 0.5rem;">
-        <a href="https://librecounter.org/referer/show" style="display: inline-block; margin-right: 1rem;">
-          <img src="https://librecounter.org/counter.svg" referrerPolicy="unsafe-url" alt="Visitor Counter" width="20" height="20" style="height: auto;">
-        </a>
-        <div style="display: inline-block; text-align: left; font-size: 0.8rem; background: rgba(0,0,0,0.2); padding: 0.3rem 0.8rem; border-radius: 1rem;">
-          <span style="color: var(--text-dim);">👁️ <span data-placeholder="now">...</span> | <span data-lang="en">Today</span><span data-lang="ru">Сегодня</span><span data-lang="es">Hoy</span><span data-lang="ar">اليوم</span><span data-lang="hi">आज</span><span data-lang="de">Heute</span><span data-lang="pt">Hoje</span><span data-lang="id">Hari ini</span>: <span data-placeholder="24h">...</span> | <span data-lang="en">Total</span><span data-lang="ru">Всего</span><span data-lang="es">Total</span><span data-lang="ar">المجموع</span><span data-lang="hi">कुल</span><span data-lang="de">Gesamt</span><span data-lang="pt">Total</span><span data-lang="id">Total</span>: <span data-placeholder="total">...</span></span>
-        </div>
+      <div style="margin-top: 1rem;">
+        <a href="https://t.me/ASTROSCAN_BOT" target="_blank" rel="noopener noreferrer" class="telegram-link">📧 Contact & Support: @ASTROSCAN_BOT</a>
       </div>
     </section>
     <footer>
-      <p><span data-lang="en">© 2026 AstroScan Lab · Built on Swiss Ephemeris v2.10</span><span data-lang="ru">© 2026 AstroScan Lab · Разработано на Swiss Ephemeris v2.10</span></p>
-      <p><span data-lang="en">AstroScan is a self-discovery tool. Results are not medical or predictive conclusions.</span><span data-lang="ru">AstroScan — это инструмент самопознания. Результаты не являются медицинским или предсказательным заключением.</span></p>
+      <p>© 2026 AstroScan Lab · Built on Swiss Ephemeris v2.10</p>
+      <p>AstroScan is a self-discovery tool. Results are not medical or predictive conclusions.</p>
     </footer>
   </div>
   <div class="cta-bar" id="global-cta-bar">
-    <a class="telegram-cta" href="https://t.me/ASTROSCAN_BOT" target="_blank" id="cta-footer">⚡ GET FULL REPORT IN TELEGRAM</a>
+    <a class="telegram-cta" href="https://t.me/ASTROSCAN_BOT" target="_blank" rel="noopener noreferrer">⚡ GET FULL REPORT IN TELEGRAM</a>
   </div>
   <script async src="https://api.learntogoogle.de/OpenCounterAPI.js" data-page="astroscan_home"></script>
   <script src="app.js"></script>
