@@ -1,0 +1,77 @@
+name: Rebuild language pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'build.py'
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run build.py
+        run: python build.py
+
+      - name: Validate build output
+        run: python validate.py
+
+      - name: Check for real content changes
+        id: changes
+        run: |
+          if git diff --quiet -- ru/index.html es/index.html hi/index.html; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Update sitemap lastmod (only on real content change)
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          python - <<'EOF'
+          import re, datetime
+          today = datetime.date.today().isoformat()
+          with open('sitemap.xml', encoding='utf-8') as f:
+              s = f.read()
+          s = re.sub(r'<lastmod>[^<]*</lastmod>', f'<lastmod>{today}</lastmod>', s)
+          with open('sitemap.xml', 'w', encoding='utf-8') as f:
+              f.write(s)
+          EOF
+
+      - name: Commit regenerated pages
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add ru/index.html es/index.html hi/index.html sitemap.xml
+          git diff --cached --quiet || git commit -m "chore: rebuild ru/es/hi from index.html [skip ci]"
+          git push
+
+      - name: Notify IndexNow (Bing/Yandex/Naver/Seznam) of real content changes
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          curl -s -X POST "https://api.indexnow.org/IndexNow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d @- <<'EOF'
+          {
+            "host": "astroscan-lab.github.io",
+            "key": "dc390a3dc92cf75a85ebf76d61591f20",
+            "keyLocation": "https://astroscan-lab.github.io/astroscan_bot/dc390a3dc92cf75a85ebf76d61591f20.txt",
+            "urlList": [
+              "https://astroscan-lab.github.io/astroscan_bot/",
+              "https://astroscan-lab.github.io/astroscan_bot/ru/",
+              "https://astroscan-lab.github.io/astroscan_bot/es/",
+              "https://astroscan-lab.github.io/astroscan_bot/hi/"
+            ]
+          }
+          EOF

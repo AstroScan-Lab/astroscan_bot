@@ -1,0 +1,4 @@
+Contact: https://t.me/ASTROSCAN_BOT
+Expires: 2027-06-22T00:00:00.000Z
+Preferred-Languages: en, ru, es, hi
+Canonical: https://astroscan-lab.github.io/astroscan_bot/.well-known/security.txt

@@ -1,0 +1,25 @@
+{
+  "name": "AstroScan · Free Personality Test",
+  "short_name": "AstroScan",
+  "description": "Free personality test: discover your Chinese zodiac sign and archetype without a birth date. No registration.",
+  "start_url": "/astroscan_bot/",
+  "scope": "/astroscan_bot/",
+  "display": "standalone",
+  "background_color": "#0a0718",
+  "theme_color": "#0a0718",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "/astroscan_bot/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/astroscan_bot/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
