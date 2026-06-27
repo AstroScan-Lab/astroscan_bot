@@ -1,6 +1,9 @@
-import io, re
+import io, re, os
+import json as _json
+from html.parser import HTMLParser
 
 BASE = "https://astroscan-lab.github.io/astroscan_bot"
+ALL_LANGS = ["en", "ru", "es", "hi"]
 
 LANGS = {
     "ru": {
@@ -53,12 +56,23 @@ LANGS = {
     },
 }
 
-import json as _json
+EN_HOWTO_STEPS = [
+    "Answer 10 questions about your behavior.",
+    "Receive your Chinese zodiac sign and archetype.",
+    "Choose a partner's sign and context (love/friendship/work).",
+    "See compatibility percentage and personalized insights.",
+]
+EN_PRODUCT_DESC = ("Free online test to discover your Chinese zodiac sign, behavioral archetype, "
+                   "and compatibility. No registration required. Compare Western and Vedic astrology. "
+                   "Based on Swiss Ephemeris calculations.")
+EN_HOWTO_NAME = "How to use AstroScan"
+
 
 def clean_faq_text(s):
     s = re.sub(r'<[^>]+>', '', s)
     s = s.replace('&amp;', '&').replace('&quot;', '"').replace('&#39;', "'")
     return s.strip()
+
 
 def extract_faq(html, lang):
     pattern = re.compile(
@@ -66,6 +80,7 @@ def extract_faq(html, lang):
         re.S
     )
     return [(clean_faq_text(q), clean_faq_text(a)) for q, a in pattern.findall(html)]
+
 
 def faq_mainentity_json(pairs):
     entries = []
@@ -79,77 +94,190 @@ def faq_mainentity_json(pairs):
         )
     return '"mainEntity": [\n' + ',\n'.join(entries) + '\n        ]'
 
-EN_HOWTO_STEPS = [
-    "Answer 10 questions about your behavior.",
-    "Receive your Chinese zodiac sign and archetype.",
-    "Choose a partner's sign and context (love/friendship/work).",
-    "See compatibility percentage and personalized insights.",
-]
 
-with io.open("index.html", "r", encoding="utf-8") as f:
+VOID_TAGS = {"area", "base", "br", "col", "embed", "hr", "img", "input",
+             "link", "meta", "param", "source", "track", "wbr"}
+
+
+class LangFilter(HTMLParser):
+    """Strips every element carrying a data-lang attribute that doesn't match
+    target_lang (and its whole subtree), so the output is genuinely single-language
+    instead of all 4 languages hidden/shown via CSS+JS."""
+
+    def __init__(self, target_lang):
+        super().__init__(convert_charrefs=False)
+        self.target_lang = target_lang
+        self.out = []
+        self.skip_stack = []
+        self.depth = 0
+
+    def _skipping(self):
+        return len(self.skip_stack) > 0
+
+    def _render_starttag(self, tag, attrs, self_close):
+        parts = [f"<{tag}"]
+        for k, v in attrs:
+            if k == "data-lang":
+                continue
+            parts.append(f" {k}" if v is None else f' {k}="{v}"')
+        parts.append(" />" if self_close else ">")
+        self.out.append("".join(parts))
+
+    def handle_starttag(self, tag, attrs):
+        lang = dict(attrs).get("data-lang")
+        if tag in VOID_TAGS:
+            if self._skipping():
+                return
+            if lang is not None and lang != self.target_lang:
+                return
+            self._render_starttag(tag, attrs, self_close=False)
+            return
+        self.depth += 1
+        if self._skipping():
+            return
+        if lang is not None and lang != self.target_lang:
+            self.skip_stack.append(self.depth)
+            return
+        self._render_starttag(tag, attrs, self_close=False)
+
+    def handle_startendtag(self, tag, attrs):
+        if self._skipping():
+            return
+        lang = dict(attrs).get("data-lang")
+        if lang is not None and lang != self.target_lang:
+            return
+        self._render_starttag(tag, attrs, self_close=True)
+
+    def handle_endtag(self, tag):
+        if self.skip_stack and self.skip_stack[-1] == self.depth:
+            self.skip_stack.pop()
+            self.depth -= 1
+            return
+        self.depth -= 1
+        if self._skipping():
+            return
+        self.out.append(f"</{tag}>")
+
+    def handle_data(self, data):
+        if not self._skipping():
+            self.out.append(data)
+
+    def handle_entityref(self, name):
+        if not self._skipping():
+            self.out.append(f"&{name};")
+
+    def handle_charref(self, name):
+        if not self._skipping():
+            self.out.append(f"&#{name};")
+
+    def handle_comment(self, data):
+        if not self._skipping():
+            self.out.append(f"<!--{data}-->")
+
+    def handle_decl(self, decl):
+        if not self._skipping():
+            self.out.append(f"<!{decl}>")
+
+    def filtered(self, html):
+        self.feed(html)
+        self.close()
+        return "".join(self.out)
+
+
+with io.open("template.html", "r", encoding="utf-8") as f:
     template = f.read()
 
-import os
-
-# Keep index.html's own JSON-LD FAQPage in sync with its visible <details data-lang="en"> blocks,
-# since index.html is the source template and never gets "built" from anything else.
-_en_pairs = extract_faq(template, "en")
-_en_faq_block = faq_mainentity_json(_en_pairs)
-_resynced = re.sub(r'"mainEntity": \[.*?\n        \]', lambda m: _en_faq_block, template, count=1, flags=re.S)
-if _resynced != template:
-    template = _resynced
-    with io.open("index.html", "w", encoding="utf-8", newline="\n") as f:
-        f.write(template)
-    print("Resynced index.html JSON-LD FAQ to", len(_en_pairs), "entries")
-
-for lang, t in LANGS.items():
+for lang in ALL_LANGS:
     html = template
+    is_en = lang == "en"
+    t = LANGS.get(lang)
 
     html = html.replace('<html lang="en">', '<html lang="%s" data-forced-lang="%s">' % (lang, lang), 1)
 
-    html = re.sub(r'(<title>)[^<]*(</title>)', lambda m: m.group(1) + t["title"] + m.group(2), html, count=1)
-    html = re.sub(r'(<meta name="description" content=")[^"]*(")', lambda m: m.group(1) + t["desc"] + m.group(2), html, count=1)
-    html = re.sub(r'(<meta name="keywords" content=")[^"]*(")', lambda m: m.group(1) + t["keywords"] + m.group(2), html, count=1)
-    html = re.sub(r'(<link rel="canonical" href=")[^"]*(")', lambda m: m.group(1) + BASE + "/" + lang + "/" + m.group(2), html, count=1)
-    html = re.sub(r'(<meta property="og:title" content=")[^"]*(")', lambda m: m.group(1) + t["og_title"] + m.group(2), html, count=1)
-    html = re.sub(r'(<meta property="og:description" content=")[^"]*(")', lambda m: m.group(1) + t["og_desc"] + m.group(2), html, count=1)
-    html = re.sub(r'(<meta property="og:url" content=")[^"]*(")', lambda m: m.group(1) + BASE + "/" + lang + "/" + m.group(2), html, count=1)
-    html = re.sub(r'(<meta property="og:locale" content=")[^"]*(")', lambda m: m.group(1) + t["locale"] + m.group(2), html, count=1)
+    if not is_en:
+        html = re.sub(r'(<title>)[^<]*(</title>)', lambda m: m.group(1) + t["title"] + m.group(2), html, count=1)
+        html = re.sub(r'(<meta name="description" content=")[^"]*(")', lambda m: m.group(1) + t["desc"] + m.group(2), html, count=1)
+        html = re.sub(r'(<meta name="keywords" content=")[^"]*(")', lambda m: m.group(1) + t["keywords"] + m.group(2), html, count=1)
+        html = re.sub(r'(<link rel="canonical" href=")[^"]*(")', lambda m: m.group(1) + BASE + "/" + lang + "/" + m.group(2), html, count=1)
+        html = re.sub(r'(<meta property="og:title" content=")[^"]*(")', lambda m: m.group(1) + t["og_title"] + m.group(2), html, count=1)
+        html = re.sub(r'(<meta property="og:description" content=")[^"]*(")', lambda m: m.group(1) + t["og_desc"] + m.group(2), html, count=1)
+        html = re.sub(r'(<meta property="og:url" content=")[^"]*(")', lambda m: m.group(1) + BASE + "/" + lang + "/" + m.group(2), html, count=1)
+        html = re.sub(r'(<meta property="og:locale" content=")[^"]*(")', lambda m: m.group(1) + t["locale"] + m.group(2), html, count=1)
 
-    # localize JSON-LD: Product description, FAQPage Q&A, HowTo name+steps
-    html = html.replace(
-        '"description": "Free online test to discover your Chinese zodiac sign, behavioral archetype, and compatibility. No registration required. Compare Western and Vedic astrology. Based on Swiss Ephemeris calculations.",',
-        '"description": "%s",' % t["product_desc"],
-        1
-    )
+        html = html.replace(
+            '"description": "%s",' % EN_PRODUCT_DESC,
+            '"description": "%s",' % t["product_desc"],
+            1
+        )
+        html = html.replace('"name": "%s",' % EN_HOWTO_NAME, '"name": "%s",' % t["howto_name"], 1)
+        for en_s, loc_s in zip(EN_HOWTO_STEPS, t["howto_steps"]):
+            html = html.replace('"text": "%s" }' % en_s, '"text": "%s" }' % loc_s, 1)
+
+        html = html.replace('<body class="lang-en">', '<body class="lang-%s">' % lang, 1)
+
+        # relative asset paths need ../ prefix from a subdirectory
+        html = html.replace('href="favicon.ico"', 'href="../favicon.ico"')
+        html = html.replace('href="apple-touch-icon.png"', 'href="../apple-touch-icon.png"')
+        html = html.replace('src="cover.jpg"', 'src="../cover.jpg"')
+        html = html.replace('srcset="cover.webp"', 'srcset="../cover.webp"')
+        # terms.html/privacy.html exist in every language folder now (no ../ prefix needed)
+        html = html.replace('href="icon-192.png"', 'href="../icon-192.png"')
+        html = html.replace('href="manifest.json"', 'href="../manifest.json"')
+        html = html.replace('href="assets/css/styles.css"', 'href="../assets/css/styles.css"')
+        html = html.replace('src="assets/js/main.js"', 'src="../assets/js/main.js"')
+
+    # FAQPage JSON-LD must reflect only this language's Q&A
     faq_pairs = extract_faq(template, lang)
     new_faq_block = faq_mainentity_json(faq_pairs)
-    html = re.sub(
-        r'"mainEntity": \[.*?\n        \]',
-        lambda m: new_faq_block,
-        html, count=1, flags=re.S
-    )
-    html = html.replace('"name": "How to use AstroScan",', '"name": "%s",' % t["howto_name"], 1)
-    for en_s, loc_s in zip(EN_HOWTO_STEPS, t["howto_steps"]):
-        html = html.replace('"text": "%s" }' % en_s, '"text": "%s" }' % loc_s, 1)
+    html = re.sub(r'"mainEntity": \[.*?\n        \]', lambda m: new_faq_block, html, count=1, flags=re.S)
 
-    html = html.replace('<body class="lang-en">', '<body class="lang-%s">' % lang, 1)
+    # Strip every other language's markup so the deployed page is single-language
+    html = LangFilter(lang).filtered(html)
 
-    # relative asset paths need ../ prefix from a subdirectory
-    html = html.replace('href="favicon.ico"', 'href="../favicon.ico"')
-    html = html.replace('href="apple-touch-icon.png"', 'href="../apple-touch-icon.png"')
-    html = html.replace('src="cover.jpg"', 'src="../cover.jpg"')
-    html = html.replace('srcset="cover.webp"', 'srcset="../cover.webp"')
-    html = html.replace('href="terms.html"', 'href="../terms.html"')
-    html = html.replace('href="privacy.html"', 'href="../privacy.html"')
-    html = html.replace('href="icon-192.png"', 'href="../icon-192.png"')
-    html = html.replace('href="manifest.json"', 'href="../manifest.json"')
-    html = html.replace('href="assets/css/styles.css"', 'href="../assets/css/styles.css"')
-    html = html.replace('src="assets/js/main.js"', 'src="../assets/js/main.js"')
-
-    os.makedirs(lang, exist_ok=True)
-    with io.open(os.path.join(lang, "index.html"), "w", encoding="utf-8", newline="\n") as f:
+    out_path = "index.html" if is_en else os.path.join(lang, "index.html")
+    if not is_en:
+        os.makedirs(lang, exist_ok=True)
+    with io.open(out_path, "w", encoding="utf-8", newline="\n") as f:
         f.write(html)
-    print("OK", lang + "/index.html", len(html), "bytes")
+    print("OK", out_path, len(html), "bytes")
 
-print("Done:", ", ".join(LANGS.keys()))
+print("Done:", ", ".join(ALL_LANGS))
+
+# --- Legal pages (privacy.html, terms.html): same single-language-per-page approach ---
+LANG_BAR_NAMES = {"en": "English", "ru": "Русский", "es": "Español", "hi": "हिन्दी"}
+
+for page in ["privacy", "terms"]:
+    with io.open("%s_template.html" % page, "r", encoding="utf-8") as f:
+        legal_template = f.read()
+
+    lang_bar_re = re.compile(r'<div class="lang-bar">.*?</div>', re.S)
+    script_re = re.compile(r'\s*<script>\s*function setPLang.*?</script>', re.S)
+
+    for lang in ALL_LANGS:
+        html = legal_template
+        is_en = lang == "en"
+        canon = BASE + ("/%s.html" % page if is_en else "/%s/%s.html" % (lang, page))
+
+        html = html.replace('<html lang="en">', '<html lang="%s">' % lang, 1)
+        html = re.sub(r'(<link rel="canonical" href=")[^"]*(")', lambda m: m.group(1) + canon + m.group(2), html, count=1)
+        html = html.replace('<body class="lang-en">', '<body class="lang-%s">' % lang, 1)
+
+        lang_bar_links = "\n".join(
+            '        <a href="%s">%s</a>' % (
+                BASE + ("/%s.html" % page if l == "en" else "/%s/%s.html" % (l, page)),
+                LANG_BAR_NAMES[l]
+            ) for l in ALL_LANGS
+        )
+        html = lang_bar_re.sub('<div class="lang-bar">\n%s\n    </div>' % lang_bar_links, html, count=1)
+        html = script_re.sub('', html, count=1)
+
+        html = LangFilter(lang).filtered(html)
+
+        out_path = "%s.html" % page if is_en else os.path.join(lang, "%s.html" % page)
+        if not is_en:
+            os.makedirs(lang, exist_ok=True)
+        with io.open(out_path, "w", encoding="utf-8", newline="\n") as f:
+            f.write(html)
+        print("OK", out_path, len(html), "bytes")
+
+print("Done: privacy, terms")

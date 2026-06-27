@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://astroscan-lab.github.io/astroscan_bot/</loc>
-    <lastmod>2026-06-25</lastmod>
+    <lastmod>2026-06-27</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/"/>
@@ -12,7 +12,7 @@
   </url>
   <url>
     <loc>https://astroscan-lab.github.io/astroscan_bot/ru/</loc>
-    <lastmod>2026-06-25</lastmod>
+    <lastmod>2026-06-27</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/"/>
@@ -21,7 +21,7 @@
   </url>
   <url>
     <loc>https://astroscan-lab.github.io/astroscan_bot/es/</loc>
-    <lastmod>2026-06-25</lastmod>
+    <lastmod>2026-06-27</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/"/>
@@ -30,7 +30,7 @@
   </url>
   <url>
     <loc>https://astroscan-lab.github.io/astroscan_bot/hi/</loc>
-    <lastmod>2026-06-25</lastmod>
+    <lastmod>2026-06-27</lastmod>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/"/>
@@ -38,11 +38,507 @@
     <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/"/>
   </url>
   <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/zodiac/rat/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/rat/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/rat/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/rat/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/rat/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/rat/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/rat/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/rat/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/rat/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/rat/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/rat/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/rat/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/es/zodiac/rat/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/rat/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/rat/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/rat/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/rat/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/rat/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/rat/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/rat/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/rat/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/rat/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/rat/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/rat/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/zodiac/ox/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/ox/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/ox/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/ox/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/ox/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/ox/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/ox/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/ox/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/ox/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/ox/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/ox/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/ox/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/es/zodiac/ox/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/ox/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/ox/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/ox/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/ox/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/ox/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/ox/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/ox/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/ox/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/ox/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/ox/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/ox/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/zodiac/tiger/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/tiger/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/tiger/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/tiger/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/tiger/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/tiger/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/tiger/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/tiger/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/tiger/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/tiger/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/tiger/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/tiger/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/es/zodiac/tiger/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/tiger/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/tiger/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/tiger/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/tiger/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/tiger/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/tiger/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/tiger/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/tiger/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/tiger/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/tiger/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/tiger/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/zodiac/rabbit/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/rabbit/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/rabbit/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/rabbit/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/rabbit/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/rabbit/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/rabbit/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/rabbit/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/rabbit/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/rabbit/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/rabbit/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/rabbit/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/es/zodiac/rabbit/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/rabbit/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/rabbit/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/rabbit/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/rabbit/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/rabbit/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/rabbit/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/rabbit/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/rabbit/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/rabbit/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/rabbit/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/rabbit/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/zodiac/dragon/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/dragon/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/dragon/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/dragon/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/dragon/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/dragon/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/dragon/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/dragon/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/dragon/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/dragon/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/dragon/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/dragon/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/es/zodiac/dragon/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/dragon/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/dragon/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/dragon/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/dragon/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/dragon/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/dragon/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/dragon/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/dragon/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/dragon/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/dragon/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/dragon/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/zodiac/snake/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/snake/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/snake/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/snake/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/snake/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/snake/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/snake/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/snake/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/snake/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/snake/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/snake/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/snake/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/es/zodiac/snake/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/snake/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/snake/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/snake/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/snake/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/snake/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/snake/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/snake/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/snake/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/snake/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/snake/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/snake/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/zodiac/horse/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/horse/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/horse/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/horse/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/horse/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/horse/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/horse/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/horse/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/horse/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/horse/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/horse/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/horse/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/es/zodiac/horse/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/horse/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/horse/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/horse/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/horse/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/horse/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/horse/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/horse/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/horse/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/horse/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/horse/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/horse/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/zodiac/goat/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/goat/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/goat/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/goat/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/goat/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/goat/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/goat/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/goat/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/goat/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/goat/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/goat/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/goat/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/es/zodiac/goat/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/goat/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/goat/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/goat/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/goat/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/goat/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/goat/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/goat/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/goat/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/goat/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/goat/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/goat/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/zodiac/monkey/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/monkey/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/monkey/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/monkey/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/monkey/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/monkey/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/monkey/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/monkey/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/monkey/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/monkey/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/monkey/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/monkey/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/es/zodiac/monkey/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/monkey/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/monkey/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/monkey/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/monkey/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/monkey/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/monkey/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/monkey/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/monkey/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/monkey/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/monkey/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/monkey/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/zodiac/rooster/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/rooster/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/rooster/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/rooster/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/rooster/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/rooster/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/rooster/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/rooster/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/rooster/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/rooster/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/rooster/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/rooster/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/es/zodiac/rooster/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/rooster/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/rooster/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/rooster/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/rooster/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/rooster/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/rooster/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/rooster/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/rooster/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/rooster/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/rooster/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/rooster/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/zodiac/dog/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/dog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/dog/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/dog/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/dog/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/dog/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/dog/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/dog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/dog/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/dog/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/dog/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/dog/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/es/zodiac/dog/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/dog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/dog/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/dog/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/dog/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/dog/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/dog/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/dog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/dog/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/dog/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/dog/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/dog/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/zodiac/pig/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/pig/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/pig/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/pig/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/pig/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/pig/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/pig/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/pig/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/pig/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/pig/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/pig/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/pig/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/es/zodiac/pig/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/pig/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/pig/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/pig/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/pig/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/pig/"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/pig/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/pig/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/zodiac/pig/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/pig/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/zodiac/pig/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/pig/"/>
+  </url>
+  <url>
     <loc>https://astroscan-lab.github.io/astroscan_bot/terms.html</loc>
-    <lastmod>2026-06-25</lastmod>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/terms.html"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/ru/terms.html</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/terms.html"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/es/terms.html</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/terms.html"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/hi/terms.html</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/terms.html"/>
   </url>
   <url>
     <loc>https://astroscan-lab.github.io/astroscan_bot/privacy.html</loc>
-    <lastmod>2026-06-25</lastmod>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/ru/privacy.html</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/es/privacy.html</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://astroscan-lab.github.io/astroscan_bot/hi/privacy.html</loc>
+    <lastmod>2026-06-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/privacy.html"/>
   </url>
 </urlset>

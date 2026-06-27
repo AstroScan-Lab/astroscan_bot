@@ -339,14 +339,11 @@
       renderZodiacCalcResult();
     }
     function detectLang() {
-      const urlLang = new URLSearchParams(location.search).get('lang');
-      if (urlLang && LANGS.includes(urlLang)) return urlLang;
+      // Each deployed page is genuinely single-language (baked by build.py from
+      // template.html), so data-forced-lang is authoritative — content for any
+      // other language doesn't exist in this page's DOM.
       const forced = document.documentElement.getAttribute('data-forced-lang');
-      if (forced && LANGS.includes(forced)) return forced;
-      const saved = localStorage.getItem('astroscan_lang');
-      if (saved && LANGS.includes(saved)) return saved;
-      const browser = navigator.language.split('-')[0];
-      return LANGS.includes(browser) ? browser : 'en';
+      return (forced && LANGS.includes(forced)) ? forced : 'en';
     }
     function buildLangBar() {
       const bar = document.getElementById('lang-bar');
@@ -357,7 +354,11 @@
         btn.textContent = LANG_NAMES[l];
         btn.dataset.lang = l;
         btn.setAttribute('aria-label', `Switch to ${LANG_NAMES[l]}`);
-        btn.onclick = () => setLang(l);
+        btn.onclick = () => {
+          window.location.href = l === 'en'
+            ? 'https://astroscan-lab.github.io/astroscan_bot/'
+            : `https://astroscan-lab.github.io/astroscan_bot/${l}/`;
+        };
         bar.appendChild(btn);
       });
       setLang(detectLang());
@@ -381,9 +382,14 @@
       if (!input || !out) return;
       const year = parseInt(input.value, 10);
       if (!year || year < 1900 || year > 2026) { out.textContent = ''; return; }
-      const t = translations[currentLang];
       const z = zodiacByYear(year);
-      out.innerHTML = `${t.zcResultPrefix}<span style="color:var(--accent-primary)">${getZodiacName(z)}</span> (${t.zcElementLabel}: ${getElementName(z.element)})<br><span style="font-weight:400;color:var(--text-dim);font-size:0.9rem;">${t.zcCta}</span>`;
+      out.textContent = '';
+      userZodiac = z.id;
+      userArchetype = zodiacToArchetype[userZodiac];
+      window.currentQuizState = 'result';
+      renderResult();
+      showGlobalCTA();
+      document.getElementById('appRoot').scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
     function bindZodiacCalculator() {
       const btn = document.getElementById('zcCalcBtn');

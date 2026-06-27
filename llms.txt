@@ -7,13 +7,16 @@
 - [Español](https://astroscan-lab.github.io/astroscan_bot/es/): Test en español.
 - [हिन्दी](https://astroscan-lab.github.io/astroscan_bot/hi/): हिन्दी में परीक्षण.
 - [Telegram Bot](https://t.me/ASTROSCAN_BOT): Detailed natal chart reports with Swiss Ephemeris.
-- [Privacy Policy](https://astroscan-lab.github.io/astroscan_bot/privacy.html)
-- [Terms of Service](https://astroscan-lab.github.io/astroscan_bot/terms.html)
+- Privacy Policy: [en](https://astroscan-lab.github.io/astroscan_bot/privacy.html) · [ru](https://astroscan-lab.github.io/astroscan_bot/ru/privacy.html) · [es](https://astroscan-lab.github.io/astroscan_bot/es/privacy.html) · [hi](https://astroscan-lab.github.io/astroscan_bot/hi/privacy.html)
+- Terms of Service: [en](https://astroscan-lab.github.io/astroscan_bot/terms.html) · [ru](https://astroscan-lab.github.io/astroscan_bot/ru/terms.html) · [es](https://astroscan-lab.github.io/astroscan_bot/es/terms.html) · [hi](https://astroscan-lab.github.io/astroscan_bot/hi/terms.html)
 
 ## Key sections (on main page)
 - [About the project](https://astroscan-lab.github.io/astroscan_bot/#about-section)
 - [Technology & Western vs Vedic](https://astroscan-lab.github.io/astroscan_bot/#section-tech)
 - [Services & FAQ](https://astroscan-lab.github.io/astroscan_bot/#section-services)
+
+## Chinese zodiac sign pages (12 signs x 4 languages = 48 pages)
+Each sign has its own page with personality traits, element, lucky years, and compatibility — available in all 4 languages by replacing the language prefix, e.g. for Rat: [en](https://astroscan-lab.github.io/astroscan_bot/zodiac/rat/) · [ru](https://astroscan-lab.github.io/astroscan_bot/ru/zodiac/rat/) · [es](https://astroscan-lab.github.io/astroscan_bot/es/zodiac/rat/) · [hi](https://astroscan-lab.github.io/astroscan_bot/hi/zodiac/rat/). Signs: rat, ox, tiger, rabbit, dragon, snake, horse, goat, monkey, rooster, dog, pig.
 
 ## Resources
 - [Sitemap](https://astroscan-lab.github.io/astroscan_bot/sitemap.xml)

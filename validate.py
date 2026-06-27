@@ -5,6 +5,8 @@ import xml.etree.ElementTree as ET
 errors = []
 
 PAGES = ["index.html", "ru/index.html", "es/index.html", "hi/index.html"]
+PAGES += ["privacy.html", "terms.html", "ru/privacy.html", "ru/terms.html",
+          "es/privacy.html", "es/terms.html", "hi/privacy.html", "hi/terms.html"]
 PAGES += sorted(glob.glob("zodiac/*/index.html"))
 PAGES += sorted(glob.glob("ru/zodiac/*/index.html"))
 PAGES += sorted(glob.glob("es/zodiac/*/index.html"))
@@ -16,9 +18,12 @@ def check_page(path):
     with io.open(path, encoding="utf-8") as f:
         html = f.read()
 
+    is_legal_page = os.path.basename(path) in ("privacy.html", "terms.html")
+
     m = re.search(r'<script type="application/ld\+json">(.*?)</script>', html, re.S)
     if not m:
-        errors.append("%s: no JSON-LD block found" % path)
+        if not is_legal_page:
+            errors.append("%s: no JSON-LD block found" % path)
     else:
         try:
             json.loads(m.group(1))
@@ -36,7 +41,11 @@ def check_page(path):
         url = m2.group(1)
         if url.startswith(("http://", "https://", "#", "mailto:", "data:")):
             continue
-        local_path = os.path.normpath(os.path.join(base_dir, url))
+        if url.startswith("/astroscan_bot/"):
+            # site-root-absolute path (e.g. "/astroscan_bot/ru/") — resolve from repo root, not the page's own folder
+            local_path = os.path.normpath(url[len("/astroscan_bot/"):])
+        else:
+            local_path = os.path.normpath(os.path.join(base_dir, url))
         if url.endswith("/"):
             local_path = os.path.join(local_path, "index.html")
         if not os.path.isfile(local_path):
@@ -47,7 +56,8 @@ def check_page(path):
 
     lang = {"index.html": "en", "ru/index.html": "ru", "es/index.html": "es", "hi/index.html": "hi"}.get(path)
     if lang:
-        visible_count = len(re.findall(r'<details data-lang="%s"[^>]*>' % lang, html))
+        # pages are now baked single-language by build.py, so <details> no longer carries data-lang
+        visible_count = len(re.findall(r"<details[ >]", html))
         try:
             data = json.loads(m.group(1))
             faq_nodes = [n for n in data.get("@graph", []) if n.get("@type") == "FAQPage"]
