@@ -152,13 +152,18 @@ def render_page(sign_id, lang):
     nav = NAV_LABELS[lang]
     name = NAMES[sign_id][lang]
     element = ELEMENT_NAMES[ELEMENT_KEY[sign_id]][lang]
-    m1 = NAMES[MATCH[sign_id][0]][lang]
-    m2 = NAMES[MATCH[sign_id][1]][lang]
-    clash = NAMES[CLASH[sign_id]][lang]
+    m1_id, m2_id = MATCH[sign_id][0], MATCH[sign_id][1]
+    clash_id = CLASH[sign_id]
+    m1 = NAMES[m1_id][lang]
+    m2 = NAMES[m2_id][lang]
+    clash = NAMES[clash_id][lang]
     title = TITLE_TPL[lang].format(name=name)
     desc = DESC_TPL[lang].format(name=name)
     intro = INTRO_TPL[lang].format(name=name, element=element)
-    compat = COMPAT_TPL[lang].format(name=name, m1=m1, m2=m2, clash=clash)
+    m1_link = f'<a href="{url_for(lang, m1_id)}">{m1}</a>'
+    m2_link = f'<a href="{url_for(lang, m2_id)}">{m2}</a>'
+    clash_link = f'<a href="{url_for(lang, clash_id)}">{clash}</a>'
+    compat = COMPAT_TPL[lang].format(name=name, m1=m1_link, m2=m2_link, clash=clash_link)
     h1 = H1_TPL.format(emoji=EMOJI[sign_id], name=name)
     traits_html = "".join(f"<li>{t}</li>" for t in TRAITS[sign_id][lang])
     hreflang_links = "\n    ".join(f'<link rel="alternate" hreflang="{l}" href="{url_for(l, sign_id)}">' for l in LANGS)
