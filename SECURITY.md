@@ -22,7 +22,8 @@ Out of scope: the Telegram bot backend and its natal-chart calculation pipeline,
 
 This site is hosted on GitHub Pages' free tier, which does not allow setting custom HTTP response headers. As a result:
 
-- **`X-Frame-Options`** cannot be set at the HTTP level. Clickjacking protection is instead enforced via the `frame-ancestors` directive in the CSP `<meta>` tag, which all modern browsers honor (note: `frame-ancestors` has no effect when delivered via `<meta>` per spec in some older browsers — this is a known tradeoff of static hosting without server-side header control).
-- **HSTS** cannot be set at all — it is an HTTP-header-only mechanism and has no `<meta>` equivalent. GitHub Pages itself serves over HTTPS with redirect, which provides baseline protection, but we cannot enforce HSTS preloading from this repository.
+- **`X-Frame-Options`** cannot be set at the HTTP level, and there is no working substitute: per the CSP specification, the `frame-ancestors` directive (along with `sandbox` and `report-uri`/`report-to`) is ignored entirely when CSP is delivered via a `<meta>` tag, in every browser — not just older ones. The `frame-ancestors` value present in this site's CSP `<meta>` tag is set for documentation/intent purposes only and provides **no actual clickjacking protection**. This is an inherent limitation of static hosting without server-side header control, not a bug fixable from within this repository.
+- **`X-Content-Type-Options: nosniff`** is also not set, and has no `<meta>` equivalent.
+- **HSTS** is actually handled — GitHub Pages sets `Strict-Transport-Security: max-age=31556952` automatically on every response (verified via live response headers), so this is covered at the platform level without any action needed from this repository. It does not include `preload`, so the domain is not eligible for the HSTS preload list, but the header itself is present and effective from the first HTTPS response onward.
 
 If these matter for your use case, hosting behind a CDN/reverse proxy that adds these headers (e.g. Cloudflare) would be required — that's a deployment change outside this repository's scope.

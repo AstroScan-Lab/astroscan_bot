@@ -169,6 +169,13 @@ def render_page(sign_id, lang):
         "about": f"Chinese zodiac {sign_id} sign", "inLanguage": lang,
         "isPartOf": {"@type": "WebSite", "name": "AstroScan", "url": BASE + "/"},
     }
+    breadcrumb_jsonld = {
+        "@context": "https://schema.org", "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": nav['home'], "item": home_url(lang)},
+            {"@type": "ListItem", "position": 2, "name": f"{EMOJI[sign_id]} {name}", "item": url_for(lang, sign_id)},
+        ],
+    }
     return f"""<!DOCTYPE html>
 <html lang="{lang}">
 <head>
@@ -185,9 +192,10 @@ def render_page(sign_id, lang):
   <meta property="og:description" content="{desc}">
   <meta property="og:url" content="{url_for(lang, sign_id)}">
   <meta property="og:image" content="{BASE}/cover.jpg">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://api.learntogoogle.de https://librecounter.org; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https: https://librecounter.org; frame-ancestors 'self' https://web.telegram.org https://telegram.org https://*.telegram.org; object-src 'none'; base-uri 'none'; upgrade-insecure-requests;">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://api.learntogoogle.de https://librecounter.org; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://librecounter.org; frame-ancestors 'self' https://web.telegram.org https://telegram.org https://*.telegram.org; object-src 'none'; base-uri 'none'; upgrade-insecure-requests;">
   <link rel="stylesheet" href="{ap}assets/css/styles.css">
   <script type="application/ld+json">{json.dumps(jsonld, ensure_ascii=False)}</script>
+  <script type="application/ld+json">{json.dumps(breadcrumb_jsonld, ensure_ascii=False)}</script>
 </head>
 <body class="lang-{lang}">
   <div class="container" style="max-width:760px;">
