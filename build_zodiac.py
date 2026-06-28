@@ -185,7 +185,7 @@ def render_page(sign_id, lang):
   <meta property="og:description" content="{desc}">
   <meta property="og:url" content="{url_for(lang, sign_id)}">
   <meta property="og:image" content="{BASE}/cover.jpg">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://api.learntogoogle.de https://librecounter.org; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https: https://librecounter.org; frame-ancestors 'self' https://web.telegram.org https://telegram.org https://*.telegram.org;">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://api.learntogoogle.de https://librecounter.org; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https: https://librecounter.org; frame-ancestors 'self' https://web.telegram.org https://telegram.org https://*.telegram.org; object-src 'none'; base-uri 'none'; upgrade-insecure-requests;">
   <link rel="stylesheet" href="{ap}assets/css/styles.css">
   <script type="application/ld+json">{json.dumps(jsonld, ensure_ascii=False)}</script>
 </head>

@@ -1,0 +1,5 @@
+# ai.txt — experimental, not yet a ratified standard (unlike robots.txt).
+# Included as a forward-looking complement to llms.txt; AI crawlers/assistants
+# should treat llms.txt as the authoritative structured summary of this site.
+LLM: https://astroscan-lab.github.io/astroscan_bot/llms.txt
+Allow: /

@@ -8,6 +8,7 @@
   "background_color": "#0a0718",
   "theme_color": "#0a0718",
   "lang": "en",
+  "categories": ["entertainment", "lifestyle", "personalization"],
   "icons": [
     {
       "src": "/astroscan_bot/icon-192.png",

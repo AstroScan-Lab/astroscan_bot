@@ -8,8 +8,8 @@ ALL_LANGS = ["en", "ru", "es", "hi"]
 LANGS = {
     "ru": {
         "locale": "ru_RU",
-        "title": "AstroScan · Бесплатный тест: узнайте свой знак китайского зодиака без даты рождения (без регистрации)",
-        "desc": "Бесплатный тест личности определяет ваш знак китайского зодиака и архетип по характеру — без даты рождения и регистрации. Проверьте совместимость, сравните западную и ведическую астрологию. Полный разбор — в Telegram.",
+        "title": "AstroScan · Бесплатный тест на знак китайского зодиака",
+        "desc": "Бесплатный тест личности определяет знак китайского зодиака и архетип — без даты рождения. Проверьте совместимость онлайн.",
         "og_title": "AstroScan · Узнайте свой знак китайского зодиака без даты рождения — бесплатно",
         "og_desc": "Узнайте свой архетип, знак китайского зодиака и совместимость бесплатно — по характеру, без даты рождения и регистрации.",
         "keywords": "бесплатный тест личности, китайский зодиак без даты рождения, тест на архетип и зодиак, совместимость, западная астрология, ведическая астрология, джйотиш, сравнение астрологии, бесплатный тест, Swiss Ephemeris",
@@ -24,8 +24,8 @@ LANGS = {
     },
     "es": {
         "locale": "es_ES",
-        "title": "AstroScan · Test Gratis: Descubre tu Signo del Zodíaco Chino Sin Fecha de Nacimiento (Sin Registro)",
-        "desc": "Test de personalidad gratuito que revela tu signo del zodíaco chino y tu arquetipo según tu carácter — sin fecha de nacimiento ni registro. Comprueba la compatibilidad y compara la astrología occidental y védica. Informe completo en Telegram.",
+        "title": "AstroScan · Test Gratis de tu Signo del Zodíaco Chino",
+        "desc": "Test de personalidad gratis revela tu signo del zodíaco chino y arquetipo — sin fecha de nacimiento. Comprueba tu compatibilidad.",
         "og_title": "AstroScan · Descubre tu Signo del Zodíaco Chino Sin Fecha de Nacimiento — Gratis",
         "og_desc": "Descubre tu arquetipo, tu signo del zodíaco chino y tu compatibilidad gratis — según tu carácter, sin fecha de nacimiento ni registro.",
         "keywords": "test de personalidad gratis, zodiaco chino sin fecha de nacimiento, test de arquetipo y zodiaco, compatibilidad, astrología occidental, astrología védica, jyotish, comparación de astrología, test gratis, Swiss Ephemeris",
@@ -40,8 +40,8 @@ LANGS = {
     },
     "hi": {
         "locale": "hi_IN",
-        "title": "AstroScan · मुफ़्त टेस्ट: बिना जन्म तिथि के अपना चीनी राशि चक्र जानें (बिना पंजीकरण)",
-        "desc": "मुफ़्त व्यक्तित्व परीक्षण आपके स्वभाव से आपका चीनी राशि चक्र और आर्कटाइप बताता है — बिना जन्म तिथि और पंजीकरण के। अनुकूलता जानें, पश्चिमी और वैदिक ज्योतिष की तुलना करें। पूरी रिपोर्ट Telegram में।",
+        "title": "AstroScan · मुफ़्त चीनी राशि चक्र टेस्ट",
+        "desc": "मुफ़्त व्यक्तित्व परीक्षण आपका चीनी राशि चक्र और आर्कटाइप बताता है — बिना जन्म तिथि। अनुकूलता जानें।",
         "og_title": "AstroScan · बिना जन्म तिथि के अपना चीनी राशि चक्र जानें — मुफ़्त",
         "og_desc": "अपना आर्कटाइप, चीनी राशि चक्र और अनुकूलता मुफ़्त में जानें — अपने स्वभाव से, बिना जन्म तिथि और पंजीकरण के।",
         "keywords": "मुफ़्त व्यक्तित्व परीक्षण, बिना जन्म तिथि चीनी राशि चक्र, आर्कटाइप और राशि परीक्षण, अनुकूलता, पश्चिमी ज्योतिष, वैदिक ज्योतिष, ज्योतिष तुलना, मुफ़्त परीक्षण, Swiss Ephemeris",
@@ -218,8 +218,8 @@ for lang in ALL_LANGS:
         # relative asset paths need ../ prefix from a subdirectory
         html = html.replace('href="favicon.ico"', 'href="../favicon.ico"')
         html = html.replace('href="apple-touch-icon.png"', 'href="../apple-touch-icon.png"')
-        html = html.replace('src="cover.jpg"', 'src="../cover.jpg"')
-        html = html.replace('srcset="cover.webp"', 'srcset="../cover.webp"')
+        html = html.replace('src="cover-small.jpg"', 'src="../cover-small.jpg"')
+        html = html.replace('srcset="cover-small.webp"', 'srcset="../cover-small.webp"')
         # terms.html/privacy.html exist in every language folder now (no ../ prefix needed)
         html = html.replace('href="icon-192.png"', 'href="../icon-192.png"')
         html = html.replace('href="manifest.json"', 'href="../manifest.json"')
@@ -246,6 +246,8 @@ print("Done:", ", ".join(ALL_LANGS))
 # --- Legal pages (privacy.html, terms.html): same single-language-per-page approach ---
 LANG_BAR_NAMES = {"en": "English", "ru": "Русский", "es": "Español", "hi": "हिन्दी"}
 
+LOCALE_MAP = {"en": "en_US", "ru": "ru_RU", "es": "es_ES", "hi": "hi_IN"}
+
 for page in ["privacy", "terms"]:
     with io.open("%s_template.html" % page, "r", encoding="utf-8") as f:
         legal_template = f.read()
@@ -260,6 +262,8 @@ for page in ["privacy", "terms"]:
 
         html = html.replace('<html lang="en">', '<html lang="%s">' % lang, 1)
         html = re.sub(r'(<link rel="canonical" href=")[^"]*(")', lambda m: m.group(1) + canon + m.group(2), html, count=1)
+        html = re.sub(r'(<meta property="og:url" content=")[^"]*(")', lambda m: m.group(1) + canon + m.group(2), html, count=1)
+        html = re.sub(r'(<meta property="og:locale" content=")[^"]*(")', lambda m: m.group(1) + LOCALE_MAP[lang] + m.group(2), html, count=1)
         html = html.replace('<body class="lang-en">', '<body class="lang-%s">' % lang, 1)
 
         lang_bar_links = "\n".join(

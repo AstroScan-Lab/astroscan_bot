@@ -2,6 +2,11 @@ User-agent: *
 Allow: /
 Sitemap: https://astroscan-lab.github.io/astroscan_bot/sitemap.xml
 
+# Structured summary for AI assistants/crawlers (llms.txt is the established
+# convention; ai.txt is experimental and not yet a ratified standard)
+# https://astroscan-lab.github.io/astroscan_bot/llms.txt
+# https://astroscan-lab.github.io/astroscan_bot/ai.txt
+
 # === ПРАВИЛА ДЛЯ AI-КРАУЛЕРОВ ===
 User-agent: GPTBot
 Allow: /

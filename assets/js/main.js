@@ -97,6 +97,28 @@
     const LANGS = ['en','ru','hi','es'];
     const LANG_NAMES = { en:'English', ru:'Русский', hi:'हिन्दी', es:'Español' };
     let currentLang = 'en';
+    function showToast(message, duration) {
+      duration = duration || 3000;
+      let container = document.querySelector('.toast-container');
+      if (!container) {
+        container = document.createElement('div');
+        container.className = 'toast-container';
+        container.setAttribute('role', 'region');
+        container.setAttribute('aria-label', 'Notifications');
+        document.body.appendChild(container);
+      }
+      const toast = document.createElement('div');
+      toast.className = 'toast';
+      toast.setAttribute('role', 'alert');
+      toast.setAttribute('aria-live', 'polite');
+      toast.textContent = message;
+      container.appendChild(toast);
+      requestAnimationFrame(() => requestAnimationFrame(() => toast.classList.add('visible')));
+      setTimeout(() => {
+        toast.classList.remove('visible');
+        setTimeout(() => toast.remove(), 300);
+      }, duration);
+    }
     const translations = {
       en: {
         ctaFooter: '⚡ GET FULL REPORT IN TELEGRAM',
@@ -332,7 +354,7 @@
       document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
       document.getElementById(`lang-${lang}`)?.classList.add('active');
       const t = translations[lang];
-      document.getElementById('cta-footer').innerHTML = t.ctaFooter;
+      document.getElementById('cta-footer').textContent = t.ctaFooter;
       if (!window.currentQuizState) renderApp();
       else if (window.currentQuizState === 'quiz') renderApp();
       else if (window.currentQuizState === 'result') renderResult();
@@ -442,18 +464,19 @@
           const t = translations[currentLang];
           const questionText = q[`text${currentLang.charAt(0).toUpperCase()+currentLang.slice(1)}`] || q.textEn;
           const options = q[`options${currentLang.charAt(0).toUpperCase()+currentLang.slice(1)}`] || q.optionsEn;
-          const optsHtml = options.map((opt, idx) => `<button class="option-btn" data-opt="${idx}" type="button">${opt}</button>`).join('');
+          const optsHtml = options.map((opt, idx) => `<button class="option-btn" data-opt="${idx}" type="button" role="radio" aria-checked="false">${opt}</button>`).join('');
           app.innerHTML = `
             <div class="card">
               <div class="progress-bar"><div class="progress-fill" style="width:${(currentQuestion/QUESTIONS.length)*100}%"></div></div>
-              <div class="question-text">${questionText}</div>
-              <div class="options">${optsHtml}</div>
+              <div class="question-text" id="questionLabel">${questionText}</div>
+              <div class="options" role="radiogroup" aria-labelledby="questionLabel">${optsHtml}</div>
               <button class="btn-primary" id="nextBtn">${currentQuestion === QUESTIONS.length-1 ? t.result : t.next}</button>
             </div>`;
           document.querySelectorAll('.option-btn').forEach(btn => {
             btn.addEventListener('click', () => {
-              document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+              document.querySelectorAll('.option-btn').forEach(b => { b.classList.remove('selected'); b.setAttribute('aria-checked', 'false'); });
               btn.classList.add('selected');
+              btn.setAttribute('aria-checked', 'true');
               answers[currentQuestion] = parseInt(btn.dataset.opt);
             });
           });
@@ -568,7 +591,7 @@
           setTimeout(() => URL.revokeObjectURL(url), 1000);
         } catch (e) {
           if (navigator.share) { navigator.share({ title: 'AstroScan Result', url: window.location.href }); }
-          else { alert(t.copyLink); }
+          else { showToast(t.copyLink); }
         }
       });
       function getTrackerData() {

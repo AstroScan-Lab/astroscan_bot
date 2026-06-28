@@ -84,11 +84,6 @@
     .cta-bar a { flex: 1; text-align: center; padding: 14px; text-decoration: none; font-weight: bold; text-transform: uppercase; color: var(--text-light); }
     .cta-bar .telegram-cta { background: var(--accent-primary); color: #0a0718; }
     .lazy-section { min-height: 300px; contain: layout; }
-    [data-lang] { display: none; }
-    body.lang-en [data-lang="en"] { display: revert; }
-    body.lang-ru [data-lang="ru"] { display: revert; }
-    body.lang-es [data-lang="es"] { display: revert; }
-    body.lang-hi [data-lang="hi"] { display: revert; }
     *:focus-visible { outline: 2px solid var(--accent-primary); outline-offset: 2px; }
     @media (max-width: 700px) { body { padding: 1rem; } .static-hero h1 { font-size: 1.8rem; } .card { padding: 1rem; }.static-hero { min-height: 500px; } }
     .hidden { display: none; }
@@ -114,3 +109,33 @@
   
 .service-card-link { text-decoration: none; border: 1px solid var(--border-dim); border-radius: 1rem; padding: 1rem; display: block; color: inherit; transition: border-color 0.2s; }
 .service-card-link:hover { border-color: var(--accent-primary); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .telegram-cta { animation: none !important; }
+  .fade-up { opacity: 1 !important; transform: none !important; }
+}
+
+@media print {
+  body { background: white !important; color: black !important; padding: 0 !important; }
+  .cta-bar, .lang-bar, .telegram-link, .telegram-cta, .skip-link { display: none !important; }
+  .card { border: 1px solid #ccc !important; box-shadow: none !important; break-inside: avoid; }
+  .static-hero h1 { color: black !important; background: none !important; -webkit-background-clip: initial !important; background-clip: initial !important; }
+  a { color: #000 !important; text-decoration: underline !important; }
+}
+
+.toast-container {
+  position: fixed; bottom: 80px; left: 50%; transform: translateX(-50%);
+  z-index: 1000; pointer-events: none;
+}
+.toast {
+  background: var(--card-bg); color: var(--text-light); padding: 0.75rem 1.5rem;
+  border-radius: 1.5rem; border: 1px solid var(--accent-primary); margin-top: 0.5rem;
+  opacity: 0; transform: translateY(20px); transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: auto; max-width: 90vw; text-align: center;
+}
+.toast.visible { opacity: 1; transform: translateY(0); }
