@@ -96,6 +96,7 @@
     ];
     const LANGS = ['en','ru','hi','es'];
     const LANG_NAMES = { en:'English', ru:'Русский', hi:'हिन्दी', es:'Español' };
+    const SAMPLE_PDF = { en: 'astroscan_career_sample_en.pdf', ru: 'astroscan_career_sample_ru.pdf', es: 'astroscan_career_sample_en.pdf', hi: 'astroscan_career_sample_en.pdf' };
     let currentLang = 'en';
     function showToast(message, duration) {
       duration = duration || 3000;
@@ -135,6 +136,7 @@
         dynamicCTATitle: 'Want a personalized report?',
         dynamicCTAText: 'We use Swiss Ephemeris to calculate your full natal chart. Get a detailed PDF report in our Telegram bot! Not sure yet? You can check sample PDF reports first and see for yourself.',
         dynamicCTABtn: '⚡ GET MY FULL AUDIT',
+        samplePdfLink: 'View sample PDF report',
         selectPartner: 'Select partner sign',
         techTitle: '📡 Technology &amp; Astrological Traditions',
         techDesc: '<strong>AstroScan uses the Western tropical zodiac</strong> and professional Swiss Ephemeris v2.10. But how does your chart look in other systems?',
@@ -189,6 +191,7 @@
         dynamicCTATitle: 'Хотите персонализированный отчёт?',
         dynamicCTAText: 'Мы используем Швейцарские эфемериды для расчёта вашей полной натальной карты. Получите подробный PDF-отчёт в нашем Telegram-боте! Не уверены? Сначала можете посмотреть примеры отчётов и убедиться сами.',
         dynamicCTABtn: '⚡ ПОЛУЧИТЬ ПОЛНЫЙ АУДИТ',
+        samplePdfLink: 'Посмотреть пример PDF-отчёта',
         selectPartner: 'Выберите знак партнёра',
         techTitle: '📡 Технологии и астрологические традиции',
         techDesc: '<strong>AstroScan использует западный тропический зодиак</strong> и профессиональные швейцарские эфемериды Swiss Ephemeris v2.10. Но как ваша карта выглядит в других системах?',
@@ -243,6 +246,7 @@
         dynamicCTATitle: 'एक व्यक्तिगत रिपोर्ट चाहिए?',
         dynamicCTAText: 'हम आपकी पूरी जन्म कुंडली की गणना करने के लिए स्विस एफेमेरिस का उपयोग करते हैं। हमारे टेलीग्राम बॉट में एक विस्तृत पीडीएफ रिपोर्ट प्राप्त करें! अभी तय नहीं कर पाए? पहले नमूना रिपोर्ट देख लें और खुद देखकर तय करें।',
         dynamicCTABtn: '⚡ मेरा पूरा ऑडिट प्राप्त करें',
+        samplePdfLink: 'नमूना पीडीएफ रिपोर्ट देखें',
         selectPartner: 'साथी का चिन्ह चुनें',
         techTitle: '📡 प्रौद्योगिकी और ज्योतिषीय परंपराएं',
         techDesc: '<strong>AstroScan पश्चिमी उष्णकटिबंधीय राशि चक्र</strong> और पेशेवर स्विस एफेमेरिस v2.10 का उपयोग करता है। लेकिन अन्य प्रणालियों में आपका चार्ट कैसा दिखता है?',
@@ -297,6 +301,7 @@
         dynamicCTATitle: '¿Quieres un informe personalizado?',
         dynamicCTAText: 'Usamos Swiss Ephemeris para calcular tu carta natal completa. ¡Obtén un informe PDF detallado en nuestro bot de Telegram! ¿No estás seguro? Primero puedes ver ejemplos de informes y comprobarlo tú mismo.',
         dynamicCTABtn: '⚡ OBTENER MI AUDITORÍA COMPLETA',
+        samplePdfLink: 'Ver ejemplo de informe PDF',
         selectPartner: 'Elige el signo de tu pareja',
         techTitle: '📡 Tecnología y Tradiciones Astrológicas',
         techDesc: '<strong>AstroScan utiliza el zodíaco tropical occidental</strong> y las efemérides suizas profesionales Swiss Ephemeris v2.10. Pero, ¿cómo se ve tu carta en otros sistemas?',
@@ -453,6 +458,7 @@
           <h3 style="color: #fbbf24; margin-bottom: 0.5rem;">${t.dynamicCTATitle}</h3>
           <p style="margin-bottom: 1rem;">${t.dynamicCTAText}</p>
           <a href="https://t.me/ASTROSCAN_BOT" target="_blank" rel="noopener noreferrer" class="btn-primary" style="display: inline-block;">${t.dynamicCTABtn}</a>
+          <div style="margin-top: 0.75rem;"><a href="https://astroscan-lab.github.io/astroscan_bot/${SAMPLE_PDF[currentLang]}" target="_blank" rel="noopener noreferrer" style="font-size: 0.85rem;">${t.samplePdfLink}</a></div>
         </div>
       `;
     }
