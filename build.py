@@ -61,7 +61,7 @@ LANGS = {
         "desc": "Teste de personalidade gratuito revela seu signo do zodíaco chinês e arquétipo — sem data de nascimento. Confira a compatibilidade na hora.",
         "og_title": "AstroScan · Descubra seu Signo do Zodíaco Chinês Sem Data de Nascimento — Grátis",
         "og_desc": "Descubra seu arquétipo, signo do zodíaco chinês e compatibilidade de graça — com base no seu comportamento, sem precisar de data de nascimento ou cadastro.",
-        "keywords": "teste de personalidade gratuito, zodíaco chinês sem data de nascimento, teste de arquétipo e compatibilidade zodiacal, sem cadastro, teste de arquétipo, compatibilidade, astrologia ocidental, astrologia védica, jyotish, comparação de astrologia, teste grátis, Swiss Ephemeris",
+        "keywords": "teste de personalidade gratuito, signo do zodíaco chinês sem data de nascimento, horóscopo chinês, compatibilidade de signos, sem cadastro, astrologia ocidental, astrologia védica, jyotish, comparação de astrologia, teste grátis, Swiss Ephemeris",
         "product_desc": "Teste online gratuito para descobrir seu signo do zodíaco chinês, arquétipo comportamental e compatibilidade. Sem necessidade de cadastro. Compare a astrologia ocidental e védica. Baseado em cálculos do Swiss Ephemeris.",
         "howto_name": "Como usar o AstroScan",
         "howto_steps": [
@@ -93,7 +93,7 @@ LANGS = {
         "desc": "Ücretsiz kişilik testi, doğum tarihi olmadan Çin burcunuzu ve arketipinizi ortaya çıkarır. Uyumluluğu anında öğrenin.",
         "og_title": "AstroScan · Doğum Tarihi Olmadan Çin Burcunuzu Bulun — Ücretsiz",
         "og_desc": "Arketipinizi, Çin burcunuzu ve uyumluluğunuzu ücretsiz keşfedin — doğum tarihi veya kayıt gerekmeden, sadece davranışlarınıza dayanarak.",
-        "keywords": "ücretsiz kişilik testi, doğum tarihi olmadan Çin burcu, arketip ve burç uyumluluk testi, kayıt gerektirmez, arketip testi, uyumluluk, batı astrolojisi, vedik astroloji, jyotish, astroloji karşılaştırması, ücretsiz test, Swiss Ephemeris",
+        "keywords": "ücretsiz kişilik testi, doğum tarihi olmadan Çin burcu, burç uyumluluğu testi, kayıt gerektirmez, arketip testi, batı astrolojisi, vedik astroloji, jyotish, astroloji karşılaştırması, ücretsiz test, Swiss Ephemeris",
         "product_desc": "Çin burcunuzu, davranışsal arketipinizi ve uyumluluğunuzu keşfetmek için ücretsiz çevrimiçi test. Kayıt gerekmez. Batı ve Vedik astrolojiyi karşılaştırın. Swiss Ephemeris hesaplamalarına dayanır.",
         "howto_name": "AstroScan Nasıl Kullanılır",
         "howto_steps": [
@@ -109,7 +109,7 @@ LANGS = {
         "desc": "Tes kepribadian gratis mengungkap shio dan arketip Anda — tanpa perlu tanggal lahir. Cek kecocokan secara instan.",
         "og_title": "AstroScan · Temukan Shio Anda Tanpa Tanggal Lahir — Gratis",
         "og_desc": "Temukan arketip, shio, dan kecocokan Anda secara gratis — berdasarkan perilaku Anda, tanpa perlu tanggal lahir atau pendaftaran.",
-        "keywords": "tes kepribadian gratis, shio tanpa tanggal lahir, tes arketip dan kecocokan shio, tanpa pendaftaran, tes arketip, kecocokan, astrologi barat, astrologi weda, jyotish, perbandingan astrologi, tes gratis, Swiss Ephemeris",
+        "keywords": "tes kepribadian gratis, shio tanpa tanggal lahir, ramalan shio, kecocokan shio, tanpa pendaftaran, astrologi barat, astrologi weda, jyotish, perbandingan astrologi, tes gratis, Swiss Ephemeris",
         "product_desc": "Tes online gratis untuk menemukan shio, arketip perilaku, dan kecocokan Anda. Tidak perlu pendaftaran. Bandingkan astrologi Barat dan Weda. Berdasarkan perhitungan Swiss Ephemeris.",
         "howto_name": "Cara menggunakan AstroScan",
         "howto_steps": [
@@ -125,7 +125,7 @@ LANGS = {
         "desc": "Bepul shaxsiyat testi tug'ilgan sanasiz sizning xitoy zodiak belgingiz va arxetipingizni aniqlaydi. Moslikni darhol tekshiring.",
         "og_title": "AstroScan · Tug'ilgan Sanasiz Xitoy Zodiak Belgingizni Toping — Bepul",
         "og_desc": "Arxetipingizni, xitoy zodiak belgingizni va moslikni bepul aniqlang — xatti-harakatingiz asosida, tug'ilgan sana yoki ro'yxatdan o'tishsiz.",
-        "keywords": "bepul shaxsiyat testi, tug'ilgan sanasiz xitoy zodiaki, arxetip va zodiak moslik testi, ro'yxatdan o'tishsiz, arxetip testi, moslik, g'arb astrologiyasi, vedik astrologiya, jyotish, astrologiya solishtirish, bepul test, Swiss Ephemeris",
+        "keywords": "bepul shaxsiyat testi, tug'ilgan sanasiz xitoy zodiaki, xitoy yil hayvonlari, zodiak moslik testi, ro'yxatdan o'tishsiz, g'arb astrologiyasi, vedik astrologiya, jyotish, astrologiya solishtirish, bepul test, Swiss Ephemeris",
         "product_desc": "Xitoy zodiak belgingiz, xulq-atvor arxetipingiz va moslikni aniqlash uchun bepul onlayn test. Ro'yxatdan o'tish talab qilinmaydi. G'arb va vedik astrologiyani solishtiring. Swiss Ephemeris hisob-kitoblariga asoslangan.",
         "howto_name": "AstroScan'dan qanday foydalanish kerak",
         "howto_steps": [
@@ -141,7 +141,7 @@ LANGS = {
         "desc": "Тегін тұлғалық тест сіздің қытай зодиак белгіңіз бен архетипіңізді анықтайды — туған күнсіз. Үйлесімділікті лезде тексеріңіз.",
         "og_title": "AstroScan · Туған Күнсіз Қытай Зодиак Белгіңізді Табыңыз — Тегін",
         "og_desc": "Архетипіңізді, қытай зодиак белгіңізді және үйлесімділікті тегін біліңіз — мінез-құлқыңызға негізделген, туған күн немесе тіркеу қажет емес.",
-        "keywords": "тегін тұлғалық тест, туған күнсіз қытай зодиагы, архетип және зодиак үйлесімділік тесті, тіркеусіз, архетип тесті, үйлесімділік, батыс астрологиясы, ведалық астрология, джйотиш, астрологияны салыстыру, тегін тест, Swiss Ephemeris",
+        "keywords": "тегін тұлғалық тест, туған күнсіз қытай зодиагы, қытай жыл мүшелері, зодиак үйлесімділігі, тіркеусіз, батыс астрологиясы, ведалық астрология, джйотиш, астрологияны салыстыру, тегін тест, Swiss Ephemeris",
         "product_desc": "Қытай зодиак белгіңізді, мінез-құлық архетипіңізді және үйлесімділікті анықтауға арналған тегін онлайн тест. Тіркеу қажет емес. Батыс және ведалық астрологияны салыстырыңыз. Swiss Ephemeris есептеулеріне негізделген.",
         "howto_name": "AstroScan-ды қалай пайдалану керек",
         "howto_steps": [
@@ -157,7 +157,7 @@ LANGS = {
         "desc": "Un test de personnalité gratuit révèle votre signe du zodiaque chinois et votre archétype — sans date de naissance. Vérifiez votre compatibilité instantanément.",
         "og_title": "AstroScan · Découvrez votre Signe du Zodiaque Chinois Sans Date de Naissance — Gratuit",
         "og_desc": "Découvrez gratuitement votre archétype, votre signe du zodiaque chinois et votre compatibilité — selon votre comportement, sans date de naissance ni inscription.",
-        "keywords": "test de personnalité gratuit, zodiaque chinois sans date de naissance, test d'archétype et de compatibilité zodiacale, sans inscription, test d'archétype, compatibilité, astrologie occidentale, astrologie védique, jyotish, comparaison d'astrologie, test gratuit, Swiss Ephemeris",
+        "keywords": "test de personnalité gratuit, signe chinois sans date de naissance, horoscope chinois, compatibilité des signes, sans inscription, astrologie occidentale, astrologie védique, jyotish, comparaison d'astrologie, test gratuit, Swiss Ephemeris",
         "product_desc": "Test en ligne gratuit pour découvrir votre signe du zodiaque chinois, votre archétype comportemental et votre compatibilité. Aucune inscription requise. Comparez l'astrologie occidentale et védique. Basé sur les calculs de Swiss Ephemeris.",
         "howto_name": "Comment utiliser AstroScan",
         "howto_steps": [
@@ -173,7 +173,7 @@ LANGS = {
         "desc": "Der kostenlose Persönlichkeitstest verrät Ihr chinesisches Sternzeichen und Archetyp — ganz ohne Geburtsdatum. Kompatibilität sofort prüfen.",
         "og_title": "AstroScan · Finden Sie Ihr Chinesisches Sternzeichen Ohne Geburtsdatum — Kostenlos",
         "og_desc": "Entdecken Sie kostenlos Ihren Archetyp, Ihr chinesisches Sternzeichen und Ihre Kompatibilität — basierend auf Ihrem Verhalten, ohne Geburtsdatum oder Registrierung.",
-        "keywords": "kostenloser Persönlichkeitstest, chinesisches Sternzeichen ohne Geburtsdatum, Archetyp- und Sternzeichen-Kompatibilitätstest, keine Registrierung, Archetyp-Test, Kompatibilität, westliche Astrologie, vedische Astrologie, Jyotish, Astrologie-Vergleich, kostenloser Test, Swiss Ephemeris",
+        "keywords": "kostenloser Persönlichkeitstest, chinesisches Sternzeichen ohne Geburtsdatum, chinesisches Horoskop, Sternzeichen-Kompatibilität, ohne Anmeldung, westliche Astrologie, vedische Astrologie, Jyotish, Astrologievergleich, kostenloser Test, Swiss Ephemeris",
         "product_desc": "Kostenloser Online-Test, um Ihr chinesisches Sternzeichen, Ihren Verhaltensarchetyp und Ihre Kompatibilität zu entdecken. Keine Registrierung erforderlich. Vergleichen Sie westliche und vedische Astrologie. Basiert auf Swiss-Ephemeris-Berechnungen.",
         "howto_name": "So verwenden Sie AstroScan",
         "howto_steps": [
@@ -189,7 +189,7 @@ LANGS = {
         "desc": "ແບບທົດສອບບຸກຄະລິກຟຣີເປີດເຜີຍນັກສັດຈີນ ແລະ ຕົ້ນແບບບຸກຄະລິກຂອງທ່ານ — ບໍ່ຕ້ອງໃຊ້ວັນເກີດ. ກວດສອບຄວາມເຂົ້າກັນໄດ້ທັນທີ.",
         "og_title": "AstroScan · ຄົ້ນຫານັກສັດຈີນຂອງທ່ານໂດຍບໍ່ຕ້ອງໃຊ້ວັນເກີດ — ຟຣີ",
         "og_desc": "ຄົ້ນພົບຕົ້ນແບບບຸກຄະລິກ, ນັກສັດຈີນ ແລະ ຄວາມເຂົ້າກັນໄດ້ຂອງທ່ານຟຣີ — ອີງໃສ່ພຶດຕິກຳຂອງທ່ານ, ບໍ່ຕ້ອງໃຊ້ວັນເກີດ ຫຼື ການລົງທະບຽນ.",
-        "keywords": "ແບບທົດສອບບຸກຄະລິກຟຣີ, ນັກສັດຈີນໂດຍບໍ່ຕ້ອງໃຊ້ວັນເກີດ, ແບບທົດສອບຕົ້ນແບບແລະຄວາມເຂົ້າກັນໄດ້, ບໍ່ຕ້ອງລົງທະບຽນ, ແບບທົດສອບຕົ້ນແບບ, ຄວາມເຂົ້າກັນໄດ້, ໂຫລາສາດຕາເວັນຕົກ, ໂຫລາສາດເວດ, ໂຈຕິສ, ການປຽບທຽບໂຫລາສາດ, ແບບທົດສອບຟຣີ, Swiss Ephemeris",
+        "keywords": "ແບບທົດສອບບຸກຄະລິກຟຣີ, ນັກສັດຈີນໂດຍບໍ່ຕ້ອງໃຊ້ວັນເກີດ, ຄວາມເຂົ້າກັນໄດ້ນັກສັດ, ບໍ່ຕ້ອງລົງທະບຽນ, ໂຫລາສາດຕາເວັນຕົກ, ໂຫລາສາດເວດ, ໂຈຕິສ, ການປຽບທຽບໂຫລາສາດ, ແບບທົດສອບຟຣີ, Swiss Ephemeris",
         "product_desc": "ແບບທົດສອບອອນລາຍຟຣີເພື່ອຄົ້ນຫານັກສັດຈີນ, ຕົ້ນແບບພຶດຕິກຳ ແລະ ຄວາມເຂົ້າກັນໄດ້ຂອງທ່ານ. ບໍ່ຕ້ອງລົງທະບຽນ. ປຽບທຽບໂຫລາສາດຕາເວັນຕົກ ແລະ ໂຫລາສາດເວດ. ອີງໃສ່ການຄິດໄລ່ Swiss Ephemeris.",
         "howto_name": "ວິທີໃຊ້ AstroScan",
         "howto_steps": [
@@ -205,7 +205,7 @@ LANGS = {
         "desc": "Il test di personalità gratuito rivela il tuo segno zodiacale cinese e il tuo archetipo — senza data di nascita. Scopri subito la compatibilità.",
         "og_title": "AstroScan · Scopri il Tuo Segno Zodiacale Cinese Senza Data di Nascita — Gratis",
         "og_desc": "Scopri gratuitamente il tuo archetipo, il tuo segno zodiacale cinese e la tua compatibilità — in base al tuo carattere, senza data di nascita né registrazione.",
-        "keywords": "test di personalità gratuito, zodiaco cinese senza data di nascita, test di archetipo e compatibilità zodiacale, nessuna registrazione, test di compatibilità, astrologia occidentale, astrologia vedica, jyotish, confronto tra astrologie, test gratuito, Swiss Ephemeris",
+        "keywords": "test di personalità gratuito, segno zodiacale cinese senza data di nascita, oroscopo cinese, compatibilità di coppia, senza registrazione, astrologia occidentale, astrologia vedica, jyotish, confronto astrologico, test gratuito, Swiss Ephemeris",
         "product_desc": "Test online gratuito per scoprire il tuo segno zodiacale cinese, il tuo archetipo comportamentale e la tua compatibilità. Nessuna registrazione richiesta. Confronta l'astrologia occidentale e quella vedica. Basato sui calcoli di Swiss Ephemeris.",
         "howto_name": "Come usare AstroScan",
         "howto_steps": [
@@ -233,11 +233,11 @@ LANGS = {
     },
     "fa": {
         "locale": "fa_IR",
-        "title": "AstroScan · آزمون رایگان زودیاک چینی",
-        "desc": "آزمون رایگان شخصیت‌شناسی، زودیاک چینی و کهن‌الگوی شما را بدون نیاز به تاریخ تولد آشکار می‌کند. سازگاری را همین حالا بررسی کنید.",
-        "og_title": "AstroScan · زودیاک چینی خود را بدون تاریخ تولد بیابید — رایگان",
-        "og_desc": "کهن‌الگو، زودیاک چینی و میزان سازگاری خود را رایگان کشف کنید — بر اساس رفتار شما، بدون تاریخ تولد یا ثبت‌نام.",
-        "keywords": "آزمون شخصیت رایگان, زودیاک چینی بدون تاریخ تولد, آزمون کهن‌الگو و سازگاری زودیاک, بدون ثبت‌نام, سازگاری, طالع‌بینی غربی, طالع‌بینی ودایی, جیوتیش, مقایسه سنت‌های نجومی, آزمون رایگان, Swiss Ephemeris",
+        "title": "AstroScan · آزمون رایگان برج چینی",
+        "desc": "آزمون رایگان شخصیت‌شناسی، برج چینی و کهن‌الگوی شما را بدون نیاز به تاریخ تولد آشکار می‌کند. سازگاری را همین حالا بررسی کنید.",
+        "og_title": "AstroScan · برج چینی خود را بدون تاریخ تولد بیابید — رایگان",
+        "og_desc": "کهن‌الگو، برج چینی و میزان سازگاری خود را رایگان کشف کنید — بر اساس رفتار شما، بدون تاریخ تولد یا ثبت‌نام.",
+        "keywords": "تست شخصیت رایگان, برج چینی بدون تاریخ تولد, سازگاری برج‌ها, بدون ثبت‌نام, طالع‌بینی غربی, طالع‌بینی ودایی, جیوتیش, مقایسه طالع‌بینی, آزمون رایگان, Swiss Ephemeris",
         "product_desc": "آزمون آنلاین رایگان برای کشف زودیاک چینی، کهن‌الگوی رفتاری و سازگاری شما. بدون نیاز به ثبت‌نام. مقایسه طالع‌بینی غربی و ودایی. بر پایه محاسبات Swiss Ephemeris.",
         "howto_name": "نحوه استفاده از AstroScan",
         "howto_steps": [
