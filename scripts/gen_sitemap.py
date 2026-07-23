@@ -1,12 +1,12 @@
-"""Regenerate sitemap.xml: 4 home pages, terms/privacy, and 48 zodiac pages (12 signs x 4 langs)."""
+"""Regenerate sitemap.xml: 16 home pages, terms/privacy, and 192 zodiac pages (12 signs x 16 langs)."""
 import datetime
 
 BASE = "https://astroscan-lab.github.io/astroscan_bot"
-LANGS = ["en", "ru", "es", "hi"]
+LANGS = ["en", "ru", "es", "hi", "pt", "vi", "tr", "id", "uz", "kk", "fr", "de", "lo", "it", "ar", "fa"]
 SIGNS = ["rat", "ox", "tiger", "rabbit", "dragon", "snake", "horse", "goat", "monkey", "rooster", "dog", "pig"]
 TODAY = datetime.date.today().isoformat()
 
-LANG_PREFIX = {"en": "", "ru": "ru/", "es": "es/", "hi": "hi/"}
+LANG_PREFIX = {l: ("" if l == "en" else l + "/") for l in LANGS}
 
 
 def hreflang_block(path_for_lang, indent="    "):

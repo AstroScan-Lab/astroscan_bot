@@ -4,13 +4,35 @@ import xml.etree.ElementTree as ET
 
 errors = []
 
-PAGES = ["index.html", "ru/index.html", "es/index.html", "hi/index.html"]
+PAGES = ["index.html", "ru/index.html", "es/index.html", "hi/index.html",
+         "pt/index.html", "vi/index.html", "tr/index.html", "id/index.html",
+         "uz/index.html", "kk/index.html", "fr/index.html", "de/index.html", "lo/index.html",
+         "it/index.html", "ar/index.html", "fa/index.html"]
 PAGES += ["privacy.html", "terms.html", "ru/privacy.html", "ru/terms.html",
-          "es/privacy.html", "es/terms.html", "hi/privacy.html", "hi/terms.html"]
+          "es/privacy.html", "es/terms.html", "hi/privacy.html", "hi/terms.html",
+          "pt/privacy.html", "pt/terms.html", "vi/privacy.html", "vi/terms.html",
+          "tr/privacy.html", "tr/terms.html", "id/privacy.html", "id/terms.html",
+          "uz/privacy.html", "uz/terms.html", "kk/privacy.html", "kk/terms.html",
+          "fr/privacy.html", "fr/terms.html", "de/privacy.html", "de/terms.html",
+          "lo/privacy.html", "lo/terms.html",
+          "it/privacy.html", "it/terms.html", "ar/privacy.html", "ar/terms.html",
+          "fa/privacy.html", "fa/terms.html"]
 PAGES += sorted(glob.glob("zodiac/*/index.html"))
 PAGES += sorted(glob.glob("ru/zodiac/*/index.html"))
 PAGES += sorted(glob.glob("es/zodiac/*/index.html"))
 PAGES += sorted(glob.glob("hi/zodiac/*/index.html"))
+PAGES += sorted(glob.glob("pt/zodiac/*/index.html"))
+PAGES += sorted(glob.glob("vi/zodiac/*/index.html"))
+PAGES += sorted(glob.glob("tr/zodiac/*/index.html"))
+PAGES += sorted(glob.glob("id/zodiac/*/index.html"))
+PAGES += sorted(glob.glob("uz/zodiac/*/index.html"))
+PAGES += sorted(glob.glob("kk/zodiac/*/index.html"))
+PAGES += sorted(glob.glob("fr/zodiac/*/index.html"))
+PAGES += sorted(glob.glob("de/zodiac/*/index.html"))
+PAGES += sorted(glob.glob("lo/zodiac/*/index.html"))
+PAGES += sorted(glob.glob("it/zodiac/*/index.html"))
+PAGES += sorted(glob.glob("ar/zodiac/*/index.html"))
+PAGES += sorted(glob.glob("fa/zodiac/*/index.html"))
 LOCAL_ASSET_ATTRS = re.compile(r'(?:href|src|srcset)="([^"]+)"')
 
 
@@ -54,7 +76,11 @@ def check_page(path):
     if "script-src 'self' 'unsafe-inline'" in html:
         errors.append("%s: CSP script-src still allows 'unsafe-inline'" % path)
 
-    lang = {"index.html": "en", "ru/index.html": "ru", "es/index.html": "es", "hi/index.html": "hi"}.get(path)
+    lang = {"index.html": "en", "ru/index.html": "ru", "es/index.html": "es", "hi/index.html": "hi",
+            "pt/index.html": "pt", "vi/index.html": "vi", "tr/index.html": "tr", "id/index.html": "id",
+            "uz/index.html": "uz", "kk/index.html": "kk", "fr/index.html": "fr", "de/index.html": "de",
+            "lo/index.html": "lo",
+            "it/index.html": "it", "ar/index.html": "ar", "fa/index.html": "fa"}.get(path)
     if lang:
         # pages are now baked single-language by build.py, so <details> no longer carries data-lang
         visible_count = len(re.findall(r"<details[ >]", html))
