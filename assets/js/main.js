@@ -1164,21 +1164,58 @@
     }
     function buildLangBar() {
       const bar = document.getElementById('lang-bar');
+      const current = detectLang();
+
+      const toggle = document.createElement('button');
+      toggle.type = 'button';
+      toggle.id = 'lang-toggle';
+      toggle.className = 'lang-toggle';
+      toggle.setAttribute('aria-haspopup', 'true');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.innerHTML = `<span>${LANG_NAMES[current]}</span><span class="lang-caret" aria-hidden="true">▼</span>`;
+
+      const menu = document.createElement('div');
+      menu.id = 'lang-menu';
+      menu.className = 'lang-menu';
+      menu.setAttribute('role', 'menu');
+
       LANGS.forEach(l => {
         const btn = document.createElement('button');
         btn.id = `lang-${l}`;
         btn.className = 'lang-btn';
+        btn.type = 'button';
         btn.textContent = LANG_NAMES[l];
         btn.dataset.lang = l;
+        btn.setAttribute('role', 'menuitem');
         btn.setAttribute('aria-label', `Switch to ${LANG_NAMES[l]}`);
         btn.onclick = () => {
           window.location.href = l === 'en'
             ? 'https://astroscan-lab.github.io/astroscan_bot/'
             : `https://astroscan-lab.github.io/astroscan_bot/${l}/`;
         };
-        bar.appendChild(btn);
+        menu.appendChild(btn);
       });
-      setLang(detectLang());
+
+      bar.appendChild(toggle);
+      bar.appendChild(menu);
+
+      const closeMenu = () => {
+        menu.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      };
+      toggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = menu.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(isOpen));
+      });
+      document.addEventListener('click', (e) => {
+        if (!bar.contains(e.target)) closeMenu();
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeMenu();
+      });
+
+      setLang(current);
     }
     let userScores = new Array(12).fill(0);
     let currentQuestion = 0;
