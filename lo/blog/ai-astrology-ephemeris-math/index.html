@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="lo">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ໂຄງສ້າງຂອງໂຫລາສາດ AI ທີ່ແມ່ນຍໍາ: ເປັນຫຍັງ Swiss Ephemeris ດີກວ່າການເດົາຂອງ LLM | AstroScan</title>
+  <meta name="description" content="ຄົ້ນພົບວ່າເປັນຫຍັງແຊັດບອດ AI ທົ່ວໄປມັກຄິດເລກອົງສາຜັງດວງຊະຕາຜິດພາດ (hallucination) ແລະການລວມຄະນິດສາດ Swiss Ephemeris ທີ່ອີງໃສ່ C ກັບການສັງເຄາະ AI ຊ່ວຍສ້າງຄວາມແມ່ນຍໍາທາງໂຫລາສາດແນວໃດ.">
+  <meta name="keywords" content="ໂຫລາສາດ AI, Swiss Ephemeris v2.10, ການຄິດໄລ່ຜັງດວງຊະຕາ, ການສ້າງແຜນທີ່ແບບກໍານົດແນ່ນອນ, ກົນໄກ synastry">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://astroscan-lab.github.io/astroscan_bot/lo/blog/ai-astrology-ephemeris-math/">
+  <link rel="alternate" hreflang="ar" href="https://astroscan-lab.github.io/astroscan_bot/ar/blog/ai-astrology-ephemeris-math/">
+  <link rel="alternate" hreflang="de" href="https://astroscan-lab.github.io/astroscan_bot/de/blog/ai-astrology-ephemeris-math/">
+  <link rel="alternate" hreflang="en" href="https://astroscan-lab.github.io/astroscan_bot/blog/ai-astrology-ephemeris-math/">
+  <link rel="alternate" hreflang="es" href="https://astroscan-lab.github.io/astroscan_bot/es/blog/ai-astrology-ephemeris-math/">
+  <link rel="alternate" hreflang="fa" href="https://astroscan-lab.github.io/astroscan_bot/fa/blog/ai-astrology-ephemeris-math/">
+  <link rel="alternate" hreflang="fr" href="https://astroscan-lab.github.io/astroscan_bot/fr/blog/ai-astrology-ephemeris-math/">
+  <link rel="alternate" hreflang="hi" href="https://astroscan-lab.github.io/astroscan_bot/hi/blog/ai-astrology-ephemeris-math/">
+  <link rel="alternate" hreflang="id" href="https://astroscan-lab.github.io/astroscan_bot/id/blog/ai-astrology-ephemeris-math/">
+  <link rel="alternate" hreflang="it" href="https://astroscan-lab.github.io/astroscan_bot/it/blog/ai-astrology-ephemeris-math/">
+  <link rel="alternate" hreflang="kk" href="https://astroscan-lab.github.io/astroscan_bot/kk/blog/ai-astrology-ephemeris-math/">
+  <link rel="alternate" hreflang="lo" href="https://astroscan-lab.github.io/astroscan_bot/lo/blog/ai-astrology-ephemeris-math/">
+  <link rel="alternate" hreflang="pt" href="https://astroscan-lab.github.io/astroscan_bot/pt/blog/ai-astrology-ephemeris-math/">
+  <link rel="alternate" hreflang="ru" href="https://astroscan-lab.github.io/astroscan_bot/ru/blog/ai-astrology-ephemeris-math/">
+  <link rel="alternate" hreflang="tr" href="https://astroscan-lab.github.io/astroscan_bot/tr/blog/ai-astrology-ephemeris-math/">
+  <link rel="alternate" hreflang="uz" href="https://astroscan-lab.github.io/astroscan_bot/uz/blog/ai-astrology-ephemeris-math/">
+  <link rel="alternate" hreflang="vi" href="https://astroscan-lab.github.io/astroscan_bot/vi/blog/ai-astrology-ephemeris-math/">
+  <link rel="alternate" hreflang="x-default" href="https://astroscan-lab.github.io/astroscan_bot/blog/ai-astrology-ephemeris-math/">
+  <link rel="icon" type="image/x-icon" href="../../../favicon.ico">
+  <link rel="manifest" href="../../../manifest.json">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="ໂຄງສ້າງຂອງໂຫລາສາດ AI ທີ່ແມ່ນຍໍາ: ເປັນຫຍັງ Swiss Ephemeris ດີກວ່າການເດົາຂອງ LLM">
+  <meta property="og:description" content="ເປັນຫຍັງແຊັດບອດ AI ຄິດເລກອົງສາຜັງດວງຊະຕາຜິດພາດ ແລະ ເຄື່ອງຈັກແບບກໍານົດແນ່ນອນທີ່ອີງໃສ່ C ແກ້ໄຂແນວໃດ.">
+  <meta property="og:url" content="https://astroscan-lab.github.io/astroscan_bot/lo/blog/ai-astrology-ephemeris-math/">
+  <meta property="og:image" content="https://astroscan-lab.github.io/astroscan_bot/cover.jpg">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://api.learntogoogle.de https://librecounter.org; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://librecounter.org; frame-ancestors 'self' https://web.telegram.org https://telegram.org https://*.telegram.org; object-src 'none'; base-uri 'none'; upgrade-insecure-requests;">
+  <link rel="stylesheet" href="../../../assets/css/styles.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "ໂຄງສ້າງຂອງໂຫລາສາດ AI ທີ່ແມ່ນຍໍາ: ເປັນຫຍັງ Swiss Ephemeris ດີກວ່າການເດົາຂອງ LLM", "description": "ຄົ້ນພົບວ່າເປັນຫຍັງແຊັດບອດ AI ທົ່ວໄປມັກຄິດເລກອົງສາຜັງດວງຊະຕາຜິດພາດ ແລະການລວມຄະນິດສາດ Swiss Ephemeris ທີ່ອີງໃສ່ C ກັບການສັງເຄາະ AI ຊ່ວຍສ້າງຄວາມແມ່ນຍໍາທາງໂຫລາສາດແນວໃດ.", "keywords": "ໂຫລາສາດ AI, Swiss Ephemeris v2.10, ການຄິດໄລ່ຜັງດວງຊະຕາ, ການສ້າງແຜນທີ່ແບບກໍານົດແນ່ນອນ, ກົນໄກ synastry", "inLanguage": "lo", "isPartOf": {"@type": "WebSite", "name": "AstroScan", "url": "https://astroscan-lab.github.io/astroscan_bot/"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ໜ້າຫຼັກ", "item": "https://astroscan-lab.github.io/astroscan_bot/lo/"}, {"@type": "ListItem", "position": 2, "name": "ບລັອກ", "item": "https://astroscan-lab.github.io/astroscan_bot/lo/blog/"}, {"@type": "ListItem", "position": 3, "name": "ໂຄງສ້າງຂອງໂຫລາສາດ AI ທີ່ແມ່ນຍໍາ", "item": "https://astroscan-lab.github.io/astroscan_bot/lo/blog/ai-astrology-ephemeris-math/"}]}</script>
+</head>
+<body class="lang-lo">
+  <div class="container" style="max-width:760px;">
+    <nav style="margin:1.5rem 0;font-size:0.9rem;"><a href="../../">ໜ້າຫຼັກ</a> &rsaquo; <a href="../">ບລັອກ</a> &rsaquo; ໂຫລາສາດ AI ແລະ Swiss Ephemeris</nav>
+
+    <h1>ໂຄງສ້າງຂອງໂຫລາສາດ AI ທີ່ແມ່ນຍໍາ: ເປັນຫຍັງ Swiss Ephemeris ດີກວ່າການເດົາຂອງ LLM</h1>
+    <p style="color:var(--text-dim);font-size:0.9rem;">ໂຫລາສາດເຕັກນິກ &middot; Swiss Ephemeris v2.10</p>
+
+    <h2 style="margin-top:2rem;">ບົດນໍາ: ຂໍ້ບົກພ່ອງທີ່ເຊື່ອງຢູ່ໃນໂຫລາສາດ AI ແບບສ້າງສັນ</h2>
+    <p style="margin-top:1.2rem;">ໃນຂະນະທີ່ AI ກໍາລັງປ່ຽນແປງເຄື່ອງມືການຄົ້ນຫາຕົນເອງ, ຜູ້ໃຊ້ຫລາຍລ້ານຄົນຫັນໄປໃຊ້ Large Language Models (LLM) ເພື່ອວິເຄາະຜັງດວງຊະຕາຂອງເຂົາເຈົ້າ. ແຕ່ຜູ້ໃຊ້ທີ່ຖາມແຊັດບອດທົ່ວໄປຫາອົງສາດາວເຄາະທີ່ແນ່ນອນ, ຈຸດເລີ່ມຕົ້ນເຮືອນ, ຫຼືມຸມ synastry ມັກຈະພົບບັນຫາເຕັກນິກທີ່ຮ້າຍແຮງ: ການສ້າງຂໍ້ມູນດາລາສາດຜິດພາດ (hallucination).</p>
+    <p>LLM ເປັນເຄື່ອງຈັກທໍານາຍຂໍ້ຄວາມທາງສະຖິຕິ. ພວກມັນບໍ່ໄດ້ຄິດໄລ່ trigonometry ທົງກົມໂດຍທໍາມະຊາດ, ແລະບໍ່ໄດ້ສອບຖາມ ephemeris ດາວເຄາະແບບເວລາຈິງ. ເມື່ອ LLM ສ້າງການອ່ານຜັງດວງຊະຕາ, ມັນທໍານາຍວ່າພິກັດໃດ "ເບິ່ງເໝືອນເປັນໄປໄດ້ທາງຂໍ້ຄວາມ" ໂດຍອີງໃສ່ນໍ້າໜັກການຝຶກຝົນຂອງມັນ.</p>
+    <p>ຄວາມຜິດພາດໃນການຄິດໄລ່ພຽງແຕ່ 2&deg; ຫາ 3&deg; ປ່ຽນແປງການອ່ານທັງໝົດ:</p>
+    <ul style="margin:0.5rem 0 1rem 1.3rem; color:#d4cef0;">
+      <li style="margin-bottom:0.4rem;">ມັນອາດຄິດໄລ່ແກນ Ascendant/Descendant ຜິດ, ຍ້າຍເຮືອນທີ 7 ຂອງທ່ານໄປສູ່ລາຊີອື່ນທັງໝົດ.</li>
+      <li style="margin-bottom:0.4rem;">ມັນອາດສ້າງມຸມແຄບທີ່ບໍ່ມີຢູ່ຈິງລະຫວ່າງ Pluto, Venus, ແລະ Mars.</li>
+      <li>ມັນອາດວາງຈຸດເລີ່ມຕົ້ນເຮືອນຜິດລະຫວ່າງລະບົບການຄິດໄລ່ທີ່ແຕກຕ່າງກັນ (Placidus, Whole Sign, Koch).</li>
+    </ul>
+    <p>ເພື່ອໃຫ້ຄວາມແມ່ນຍໍາທາງໂຫລາສາດລະດັບມືອາຊີບ, ແພລດຟອມທັນສະໄໝອີງໃສ່ໂຄງສ້າງແບບກໍານົດແນ່ນອນປະສົມ.</p>
+
+    <h2 style="margin-top:2rem;">ໂຄງສ້າງປະສົມ: ເຄື່ອງຈັກແບບກໍານົດແນ່ນອນ + ການສັງເຄາະ AI</h2>
+    <p>ເພື່ອແກ້ໄຂການສ້າງຂໍ້ມູນຜິດພາດຂອງ LLM, AstroScan ແຍກການຄິດໄລ່ຄະນິດສາດອອກຈາກການປະມວນຜົນພາສາທໍາມະຊາດ. ຂະບວນການເຮັດວຽກປະຕິບັດຕາມທໍ່ການປະຕິບັດສອງລະດັບຢ່າງເຄັ່ງຄັດ:</p>
+    <pre style="background:var(--card-bg); border:1px solid var(--border-dim); border-radius:0.8rem; padding:1.2rem; overflow-x:auto; font-size:0.85rem; line-height:1.6; color:var(--text-light); margin:1.2rem 0;"><code>[ຂໍ້ມູນເກີດຂອງຜູ້ໃຊ້]
+        |
+        v
+[ລະດັບ 1: ຄັງໂປຣແກຣມ C ຂອງ Swiss Ephemeris]  --&gt;  ຄິດໄລ່ vector ອົງສາ
+        |                                          ແລະຈຸດເລີ່ມຕົ້ນເຮືອນທີ່ແນ່ນອນ
+        v
+[ຂໍ້ມູນທີ່ຢືນຢັນແລ້ວ]
+        |
+        v
+[ລະດັບ 2: ເຄື່ອງຈັກວິເຄາະ AI]              --&gt;  ສ້າງການວິເຄາະທາງຈິດວິທະຍາ
+                                                    ແລະການບັນຍາຍ</code></pre>
+
+    <h2 style="margin-top:2rem;">1. ລະດັບ 1: ຊັ້ນການຄິດໄລ່ແບບກໍານົດແນ່ນອນ (Swiss Ephemeris v2.10)</h2>
+    <p>ແທນທີ່ຈະໃຫ້ AI ຄາດຄະເນພິກັດດາວເຄາະ, ລະບົບຫລັງບ້ານສອບຖາມ <strong>Swiss Ephemeris v2.10</strong> &mdash; ຄັງໂປຣແກຣມ C ທີ່ມີຄວາມແມ່ນຍໍາສູງອີງໃສ່ ephemeris NASA JPL DE431.</p>
+    <p>ຊັ້ນນີ້ຈັດການ:</p>
+    <ul style="margin:0.5rem 0 1rem 1.3rem; color:#d4cef0;">
+      <li style="margin-bottom:0.4rem;"><strong>ຄວາມແມ່ນຍໍາລະດັບຕໍ່າກວ່າວິນາທີໂຄ້ງ:</strong> ຄິດໄລ່ຕໍາແໜ່ງອົງສາທີ່ແນ່ນອນສໍາລັບທຸກດວງດາວ, ລວມທັງ Lunar Nodes (Rahu/Ketu) ແລະ Black Moon Lilith.</li>
+      <li style="margin-bottom:0.4rem;"><strong>ຈຸດເລີ່ມຕົ້ນເຮືອນແບບ topocentric ແລະ geocentric:</strong> ການສະແດງທາງຄະນິດສາດທີ່ແມ່ນຍໍາອີງໃສ່ພິກັດການເກີດທີ່ແນ່ນອນ ແລະເຂດເວລາທ້ອງຖິ່ນ.</li>
+      <li><strong>ໄລຍະຫ່າງມຸມ:</strong> ວັດແທກໄລຍະຫ່າງມຸມທີ່ແນ່ນອນ (conjunction, square, trine, opposition) ລົງເຖິງລະດັບນາທີ.</li>
+    </ul>
+
+    <h2 style="margin-top:2rem;">2. ລະດັບ 2: ຊັ້ນການວິເຄາະ AI</h2>
+    <p>ເມື່ອຂໍ້ມູນຄະນິດສາດຖືກຄິດໄລ່ ແລະຢືນຢັນຄົບຖ້ວນແລ້ວ, vector ທີ່ຢືນຢັນຈະຖືກສົ່ງເຂົ້າໄປໃນຊັ້ນການບັນຍາຍຂອງ AI.</p>
+    <p>ໃນຈຸດນີ້ AI ເຮັດວຽກພາຍໃຕ້ເງື່ອນໄຂຂອບເຂດທີ່ເຄັ່ງຄັດ: ມັນຖືກຫ້າມຄິດໄລ່ ຫຼືປ່ຽນແປງພິກັດ. ໜ້າທີ່ດຽວຂອງມັນຄືການສັງເຄາະຕາມສະພາບການ:</p>
+    <ul style="margin:0.5rem 0 1rem 1.3rem; color:#d4cef0;">
+      <li style="margin-bottom:0.4rem;">ການສ້າງແຜນທີ່ແກນເຮືອນທີ 1 / ເຮືອນທີ 7 ເພື່ອອະທິບາຍຮູບແບບຄວາມສໍາພັນຈິດໃຕ້ສໍານຶກ ແລະ shadow dynamics.</li>
+      <li style="margin-bottom:0.4rem;">ການວິເຄາະພະລັງງານ Pluto ແລະເຄມີ Venus-Mars ໂດຍບໍ່ຄາດເດົາມຸມຄະນິດສາດພື້ນຖານ.</li>
+      <li>ການແປໂຄງສ້າງໂຫລາສາດທີ່ສັບຊ້ອນເປັນຄວາມເຂົ້າໃຈທາງຈິດວິທະຍາທີ່ນໍາໄປໃຊ້ໄດ້.</li>
+    </ul>
+
+    <h2 style="margin-top:2rem;">ການປຽບທຽບ: ແຊັດບອດ LLM ທົ່ວໄປ ທຽບກັບ ເຄື່ອງຈັກປະສົມ Swiss Ephemeris</h2>
+    <div style="overflow-x:auto; margin:1.2rem 0;">
+    <table style="width:100%; border-collapse:collapse; font-size:0.9rem;">
+      <thead>
+        <tr style="border-bottom:1px solid var(--border-dim);">
+          <th style="text-align:left; padding:0.6rem 0.8rem; color:var(--text-light);">ຄຸນສົມບັດ</th>
+          <th style="text-align:left; padding:0.6rem 0.8rem; color:var(--text-light);">ແຊັດບອດ LLM ມາດຕະຖານ</th>
+          <th style="text-align:left; padding:0.6rem 0.8rem; color:var(--accent-primary);">ເຄື່ອງຈັກປະສົມ AstroScan</th>
+        </tr>
+      </thead>
+      <tbody style="color:#d4cef0;">
+        <tr style="border-bottom:1px solid var(--border-dim);">
+          <td style="padding:0.6rem 0.8rem;">ວິທີການຫາຕໍາແໜ່ງດາວເຄາະ</td>
+          <td style="padding:0.6rem 0.8rem;">ການທໍານາຍຄວາມເປັນໄປໄດ້ຂອງຂໍ້ຄວາມ</td>
+          <td style="padding:0.6rem 0.8rem;">Swiss Ephemeris v2.10 ອີງໃສ່ C</td>
+        </tr>
+        <tr style="border-bottom:1px solid var(--border-dim);">
+          <td style="padding:0.6rem 0.8rem;">ຄວາມແມ່ນຍໍາຈຸດເລີ່ມຕົ້ນເຮືອນ</td>
+          <td style="padding:0.6rem 0.8rem;">ຄວາມສ່ຽງການສ້າງຂໍ້ມູນຜິດພາດສູງ</td>
+          <td style="padding:0.6rem 0.8rem;">ຄວາມແມ່ນຍໍາຕໍ່າກວ່າອົງສາ (ຂໍ້ມູນ NASA JPL)</td>
+        </tr>
+        <tr style="border-bottom:1px solid var(--border-dim);">
+          <td style="padding:0.6rem 0.8rem;">ຄວາມທົນທານຂອງໄລຍະຫ່າງມຸມ</td>
+          <td style="padding:0.6rem 0.8rem;">ບໍ່ຄົງທີ່ / ຄາດເດົາ</td>
+          <td style="padding:0.6rem 0.8rem;">ຂອບເຂດຄະນິດສາດທີ່ເຄັ່ງຄັດ</td>
+        </tr>
+        <tr>
+          <td style="padding:0.6rem 0.8rem;">ຄວາມໜ້າເຊື່ອຖືຂອງລະບົບ</td>
+          <td style="padding:0.6rem 0.8rem;">ບໍ່ເໝາະສົມສໍາລັບຜັງດວງຊະຕາທີ່ແນ່ນອນ</td>
+          <td style="padding:0.6rem 0.8rem;">ຄວາມແມ່ນຍໍາແບບກໍານົດແນ່ນອນລະດັບມືອາຊີບ</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h2 style="margin-top:2rem;">ເປັນຫຍັງຄວາມແມ່ນຍໍາແບບກໍານົດແນ່ນອນສໍາຄັນສໍາລັບກົນໄກຄວາມສໍາພັນ</h2>
+    <p>ໃນ synastry (ການວິເຄາະຄວາມເຂົ້າກັນໄດ້), ຄວາມແມ່ນຍໍາບໍ່ແມ່ນທາງເລືອກ &mdash; ມັນເປັນພື້ນຖານ.</p>
+    <p>ເມື່ອປະເມີນວົງຈອນການອອກເດດຊ້ໍາໆ ຫຼືຄວາມດຶງດູດທີ່ຮຸນແຮງ:</p>
+    <ul style="margin:0.5rem 0 1rem 1.3rem; color:#d4cef0;">
+      <li style="margin-bottom:0.4rem;"><strong>Descendant ຂອງເຮືອນທີ 7</strong> ກໍານົດລັກສະນະເງົາທີ່ແທ້ຈິງທີ່ທ່ານກໍາລັງຊອກຫາໃນຄູ່ຮ່ວມ. ການຄິດໄລ່ Ascendant/Descendant ຜິດພາດໃຫ້ຄໍາແນະນໍາທີ່ຜິດທັງໝົດກ່ຽວກັບຕົວກະຕຸ້ນຈິດໃຕ້ສໍານຶກຂອງທ່ານ.</li>
+      <li><strong>ມຸມ Pluto ແລະ Node</strong> ກໍານົດຈຸດເຊື່ອມຕໍ່ທາງຈິດວິທະຍາທີ່ເລິກ. ມຸມທີ່ຖືກສ້າງຂຶ້ນຜິດພາດອາດເຮັດໃຫ້ເຂົ້າໃຈຜິດວ່າການເຊື່ອມຕໍ່ທໍາມະດາເປັນວົງຈອນກໍາຫນັດໜັກ, ຫຼືພາດຕົວກະຕຸ້ນທີ່ສໍາຄັນໄປທັງໝົດ.</li>
+    </ul>
+    <p>ໂດຍການລວມຄັງໂປຣແກຣມ C ແບບກໍານົດແນ່ນອນກັບ AI ແບບສ້າງສັນ, ຜູ້ໃຊ້ໄດ້ຮັບສິ່ງທີ່ດີທີ່ສຸດຈາກທັງສອງໂລກ: ຄວາມແມ່ນຍໍາທາງຄະນິດສາດ 100% ທີ່ຂັບເຄື່ອນໂດຍການສັງເຄາະການບັນຍາຍທີ່ເລິກ.</p>
+
+    <div class="card" style="margin:2rem 0; padding:1.5rem; border:1px solid var(--border-dim); border-radius:1rem;">
+      <p style="margin:0 0 1rem;"><strong>ສໍາຫຼວດແຜນຜັງດວງຊະຕາທີ່ຢືນຢັນຂອງທ່ານ.</strong> ຢຸດການເຊື່ອຖືດວງຊະຕາຈາກແຊັດບອດທີ່ຜິດພາດ &mdash; ທົດສອບຕໍາແໜ່ງຄະນິດສາດທີ່ແນ່ນອນ ແລະ archetype ຈິດໃຕ້ສໍານຶກຂອງທ່ານມື້ນີ້.</p>
+      <p style="margin:0 0 0.8rem;"><a class="btn-primary" href="../../" style="display:inline-block;text-decoration:none;">ເຮັດແບບທົດສອບ archetype 2 ນາທີ</a></p>
+      <p style="margin:0;"><a href="https://t.me/ASTROSCAN_BOT" target="_blank" rel="noopener noreferrer">ຮັບການອ່ານ Swiss Ephemeris ແບບເຕັມຜ່ານ @ASTROSCAN_BOT ໃນ Telegram →</a></p>
+    </div>
+
+    <p style="margin-top:1.5rem;color:var(--text-dim);">ອ່ານເພີ່ມເຕີມ: <a href="../karmic-attraction/">ຄວາມດຶງດູດແບບກໍາຫນັດໃນ Synastry</a> &middot; <a href="../descendant-attraction/">ເປັນຫຍັງພວກເຮົາຖືກດຶງດູດໄປສູ່ລາຊີດຽວກັນຊ້ໍາໆ</a></p>
+    <p style="margin-top:1rem;"><a href="../">← ບົດຄວາມບລັອກທັງໝົດ</a></p>
+  </div>
+</body>
+</html>
